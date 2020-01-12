@@ -11,19 +11,20 @@
 <body>
   <script>
     // Variable declaration statements
-    var first = "Steve";
+    var first = "Steve"; // function scoped
+    // block scoped
     let age = 500;
     const cool = true;
     // Function call statement
     console.log(first);
 
     // var and let can be reassigned
-    first = "Han";
-    age = 400;
-    console.log(first);
+    // first = "Han";
+    // age = 400;
+    // console.log(first);
 
     // const cannot be reassigned
-    console.log(cool = false); // Type Error:...
+    // console.log(cool = false); // Type Error:...
 
     // Strict Mode
     // "use strict";
