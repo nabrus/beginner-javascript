@@ -10,28 +10,19 @@
 
 <body>
   <script>
-    // Variable declaration statements
-    const first = 'Steve';
-    // var is function scoped
-    // let and const are block scoped
-    const age = 500;
-    const cool = true;
-    // Function call statement
-    console.log(first);
+    /* eslint-disable */
 
-    // var and let can be reassigned
-    // first = "Han";
-    // age = 400;
-    // console.log(first);
+    // Declaring variables and assigning values
 
-    // const cannot be reassigned
-    // console.log(cool = false); // Type Error:...
+    var first = 'steve'; // var is function scoped 
+    let age = 500; // let is block scoped 
 
-    // Strict Mode
-    // "use strict";
+    // Constant variables cannot be reassigned
+    const cool = true; // const is also block scoped
 
-    // dog = "Sandy";
-    // console.log(dog); // ReferenceError: dog is not defined
+    // var and let can be updated after declaring
+    first = 'wyatt';
+
   </script>
 </body>
 
