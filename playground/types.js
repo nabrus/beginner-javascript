@@ -83,3 +83,13 @@ const person = {
 // Access properties for the values
 console.log(person.first); // Han
 console.log(person.age);   // 45
+
+
+/* NULL and UNDEFINED */
+
+// An indication a variable has not been assigned a value - `undefined` property
+let dog;
+console.log(dog); // undefined
+
+// Expressing intentional absence for a value - null
+const extraMoney = null; 
