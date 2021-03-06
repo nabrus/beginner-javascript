@@ -81,5 +81,5 @@ const person = {
 };
 
 // Access properties for the values
-console.log(person.first);
-console.log(person.age);
+console.log(person.first); // Han
+console.log(person.age);   // 45
