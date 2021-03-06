@@ -1,5 +1,7 @@
 /* eslint-disable */
 
+/* STRING */
+
 const first = 'Wyatt';  // single quotes
 const middle = "Jacob"; // double quotes
 const last = `Urban`;   // backtick 
@@ -30,4 +32,41 @@ const html1 = `
   </div>
 `;
 
-document.body.innerHTML = html1;
+// document.body.innerHTML = html1;
+
+
+/* NUMBER */
+
+// Use the operator `typeof` to indicate the type of an operand.
+const year = 2021;
+const name = 'Tony Stark';
+
+console.log(typeof(year)); // number 
+
+// JS doesn't define different types of numbers, like integers, short, long, floating-point etc.
+// JS numbers are stored as floating point numbers.
+const integer = 100;
+const float = 100.5;
+
+// `Math` method example
+const num = 22.65;
+console.log(Math.round(num)); // 23
+
+// Remainder (%)
+const blueberries = 20;
+const kids = 3;
+const eachKidGets = Math.floor(blueberries / kids);
+const dadGets = blueberries % kids;
+
+// Floating point math
+// Enter the following into the browser console:
+// window.location = `https://${0.1 + 0.2}.com`;
+
+// Note: use cents when storing money to avoid strange fraction issues
+
+// Exponentiation (**): raising the first operand to the power of the second operand
+console.log(10 ** 2);     // 100
+console.log(1000 ** 200); // Infinity
+
+// NAN (not a number)
+console.log(typeof(NaN)); // number
