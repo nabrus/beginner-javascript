@@ -93,3 +93,28 @@ console.log(dog); // undefined
 
 // Expressing intentional absence for a value - null
 const extraMoney = null; 
+
+
+/* BOOLEAN */
+
+// `true` or `false`
+let isDrawing = false;
+
+const currentAge = 18;
+const ofAge = age > 19;
+console.log(ofAge); // false
+
+// Equality 
+// one equal (=) assigns a value 
+let transport = "XWing";
+transport = "Snow Speeder";
+
+// double  equal (==) - Note: not best practice, use triple equal (===)
+// checks if the values are equal
+console.log(10 == 10);  // true
+// checks if the value and types are equal
+console.log(10 === 10); // true
+
+console.log("10" == 10);  // true
+console.log("10" === 10); // false
+
