@@ -70,3 +70,16 @@ console.log(1000 ** 200); // Infinity
 
 // NAN (not a number)
 console.log(typeof(NaN)); // number
+
+
+/* OBJECT */
+
+const person = {
+  first: 'Han',
+  last: 'Solo',
+  age: 45,
+};
+
+// Access properties for the values
+console.log(person.first);
+console.log(person.age);
