@@ -1,37 +1,33 @@
 /* eslint-disable */
-// const name = 'Steve'; // single quotes
-// const middle = "John"; // double quotes
-// const last = `Urban`; // back-tics
 
-// const hello = `Hello my name is ${name}. Nice to meet you. I am ${50 + 200} years old`;
+const first = 'Wyatt';  // single quotes
+const middle = "Jacob"; // double quotes
+const last = `Urban`;   // backtick 
 
-// const html = `
-//   <div>
-//     <h2>${name}<h2>
-//     <p>${hello}<p>
-//   </div>
-// `;
+// Examples of using quotes in strings correctly
+const sentence = 'She\'s so cool';   // escaping using a back slash
+const sentenceA = "She's so cool";   // mixing double and single
+const sentenceB = `She's so "cool"`; // mixing all three types
 
-// console.log(html);
+// Multi-line strings use escaping or backtick (template literals)
+// Creating HTML for example:
+const html = `
+<div>
+  <h2></h2>
+</div>
+`;
 
+// Another example of using the backtick-template literals (template strings)
+// for expression/variable interpolation
+const age = 4;
+const hello = `Hello my name is ${first}. Nice to meet you! In 10 more years I'll be ${10 + age}`; 
 
-/* MATH */
+// Combining both multi-line and interpolation example
+const html1 = `
+  <div>
+    <h2>${first} ${last}</h2>
+    <p>${hello}</p>
+  </div>
+`;
 
-const smarties = 20;
-const kids = 3;
-const eachKidGets = Math.floor(smarties / kids);
-
-console.log(`Each kid gets ${eachKidGets} smarties`);
-
-console.log(`And dad gets ${smarties % kids}`);
-
-// When working with money always store values in cents
-// due to Floating Point Math.
-
-// Instead of price = 10.34;
-const price = 1034;
-
-// Infinity and -Infinity are a "number", expressing a number higher than the 
-// comp can calculate.
-
-// NaN (not a number) = "number"
+document.body.innerHTML = html1;
