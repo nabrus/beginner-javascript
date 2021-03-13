@@ -3,3 +3,7 @@
 # Beginner JavaScript!
 
  [Beginner JavaScript](https://BeginnerJavaScript.com) A course by Wes Bos
+
+## Function Definition Diagram
+
+![Function Definition Diagram](images/function-definition.jpg)
