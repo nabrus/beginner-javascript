@@ -2,7 +2,19 @@
 
 # Beginner JavaScript!
 
- [Beginner JavaScript](https://BeginnerJavaScript.com) A course by Wes Bos
+[Beginner JavaScript](https://BeginnerJavaScript.com) A course by Wes Bos
+
+## Index
+
+[JS **Data Types**](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
+*  String
+*  Number
+*  Object
+*  `null` and `undefined`
+*  Boolean 
+
+
+
 
 ## Function Definition Diagram
 
