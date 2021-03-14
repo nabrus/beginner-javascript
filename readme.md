@@ -6,7 +6,7 @@
 
 ## Index
 
-[JS **Data Types**](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
+[### JS Data Types](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
 *  String
 *  Number
 *  Object
@@ -21,6 +21,6 @@
      *  Parameters and Arguments
      *  Default Parameters
 
-## Function Definition Diagram
+### Function Definition Diagram
 
 ![Function Definition Diagram](images/function-definition.jpg)
