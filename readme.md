@@ -13,8 +13,12 @@
 *  `null` and `undefined`
 *  Boolean 
 
+Functions
 
-
+*  Built In
+*  Custom
+  *  Basic function structure
+  *  
 
 ## Function Definition Diagram
 
