@@ -12,3 +12,5 @@ function doctorize(firstName) {
 const doctorize2 = function(firstName) {
   return `Dr. ${firstName}`;
 };
+
+// Arrow Functions
