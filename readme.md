@@ -24,3 +24,9 @@
 ### Function Definition Diagram
 
 ![Function Definition Diagram](images/function-definition.jpg)
+
+*  Declaring Functions
+     *  Function declaration (function statement)
+     *  Function expression
+        *  Anonymous function
+     *  Arrow Function
