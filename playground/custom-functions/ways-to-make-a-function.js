@@ -41,3 +41,23 @@ console.log(addArrow(7)); // 10
   console.log('Running the Anon function'); // Running the Anon function
   return 'The Dude abides';
 })();
+
+/* eslint-disable */
+// Method - a function which is a property of an object. Or simply, functions that live inside objects.
+
+const threepio = {
+  name: 'C3PO',
+  // Method
+  sayHi: function() {
+    console.log('Hello I am C3PO, human cyborg relations');
+    return 'Hello I am C3PO, human cyborg relations';
+  },
+  // Short hand method-better syntax, same result
+  complain() {
+    console.log('BUT SIIIIRR!!');
+    return 'BUT SIIIIRR!!';
+  },
+};
+
+threepio.sayHi(); // is a method
+threepio.complain(); // is a method
