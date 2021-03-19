@@ -4,7 +4,7 @@ function doctorize(firstName) {
 }
 
 // Function expressions - storing a function as a value in a variable
-// This also is an anonymous Function - a function with no name
+// This also is an anonymous function - a function with no name
 const doctorize2 = function(firstName) {
   return `Dr. ${firstName}`;
 };
