@@ -88,5 +88,5 @@ buttonC.addEventListener('click', () => console.log('Enough with the clicking!')
 setTimeout(threepio.scold, 1000); // after a second `threepio.scold` will run
 // or pass in an anonymous function
 setTimeout(function() {
-  console.log('Beep Beep Bloop Beep');
+  console.log('Bleep Bloop Beep');
 }, 2000); // after 2 seconds the anonymous function will run
