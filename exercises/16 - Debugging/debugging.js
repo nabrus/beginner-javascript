@@ -5,10 +5,24 @@ const people = [
 ];
 
 people.forEach((person, index) => {
-  console.log(person.name);
+  if (person.name === 'Wes') {
+    console.warn('Incorrect name'); // warn
+  }
 });
 
+console.table(people); // table output
+
 // Console Methods
+/*
+  .log - general output logging info
+  .info - informative logging ?? doesn't do much
+  .error - changes output appearance of an error UI
+  .warn - changes output appearance of a warning UI
+  .table - logs output in a table
+  .count - logs number of times a line has been called with the given label
+  .group - creates an inline group of output by another level
+  .groupEnd - exits the current inline group
+*/
 
 // Callstack
 
@@ -24,7 +38,17 @@ people.forEach((person, index) => {
 
 // Some Setup Code
 
+function doALotOfStuff() {
+  console.group('Doing some stuff'); // opens group
+  console.log('Hey, first one of this group.');
+  console.warn('Watch out, the bridge is out!');
+  console.error('Not good');
+  console.log('OK, last one of the group.');
+  console.groupEnd('Doing some stuff'); // exits group, note pass in same string used to open group
+}
+
 function doctorize(name) {
+  console.count(`Running Doctorize for ${name}`); // count how many times `doctorize` runs for given name
   return `Dr. ${name}`;
 }
 
