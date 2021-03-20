@@ -25,8 +25,11 @@
 
 ![Function Definition Diagram](images/function-definition.jpg)
 
-*  Declaring Functions
+*  [Declaring Functions](https://github.com/nabrus/beginner-javascript/blob/master/playground/custom-functions/ways-to-make-a-function.js)
      *  Function declaration (function statement)
      *  Function expression
         *  Anonymous function
      *  Arrow Function
+     *  IIFE (Immediately Invoked Function Expression)
+     *  Method
+     *  Callback function
