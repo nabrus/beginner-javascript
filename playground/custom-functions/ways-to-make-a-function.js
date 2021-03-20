@@ -52,11 +52,16 @@ const threepio = {
     console.log('Hello I am C3PO, human cyborg relations');
     return 'Hello I am C3PO, human cyborg relations';
   },
-  // Short hand method-better syntax, same result
+  // Short hand method-better syntax, same result. **preferred way**
   complain() {
     console.log('BUT SIIIIRR!!');
     return 'BUT SIIIIRR!!';
   },
+  // Arrow function used for method
+  scold: () => {
+    console.log('Oh switch off!');
+    return 'Oh switch off!';
+  }
 };
 
 threepio.sayHi(); // is a method
