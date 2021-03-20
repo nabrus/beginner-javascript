@@ -66,3 +66,5 @@ const threepio = {
 
 threepio.sayHi(); // is a method
 threepio.complain(); // is a method
+
+// Callback function - a function passed into another function as an argument, which is then invoked inside the outer function to complete some action.
