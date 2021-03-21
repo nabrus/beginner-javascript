@@ -10,6 +10,16 @@ people.forEach((person, index) => {
   }
 });
 
+// A good use example of console.groupCollapsed
+// See `function doALotOfStuff()` below for basic `console.group` structure
+people.forEach((person, index) => {
+  console.groupCollapsed(`${person.name}`); // opens group in collapsed format
+  console.log(person.country);
+  console.log(person.cool);
+  console.log('Done!');
+  console.groupEnd(`${person.name}`); // exits group
+});
+
 console.table(people); // table output
 
 // Console Methods
@@ -21,10 +31,24 @@ console.table(people); // table output
   .table - logs output in a table
   .count - logs number of times a line has been called with the given label
   .group - creates an inline group of output by another level
+  .groupCollapsed - inline group is collapsed requiring use of button to expand
   .groupEnd - exits the current inline group
 */
 
-// Callstack
+// Call stack or Stack Trace: a mechanism for an interpreter (ex JS interpreter in a web browser) to keep track of its place in a script that calls multiple functions -
+// what function is currently being run and what functions are called within that function, etc.
+/*
+  Example of call stack when en error is thrown in the console:
+
+  Uncaught ReferenceError: doesntExist is not defined
+    at greet (debugging.js:65) // function that has an  error in the call stack
+    at go (debugging.js:70) 
+    at <anonymous>:1:1 // start of call stack
+
+  greet	      @	debugging.js:65
+  go	        @	debugging.js:70
+  (anonymous)	@	VM694:1
+*/
 
 // Grabbing Elements
 
@@ -53,7 +77,7 @@ function doctorize(name) {
 }
 
 function greet(name) {
-  doesntExist();
+  doesntExist(); // Will cause an error
   return `Hello ${name}`;
 }
 
