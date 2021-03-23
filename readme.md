@@ -33,3 +33,8 @@
      *  IIFE (Immediately Invoked Function Expression)
      *  Method
      *  Callback function
+
+### [Debugging](https://github.com/nabrus/beginner-javascript/blob/master/exercises/16%20-%20Debugging/debugging.js)
+
+*  Console Methods
+*  Call Stack
