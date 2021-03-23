@@ -26,13 +26,13 @@
 ![Function Definition Diagram](images/function-definition.jpg)
 
 *  [Declaring Functions](https://github.com/nabrus/beginner-javascript/blob/master/playground/custom-functions/ways-to-make-a-function.js)
-     *  Function declaration (function statement)
-     *  Function expression
-        *  Anonymous function
+     *  Function Declaration (Function Statement, Function Definition)
+     *  Function Expression
+        *  Anonymous Function
      *  Arrow Function
      *  IIFE (Immediately Invoked Function Expression)
      *  Method
-     *  Callback function
+     *  Callback Function
 
 ### [Debugging](https://github.com/nabrus/beginner-javascript/blob/master/exercises/16%20-%20Debugging/debugging.js)
 
