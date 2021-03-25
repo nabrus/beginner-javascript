@@ -38,3 +38,4 @@
 
 *  Console Methods
 *  Call Stack
+*  Web Console Helpers - check out [MDN](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers) for more info.
