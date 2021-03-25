@@ -50,7 +50,19 @@ console.table(people); // table output
   (anonymous)	@	VM694:1
 */
 
-// Grabbing Elements
+// Web Console Helpers
+/* 
+  Grabbing Elements 
+  `$(selector, element)`
+  Equivalent to `document.queryselector()
+  Looks up a CSS selector string `selector`, returning the first node descended from `element` that matches. If unspecified, `element` defaults to `document`.
+
+  `$$(selector, element)`
+  Equivalent to document.querySelectorAll()`, but returns an array instead of a NodeList.
+
+  `$0`
+  The currently inspected element in the page.
+*/
 
 // Breakpoints
 
