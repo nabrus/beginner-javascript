@@ -81,10 +81,30 @@ function greet(name) {
   return `Hello ${name}`;
 }
 
+// Function for call stack example
 function go() {
   const name = doctorize(greet('Wes'));
   console.log(name);
 }
+
+// Another function to add to the call stack
+function bootstrap() {
+  console.log('Starting the app!');
+  go();
+}
+
+/*
+  When called:
+  bootstrap();
+
+  output in console:
+  Starting the app!
+  Uncaught ReferenceError: doesntExist is not defined
+    at greet (debugging.js:80)
+    at go (debugging.js:85)
+    at bootstrap (debugging.js:91)
+    at debugging.js:94
+*/
 
 const button = document.querySelector('.bigger');
 button.addEventListener('click', function(e) {
