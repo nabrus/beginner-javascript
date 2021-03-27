@@ -87,7 +87,7 @@ people.forEach((person, index) => {
 // Using the Network tab in dev tools.
 
 // Break On Attribute
-// Highlight a line in the Elements tab, select Break on, then the next submenu item to
+// Highlight a line in the Elements tab, select Break on, then the next sub-menu item to
 
 // Some Setup Code
 
