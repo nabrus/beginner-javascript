@@ -24,7 +24,7 @@ console.table(people); // table output
 
 // Breakpoint example
 people.forEach((person, index) => {
-  debugger; // Pauses the JS from running when dev tools is open (a breakpoint).
+  // debugger; // Pauses the JS from running when dev tools is open (a breakpoint).
   console.log(person.name);
 });
 
@@ -75,14 +75,19 @@ people.forEach((person, index) => {
   Adding a `debugger` statement inside your code
   debugger statement invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.
 
-  Another way is to set breakpoints right inside the browsers dev tools Sources tab.
+  Another way is to set breakpoints right inside the browsers dev tools Sources tab by clicking on the line.
+
+  You can select breakpoints in the Event Listener Breakpoints menu, or DOM, etc.
 */
 
 // Scope
+// the context in which values and expressions (variables) are visible or can be referenced.
 
 // Network Requests
+// Using the Network tab in dev tools.
 
 // Break On Attribute
+// Highlight a line in the Elements tab, select Break on, then the next submenu item to
 
 // Some Setup Code
 
