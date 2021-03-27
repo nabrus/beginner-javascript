@@ -22,6 +22,12 @@ people.forEach((person, index) => {
 
 console.table(people); // table output
 
+// Breakpoint example
+people.forEach((person, index) => {
+  debugger; // Pauses the JS from running when dev tools is open (a breakpoint).
+  console.log(person.name);
+});
+
 // Console Methods
 /*
   .log - general output logging info
@@ -54,7 +60,7 @@ console.table(people); // table output
 /* 
   Grabbing Elements 
   `$(selector, element)`
-  Equivalent to `document.queryselector()
+  Equivalent to `document.querySelector()
   Looks up a CSS selector string `selector`, returning the first node descended from `element` that matches. If unspecified, `element` defaults to `document`.
 
   `$$(selector, element)`
@@ -65,6 +71,12 @@ console.table(people); // table output
 */
 
 // Breakpoints
+/*
+  Adding a `debugger` statement inside your code
+  debugger statement invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.
+
+  Another way is to set breakpoints right inside the browsers dev tools Sources tab.
+*/
 
 // Scope
 
