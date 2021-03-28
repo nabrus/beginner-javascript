@@ -1,50 +1,16 @@
-// const age = 100;
+/* 
+  SCOPE 
 
-// function go() {
-//   const myAge = 200;
-//   const hair = 'blonde';
-//   console.log(age);
-//   console.log(myAge);
-//   console.log(hair);
-// }
+  Scope refers to where a variable can be accessed in a program.
+  
+  Scope is the idea in programming that some variables are accessible/inaccessible from other parts of the program.
+*/
 
-// go();
-/* eslint-disable*/
+/* 
+  GLOBAL SCOPE - refers to the context within which variables are accessible to every part of the program.
 
-// function isCool(name) {
-//   if (name === 'wes') {
-//     var cool = true;
-//   }
-//   console.log(cool);
-//   return cool;
-// }
-
-// for(let i = 0; i < 10; i++) {
-//   console.log(i);
-// }
-
-
-const dog = 'snickers';
-
-function logDog(dog) {
-  console.log(dog);
-}
-
-function go() {
-  const dog = 'sunny';
-  logDog('sunny');
-}
-
-go();
-
-function yell() {
-  console.log(name.toUpperCase())
-}
-
-function sayHi(name) {
-
-  yell();
-}
-
-
-yell();
+  A browsers global scope is the `Window`
+  **NOTE: declaring variables with `let` or `const` does not attach them to the window unlike `var`. But global variables are not good practice!
+*/
+// Global variables are variables that exist within global scope.
+const first = 'Steve';
