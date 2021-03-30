@@ -39,3 +39,9 @@
 *  Console Methods
 *  Call Stack
 *  Web Console Helpers - check out [MDN](https://developer.mozilla.org/en-US/docs/Tools/Web_Console/Helpers) for more info.
+*  Breakpoints
+     *  Debugger Statement
+     *  Setting breakpoints using browsers dev tools
+*  Network Requests
+
+### [Scope](https://github.com/nabrus/beginner-javascript/blob/master/playground/scope.js*  
