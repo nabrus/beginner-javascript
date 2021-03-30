@@ -44,4 +44,5 @@
      *  Setting breakpoints using browsers dev tools
 *  Network Requests
 
-### [Scope](https://github.com/nabrus/beginner-javascript/blob/master/playground/scope.js*  
+### [Scope](https://github.com/nabrus/beginner-javascript/blob/master/playground/scope.js)
+
