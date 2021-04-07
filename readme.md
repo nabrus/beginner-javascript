@@ -46,3 +46,7 @@
 
 ### [Scope](https://github.com/nabrus/beginner-javascript/blob/master/playground/scope.js)
 
+*  Global Scope
+     *  Global Variable
+*  Function Scope
+*  Block Scope
