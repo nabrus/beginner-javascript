@@ -68,11 +68,12 @@ for(var i = 0; i < 10; i++) {
 }
 
 /* LEXICAL SCOPE */
+// Scope lookup for variables are where functions are defined not where they are run (invoked).
 
 const dog = 'Sandy';
 
 function logDog() {
-  console.log(dog);
+  console.log(dog); // `Sandy` will get passed in
 }
 
 function goDog() {
