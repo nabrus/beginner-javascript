@@ -35,7 +35,6 @@ function go() {
     Be cautious of shadow variables. For example if the fallowing was defined inside this function:
     const age = 200;
     `age` would now be 200 when invoking go(), shadowing the global variable of `age`. 
-  
   */
 }
 
@@ -63,9 +62,22 @@ function isCool(name) {
   return cool;
 }
 /* eslint-disable */
-// Using `var` for this loop will alow the `i` variable to leak out to global scope. Using `let` here to declare `i` would make it block scoped.
+// Using `var` for this loop will alow the `i` variable to leak out to global scope. So after this loop runs, `i` = 10 outside that scope.  Using `let` here to declare `i` would make it block scoped.
 for(var i = 0; i < 10; i++) {
   console.log(i);
 }
 
 /* LEXICAL SCOPE */
+
+const dog = 'Sandy';
+
+function logDog() {
+  console.log(dog);
+}
+
+function goDog() {
+  const dog = 'Snoopy';
+  logDog();
+}
+
+goDog();
