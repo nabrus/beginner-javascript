@@ -35,7 +35,6 @@ function go() {
     Be cautious of shadow variables. For example if the fallowing was defined inside this function:
     const age = 200;
     `age` would now be 200 when invoking go(), shadowing the global variable of `age`. 
-  
   */
 }
 
@@ -63,8 +62,26 @@ function isCool(name) {
   return cool;
 }
 /* eslint-disable */
-// Using `var` for this loop will alow the `i` variable to leak out to global scope. Using `let` here to declare `i` would make it block scoped.
+// Using `var` for this loop will alow the `i` variable to leak out to global scope. So after this loop runs, `i` = 10 outside that scope.  Using `let` here to declare `i` would make it block scoped.
 for(var i = 0; i < 10; i++) {
   console.log(i);
 }
 
+<<<<<<< HEAD
+=======
+/* LEXICAL SCOPE */
+// Scope lookup for variables are where functions are defined not where they are run (invoked).
+
+const dog = 'Sandy';
+
+function logDog() {
+  console.log(dog); // `Sandy` will get passed in
+}
+
+function goDog() {
+  const dog = 'Snoopy';
+  logDog();
+}
+
+goDog();
+>>>>>>> refs/remotes/origin/master
