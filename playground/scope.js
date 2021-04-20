@@ -67,8 +67,6 @@ for(var i = 0; i < 10; i++) {
   console.log(i);
 }
 
-<<<<<<< HEAD
-=======
 /* LEXICAL SCOPE */
 // Scope lookup for variables are where functions are defined not where they are run (invoked).
 
@@ -84,4 +82,3 @@ function goDog() {
 }
 
 goDog();
->>>>>>> refs/remotes/origin/master
