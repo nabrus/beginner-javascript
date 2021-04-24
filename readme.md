@@ -50,3 +50,4 @@
      *  Global Variable
 *  Function Scope
 *  Block Scope
+*  Lexical Scope
