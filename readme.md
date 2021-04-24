@@ -51,3 +51,7 @@
 *  Function Scope
 *  Block Scope
 *  Lexical Scope
+
+### [Hoisting](https://github.com/nabrus/beginner-javascript/blob/master/playground/hoisting.js)
+
+*  Hoisting of function and variable declarations
