@@ -41,9 +41,9 @@
     const sayHello = createGreeting('hello');
     const sayHey = createGreeting('hey');
 
-    console.log(sayHello('Wyatt'));
-    console.log(sayHello('Steve'));
-    console.log(sayHey('Steve'));
+    console.log(sayHello('Wyatt')); // HELLO Wyatt
+    console.log(sayHello('Steve')); // HELLO Steve
+    console.log(sayHey('Steve')); // HEY Steve
 
     // Example of a closure creating 'private variables'
     function createGame(gameName) {
@@ -57,12 +57,12 @@
 
     const hockeyGame = createGame('Hockey');
     const soccerGame = createGame('Soccer');
-    console.log(hockeyGame());
-    console.log(hockeyGame());
-    console.log(soccerGame());
-    console.log(hockeyGame());
-    console.log(soccerGame());
-    console.log(hockeyGame());
+    console.log(hockeyGame()); // Your game Hockey score is 1
+    console.log(hockeyGame()); // Your game Hockey score is 2
+    console.log(soccerGame()); // Your game Soccer score is 1
+    console.log(hockeyGame()); // Your game Hockey score is 3
+    console.log(soccerGame()); // Your game Soccer score is 2
+    console.log(hockeyGame()); // Your game Hockey score is 4
   </script>
 </body>
 
