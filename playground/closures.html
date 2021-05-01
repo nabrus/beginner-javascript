@@ -30,7 +30,7 @@
     const innerFn = outer();
     // innerFn();
 
-    // Example of a  closure creating a function
+    // Example of a closure creating a function
     function createGreeting(greeting = '') {
       const myGreet = greeting.toUpperCase();
       return function (name) {
@@ -45,7 +45,7 @@
     console.log(sayHello('Steve'));
     console.log(sayHey('Steve'));
 
-    // Example of a  closure creating 'private variables'
+    // Example of a closure creating 'private variables'
     function createGame(gameName) {
       let score = 0;
       return function win() {
