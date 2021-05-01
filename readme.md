@@ -55,3 +55,7 @@
 ### [Hoisting](https://github.com/nabrus/beginner-javascript/blob/master/playground/hoisting.js)
 
 *  Hoisting of function and variable declarations
+
+### [Closures](https://github.com/nabrus/beginner-javascript/blob/master/playground/closures.html)
+
+*  High level overview of a *closure*
