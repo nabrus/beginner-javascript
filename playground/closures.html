@@ -16,6 +16,53 @@
     words, a closure gives you access to an outer function’s scope from an
     inner function.
     */
+
+    function outer() {
+      const outerVar = 'Hey I am an outer variable!';
+      function inner() {
+        const innerVar = 'Hey I am an inner variable!';
+        console.log(innerVar);
+        console.log(outerVar);
+      }
+      return inner;
+    }
+
+    const innerFn = outer();
+    // innerFn();
+
+    // Example of a  closure creating a function
+    function createGreeting(greeting = '') {
+      const myGreet = greeting.toUpperCase();
+      return function (name) {
+        return `${myGreet} ${name}`;
+      };
+    }
+
+    const sayHello = createGreeting('hello');
+    const sayHey = createGreeting('hey');
+
+    console.log(sayHello('Wyatt'));
+    console.log(sayHello('Steve'));
+    console.log(sayHey('Steve'));
+
+    // Example of a  closure creating 'private variables'
+    function createGame(gameName) {
+      let score = 0;
+      return function win() {
+        // eslint-disable-next-line no-plusplus
+        score++;
+        return `Your game ${gameName} score is ${score}`;
+      };
+    }
+
+    const hockeyGame = createGame('Hockey');
+    const soccerGame = createGame('Soccer');
+    console.log(hockeyGame());
+    console.log(hockeyGame());
+    console.log(soccerGame());
+    console.log(hockeyGame());
+    console.log(soccerGame());
+    console.log(hockeyGame());
   </script>
 </body>
 
