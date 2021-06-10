@@ -23,3 +23,12 @@ console.log(heading.innerText);
 
 console.log(heading.innerHTML);
 console.log(heading.outerHTML);
+
+const pizzaList = document.querySelector('.pizza');
+console.log(pizzaList.textContent);
+
+// One methode of adding onto content, but can be expensive when adding a lot of content
+// pizzaList.textContent = `${pizzaList.textContent} 🍕`;
+
+// Another way is by using `insertAdjacentText` method
+pizzaList.insertAdjacentText;
