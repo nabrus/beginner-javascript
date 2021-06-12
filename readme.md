@@ -60,4 +60,6 @@
 
 *  High level overview of a *closure*
 
-### [The Dom](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
+### [The Dom](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js
+
+*  Element - Properties and Methods)
