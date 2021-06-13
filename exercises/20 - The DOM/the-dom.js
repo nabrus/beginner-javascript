@@ -33,3 +33,19 @@ console.log(pizzaList.textContent);
 // Another way is by using `insertAdjacentText` method
 pizzaList.insertAdjacentText('afterbegin', '🍕');
 pizzaList.insertAdjacentText('beforeend', '🍕');
+
+/* CLASSES */
+const pic = document.querySelector('.animatePic');
+// The `Element.classList` is a read-only property that returns a live
+// DOMTokenList collection of the class attributes of the element. This
+// can then be used to manipulate the class list.
+pic.classList.add('open');
+pic.classList.remove('anotherClass');
+console.log(pic.classList);
+
+// Event Listener example to animate the pic from round to regular when clicked.
+function toggleRound() {
+  pic.classList.toggle('round');
+}
+
+pic.addEventListener('click', toggleRound);

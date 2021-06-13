@@ -10,6 +10,8 @@
 
 <body>
 
+  <img class="animatePic anotherClass" src="https://picsum.photos/600" />
+
   <div class="items">
 
     <div class="item">
@@ -31,13 +33,23 @@
       <p class="pizza">This is how many pizzas I ate! 🍕</p>
     </article>
 
-
   </div>
 
   <style>
     h2 span {
       display: none;
       ;
+    }
+
+    img {
+      transition: all 0.2s;
+
+    }
+
+    .round {
+      border-radius: 50%;
+      transform: rotate(1turn) scale(2);
+      box-shadow: 0 0 10px black;
     }
   </style>
 
