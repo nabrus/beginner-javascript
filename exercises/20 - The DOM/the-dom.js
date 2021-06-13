@@ -27,7 +27,7 @@ console.log(heading.outerHTML);
 const pizzaList = document.querySelector('.pizza');
 console.log(pizzaList.textContent);
 
-// One method of adding onto content, but can be expensive when adding a lot of content
+// One method of adding onto content. Note - can be expensive when adding a lot of content
 // pizzaList.textContent = `${pizzaList.textContent} 🍕`;
 
 // Another way is by using `insertAdjacentText` method
