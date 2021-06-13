@@ -62,4 +62,5 @@
 
 ### [The Dom](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
 
+*  Node vs. Element
 *  Element - Properties and Methods
