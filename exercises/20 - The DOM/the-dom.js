@@ -49,3 +49,9 @@ function toggleRound() {
 }
 
 pic.addEventListener('click', toggleRound);
+
+// Attributes - updating, adding, getters/setters
+pic.alt = 'another random  pic'; // setter
+console.log(pic.alt); // getter
+console.log(pic.naturalWidth); // getter, *note - naturalWidth is a getter only, you cannot set
+// pic.width = 200; // setter
