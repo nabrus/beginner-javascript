@@ -64,3 +64,4 @@
 
 *  Node vs. Element
 *  Node/Element - Properties and Methods
+*  Classes - Using Element.classList
