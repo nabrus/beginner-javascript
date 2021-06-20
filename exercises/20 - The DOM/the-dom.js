@@ -54,4 +54,9 @@ pic.addEventListener('click', toggleRound);
 pic.alt = 'another random  pic'; // setter
 console.log(pic.alt); // getter
 console.log(pic.naturalWidth); // getter, *note - naturalWidth is a getter only, you cannot set
-// pic.width = 200; // setter
+pic.width = 200; // setter
+
+// Methods
+// These methods differ from using the above setters/getters because you can also set custom named attributes. Note that it is discouraged from using.
+pic.setAttribute('alt', 'no description available');
+console.log(pic.getAttribute('alt'));
