@@ -57,6 +57,23 @@ console.log(pic.naturalWidth); // getter, *note - naturalWidth is a getter only,
 pic.width = 200; // setter
 
 // Methods
-// These methods differ from using the above setters/getters because you can also set custom named attributes. Note that it is discouraged from using.
+/* These methods differ from using the above setters/getters because you can
+also set custom named attributes. Note that changing the name of attributes is
+discouraged from using. See Data attributes below for proper use of adding data
+to an element */
 pic.setAttribute('alt', 'no description available');
 console.log(pic.getAttribute('alt'));
+
+// Data Attributes
+/* `data-* attributes allow us to store extra information on standard, semantic
+HTML elements without other hacks such as non-standard attributes, or extra
+properties on DOM. */
+const custom = document.querySelector('.custom');
+// To get the 'data-` attribute you call `dataset`, which returns an object with all the property values.
+console.log(custom.dataset);
+
+// An example of why you would use data attributes
+// An alert box when pic is clicked
+custom.addEventListener('click', () => {
+  alert(`Welcome ${custom.dataset.name} ${custom.dataset.last} `);
+});
