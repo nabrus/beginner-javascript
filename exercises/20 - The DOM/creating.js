@@ -31,3 +31,15 @@ myDiv.appendChild(myParagraph);
 myDiv.appendChild(myImage);
 // Now dump it into the DOM once
 document.body.appendChild(myDiv);
+
+// Adding something on top, like a heading;
+
+const heading = document.createElement('h2');
+
+heading.textContent = 'Shake and bake!';
+
+myDiv.insertAdjacentElement('afterbegin', heading);
+
+// Creating an unordered list
+
+const list = document.createElement('ul');
