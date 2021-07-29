@@ -59,4 +59,9 @@ list.appendChild(itemFour);
 list.appendChild(itemFive);
 document.body.appendChild(list);
 
+const itemThree = document.createElement('li');
+itemThree.textContent = 'Three';
+
+itemTwo.insertAdjacentElement('afterend', itemThree);
+
 console.log(itemOne);
