@@ -68,4 +68,26 @@ itemThree.textContent = 'Three';
 
 itemTwo.insertAdjacentElement('afterend', itemThree);
 
-console.log(itemOne);
+// Wes' example of ul
+const wesList = document.createElement('ul');
+const li = document.createElement('li');
+li.textContent = 'Three';
+wesList.appendChild(li);
+
+document.body.insertAdjacentElement('afterbegin', wesList);
+
+const li5 = document.createElement('li');
+li5.textContent = 'Five';
+wesList.append(li5);
+
+const li1 = li5.cloneNode(); // has the option of 'true' for deep-the whole subtree including text in the child
+li1.textContent = 'One';
+wesList.insertAdjacentElement('afterbegin', li1);
+
+const li4 = document.createElement('li');
+li4.textContent = 'Four';
+li5.insertAdjacentElement('beforebegin', li4);
+
+const li2 = document.createElement('li');
+li2.textContent = 'Two';
+li1.insertAdjacentElement('afterend', li2);
