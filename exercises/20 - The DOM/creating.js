@@ -43,3 +43,13 @@ myDiv.insertAdjacentElement('afterbegin', heading);
 // Creating an unordered list
 
 const list = document.createElement('ul');
+const itemOne = document.createElement('li');
+const itemTwo = document.createElement('li');
+const itemFour = document.createElement('li');
+const itemFive = document.createElement('li');
+
+itemOne.textContent = 'One';
+itemTwo.textContent = 'Two';
+itemFour.textContent = 'Four';
+itemFive.textContent = 'Five';
+console.log(itemOne);
