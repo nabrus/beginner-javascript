@@ -40,7 +40,7 @@ heading.textContent = 'Shake and bake!';
 
 myDiv.insertAdjacentElement('afterbegin', heading);
 
-// Creating an unordered list
+// Creating an unordered list and adding it to the DOM
 
 const list = document.createElement('ul');
 const itemOne = document.createElement('li');
@@ -52,4 +52,11 @@ itemOne.textContent = 'One';
 itemTwo.textContent = 'Two';
 itemFour.textContent = 'Four';
 itemFive.textContent = 'Five';
+
+list.appendChild(itemOne);
+list.appendChild(itemTwo);
+list.appendChild(itemFour);
+list.appendChild(itemFive);
+document.body.appendChild(list);
+
 console.log(itemOne);
