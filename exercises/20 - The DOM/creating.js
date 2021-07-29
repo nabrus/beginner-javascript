@@ -42,23 +42,27 @@ myDiv.insertAdjacentElement('afterbegin', heading);
 
 // Creating an unordered list and adding it to the DOM
 
+// Create elements ul and li
 const list = document.createElement('ul');
 const itemOne = document.createElement('li');
 const itemTwo = document.createElement('li');
 const itemFour = document.createElement('li');
 const itemFive = document.createElement('li');
 
+// Add text to li elements
 itemOne.textContent = 'One';
 itemTwo.textContent = 'Two';
 itemFour.textContent = 'Four';
 itemFive.textContent = 'Five';
 
+// Add elements then attach to DOM
 list.appendChild(itemOne);
 list.appendChild(itemTwo);
 list.appendChild(itemFour);
 list.appendChild(itemFive);
 document.body.appendChild(list);
 
+// Create list item three and add to DOM
 const itemThree = document.createElement('li');
 itemThree.textContent = 'Three';
 
