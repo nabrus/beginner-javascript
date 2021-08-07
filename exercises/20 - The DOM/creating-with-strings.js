@@ -21,7 +21,6 @@ item.innerHTML = myHTML;
 const myFragment = document.createRange().createContextualFragment(myHTML);
 
 // Now the HTML is elements and can be selected
-
 console.log(myFragment.querySelector('img'));
 console.log(myFragment);
 
