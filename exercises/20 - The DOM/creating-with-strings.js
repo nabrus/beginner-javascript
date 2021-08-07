@@ -1,3 +1,4 @@
+// Warning: Adding in HTML as strings is a security risk. You need to scrub for threats. See later examples in security vids. This is just an intro and doesn't include security steps.
 const item = document.querySelector('.item');
 
 const width = 500;
