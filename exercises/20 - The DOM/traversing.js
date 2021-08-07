@@ -31,7 +31,7 @@ console.log(steve.parentNode); // <body>...</body>
 const example = document.querySelector('.example');
 example.remove();
 
-// Another example
+// Another example-creating an element then removing. Will it still be available after removal?...
 const p = document.createElement('p');
 p.textContent = 'I will be removed';
 document.body.appendChild(p);
