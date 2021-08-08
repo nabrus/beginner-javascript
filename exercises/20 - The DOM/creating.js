@@ -1,6 +1,6 @@
 // Creating HTML elements
 /*
-  `document.createElement()  method creates the HTML element specified by tagName
+  `document.createElement()` method creates the HTML element specified by tagName
 */
 
 // Create a 'p' element
