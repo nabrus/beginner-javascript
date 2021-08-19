@@ -5,10 +5,13 @@ const myDiv = document.createElement('div');
 myDiv.classList.add('wrapper');
 
 // put it into the body
+document.body.appendChild(myDiv);
 
 // make an unordered list
+const myList = document.createElement('ul');
 
 // add three list items with the words "one, two three" in them
+
 // put that list into the above wrapper
 
 // create an image
