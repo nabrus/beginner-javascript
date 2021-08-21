@@ -11,6 +11,12 @@ document.body.appendChild(myDiv);
 const myList = document.createElement('ul');
 
 // add three list items with the words "one, two three" in them
+const listItems = `
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+`;
+myList.innerHTML = listItems;
 
 // put that list into the above wrapper
 
