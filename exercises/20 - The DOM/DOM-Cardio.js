@@ -19,14 +19,25 @@ const listItems = `
 myList.innerHTML = listItems;
 
 // put that list into the above wrapper
+myDiv.appendChild(myList);
 
 // create an image
+const myImage = document.createElement('img');
 
 // set the source to an image
+myImage.src = 'https://picsum.photos/200';
+
 // set the width to 250
+myImage.width = 250;
+
 // add a class of cute
+myImage.classList = 'cute';
+
 // add an alt of Cute Puppy
+myImage.alt = 'Cute Puppy';
+
 // Append that image to the wrapper
+myDiv.insertAdjacentElement('afterbegin', myImage);
 
 // with HTML string, make a div, with two paragraphs inside of it
 // put this div before the unordered list from above
