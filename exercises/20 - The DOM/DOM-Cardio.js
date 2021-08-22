@@ -40,6 +40,13 @@ myImage.alt = 'Cute Puppy';
 myDiv.insertAdjacentElement('afterbegin', myImage);
 
 // with HTML string, make a div, with two paragraphs inside of it
+const myHTML = `
+  <div>
+    <p>Do or do not...</p>
+    <p>...there is no try.</p>
+  </div>
+`;
+
 // put this div before the unordered list from above
 
 // add a class to the second paragraph called warning
