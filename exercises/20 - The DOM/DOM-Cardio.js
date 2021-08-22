@@ -48,6 +48,9 @@ const myHTML = `
 `;
 
 // put this div before the unordered list from above
+const myPara = document.createRange().createContextualFragment(myHTML);
+
+myDiv.appendChild(myPara);
 
 // add a class to the second paragraph called warning
 // remove the first paragraph
