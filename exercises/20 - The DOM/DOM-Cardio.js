@@ -11,15 +11,16 @@ document.body.appendChild(myDiv);
 const myList = document.createElement('ul');
 
 // add three list items with the words "one, two three" in them
-const listItems = `
+const myItems = `
   <li>One</li>
   <li>Two</li>
   <li>Three</li>
 `;
-myList.innerHTML = listItems;
+
+myList.innerHTML = myItems;
 
 // put that list into the above wrapper
-myDiv.appendChild(myList);
+myDiv.append(myList);
 
 // create an image
 const myImage = document.createElement('img');
@@ -37,7 +38,7 @@ myImage.classList = 'cute';
 myImage.alt = 'Cute Puppy';
 
 // Append that image to the wrapper
-myDiv.insertAdjacentElement('afterbegin', myImage);
+myDiv.append(myImage);
 
 // with HTML string, make a div, with two paragraphs inside of it
 const myHTML = `
@@ -48,9 +49,7 @@ const myHTML = `
 `;
 
 // put this div before the unordered list from above
-const myPara = document.createRange().createContextualFragment(myHTML);
-
-myDiv.appendChild(myPara);
+myDiv.insertAdjacentHTML('afterbegin', myHTML);
 
 // add a class to the second paragraph called warning
 // remove the first paragraph
