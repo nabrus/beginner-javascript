@@ -52,7 +52,14 @@ const myHTML = `
 myDiv.insertAdjacentHTML('afterbegin', myHTML);
 
 // add a class to the second paragraph called warning
+const myFrag = document.createRange().createContextualFragment(myHTML);
+const divPara = myFrag.querySelectorAll('p');
+
+divPara.item(1).classList.add('warning');
+
 // remove the first paragraph
+const paraOne = divPara.item(0);
+paraOne.remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
