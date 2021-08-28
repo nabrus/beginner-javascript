@@ -49,10 +49,10 @@ const myHTML = `
 `;
 
 // put this div before the unordered list from above
-myDiv.insertAdjacentHTML('afterbegin', myHTML);
+myList.insertAdjacentHTML('beforebegin', myHTML);
 
 // add a class to the second paragraph called warning
-myDiv.children[1].classList.add('warning');
+// myDiv.children[0].classList.add('warning');
 // remove the first paragraph
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
