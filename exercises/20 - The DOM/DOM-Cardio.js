@@ -60,6 +60,14 @@ paraDiv.children[1].classList.add('warning');
 paraDiv.children[0].remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
+function generatePlayerCard(name, age, height) {
+  const html = `<div class="playerCard">
+  <h2>${name} — ${age}</h2>
+  <p>They are ${height} and ${age} years old. In Dog years this person would be ${age *
+    7}. That would be a tall dog!</p>
+</div>`;
+  return html;
+}
 
 // have that function return html that looks like this:
 // <div class="playerCard">
