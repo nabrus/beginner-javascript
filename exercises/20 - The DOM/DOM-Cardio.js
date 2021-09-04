@@ -63,7 +63,7 @@ paraDiv.children[0].remove();
 function generatePlayerCard(name, age, height) {
   const html = `<div class="playerCard">
   <h2>${name} — ${age}</h2>
-  <p>They are ${height} and ${age} years old. In Dog years this person would be ${age *
+  <p>They are ${height} tall and ${age} years old. In Dog years this person would be ${age *
     7}. That would be a tall dog!</p>
 </div>`;
   return html;
@@ -76,6 +76,8 @@ function generatePlayerCard(name, age, height) {
 // </div>
 
 // make a new div with a class of cards
+const cards = document.createElement('div');
+cards.classList.add('cards');
 
 // Have that function make 4 cards
 
