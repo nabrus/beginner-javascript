@@ -27,7 +27,7 @@ const html = `
 // Another example of using the backtick-template literals (template strings)
 // for expression/variable interpolation
 const age = 4;
-const hello = `Hello my name is ${first}. Nice to meet you! In 10 more years I'll be ${10 + age}`; 
+const hello = `Hello my name is ${first}. Nice to meet you! In 10 more years I'll be ${10 + age}`;
 
 // Combining both multi-line and interpolation example
 const html1 = `
