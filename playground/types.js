@@ -12,6 +12,11 @@ const sentenceA = "She's so cool";   // mixing double and single
 const sentenceB = `She's so "cool"`; // mixing all three types
 
 // Multi-line strings use escaping or backtick (template literals)
+
+const animalChorus = `I'd rather be
+I'd rather be with
+I'd rather be with an animal`;
+
 // Creating HTML for example:
 const html = `
 <div>
