@@ -73,6 +73,8 @@ const dadGets = blueberries % kids;
 console.log(10 ** 2);     // 100
 console.log(1000 ** 200); // Infinity
 
+// Note Typeof Infinity and -Infinity = number
+
 // NAN (not a number)
 console.log(typeof(NaN)); // number
 
