@@ -82,7 +82,7 @@ console.log(typeof(NaN)); // number
 /* OBJECT */
 
 const person = {
-  first: 'Han',
+  first: 'Han', // property and value
   last: 'Solo',
   age: 45,
 };
