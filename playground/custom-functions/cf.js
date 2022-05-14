@@ -37,7 +37,7 @@ function sayHiTo(firstName) {
 const greeting = sayHiTo('Luke');
 console.log(greeting); // Hi Luke!
 
-// Passing expressions //
+// Passing expressions or running expressions passed in
 const myTotal2 = calMyBill(20 + 20 + 30 + 20, 0.15);
 console.log(myTotal2); // 103.49999999999999
 
