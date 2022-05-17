@@ -1,10 +1,10 @@
-// FUNCTION DECLARATION  (Function Statement, or Function Definition) //
+// FUNCTION DECLARATION (Function Statement, or Function Definition)
 function doctorize(firstName) {
   return `Dr. ${firstName}`;
 }
 
 // FUNCTION EXPRESSIONS - storing a function as a value in a variable //
-// This also is an anonymous function - a function with no name
+// Note: stored function is an anonymous function - a function with no name
 const doctorize2 = function(firstName) {
   return `Dr. ${firstName}`;
 };
