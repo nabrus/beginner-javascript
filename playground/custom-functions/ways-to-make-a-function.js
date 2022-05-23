@@ -17,12 +17,12 @@ function inchToCM(inches) {
   // Can also condense to `return inches * 2.54`
 }
 
-console.log(inchToCM(3));
+console.log(inchToCM(3)); // 7.62
 
 // Converted to an arrow function
 const inchToCMArrow = inches => inches * 2.54;
 
-console.log(inchToCMArrow(6));
+console.log(inchToCMArrow(3)); // 7.62
 
 // Another example
 function add(a, b = 3) {
@@ -35,6 +35,21 @@ console.log(add(4)); // 7
 const addArrow = (a, b = 3) => a + b;
 
 console.log(addArrow(7)); // 10
+
+// Example of when an arrow function is not the best option. Returning an object.
+function makeACar(make, model) {
+  const car = {
+    vehicle: `${make} ${model}`,
+    engineType: 'electric',
+  };
+  return car;
+}
+
+// Converted to an arrow doesn't have as clear  readability.
+const makeACarArrow = (make, model) => ({
+  vehicle: `${make} ${model}`,
+  engineType: 'electric',
+});
 
 // IIFE (Immediately Invoked Function Expression)
 (function() {
