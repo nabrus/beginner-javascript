@@ -6,6 +6,9 @@
 
 ## Index
 
+### [Variables](https://github.com/nabrus/beginner-javascript/blob/master/playground/variables.html)
+*  `var`, `let`, and `const`
+
 ### [JS Data Types](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
 *  String
 *  Number
