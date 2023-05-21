@@ -14,7 +14,8 @@
 *  Number
 *  Object
 *  `null` and `undefined`
-*  Boolean 
+*  Boolean
+*  Symbol 
 
 ### Functions
 
