@@ -76,6 +76,7 @@ console.log(1000 ** 200); // Infinity
 // Note Typeof Infinity and -Infinity = number
 
 // NAN (not a number)
+console.log(10 / 'dog') // NaN
 console.log(typeof(NaN)); // number
 
 
