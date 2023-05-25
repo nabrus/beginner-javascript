@@ -102,6 +102,10 @@ console.log(dog); // undefined
 // Expressing intentional absence for a value - null
 const extraMoney = null; 
 
+// Recap
+let  somethingUndefined; // No value assigned
+const somethingNull = null; // `null` has to be explicitly assigned, so it has a value of nothing
+
 
 /* BOOLEAN */
 
