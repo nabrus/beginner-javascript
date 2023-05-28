@@ -122,13 +122,14 @@ let transport = "XWing";
 transport = "Snow Speeder";
 
 // double  equal (==) - Note: not best practice, use triple equal (===)
-// checks if the values are equal
+// Double `=` checks if the values are equal
 console.log(10 == 10);  // true
-// checks if the value and types are equal
-console.log(10 === 10); // true
-
 console.log("10" == 10);  // true
+
+// Triple `=` checks if the value and types are equal
+console.log(10 === 10); // true
 console.log("10" === 10); // false
+
 
 
 /* SYMBOL */
