@@ -130,3 +130,38 @@ console.log(10 === 10); // true
 console.log("10" == 10);  // true
 console.log("10" === 10); // false
 
+
+/* SYMBOL */
+
+/* `Symbol` is a data type in JavaScript used for creating unique and immutable values that can be used as property keys for object properties. They are often used to define private or hidden properties and provide a level of uniqueness and immutability in JavaScript programs.
+*/
+
+// Create using the `Symbol()` function
+const newSymbol = Symbol();
+
+// An optional description can be used for easier identifying or debugging
+const newerSymbol = Symbol('description');
+
+// Symbols with the same description are not equal
+const symbol1 = Symbol('The description');
+const symbol2 = Symbol('The description');
+
+console.log(symbol1 === symbol2); // false
+
+
+// Symbols can be use as property keys
+const symbolKey = Symbol('key');
+
+const obj = {
+  [symbolKey]: 'value',
+};
+
+console.log(obj[symbolKey]); // Output: value
+
+
+/*
+Overall, symbols provide a way to create unique identifiers and avoid potential conflicts when defining object properties, making them useful for various purposes in JavaScript.
+*/
+
+
+
