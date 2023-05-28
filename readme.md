@@ -15,6 +15,7 @@
 *  Object
 *  `null` and `undefined`
 *  Boolean
+    * Equality: difference between `=` vs. `==` vs. `===`
 *  Symbol 
 
 ### Functions
