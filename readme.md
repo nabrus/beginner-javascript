@@ -28,7 +28,7 @@
 
 ### Function Definition Diagram
 
-![Function Definition Diagram](images/function-definition.jpg)
+[Function Definition Diagram](images/function-definition.jpg)
 
 *  [Declaring Functions](https://github.com/nabrus/beginner-javascript/blob/master/playground/custom-functions/ways-to-make-a-function.js)
      *  Function Declaration (Function Statement, Function Definition)
