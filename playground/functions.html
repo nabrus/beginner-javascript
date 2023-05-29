@@ -128,10 +128,25 @@
     delectus nesciunt facere dicta quaerat magnam illo nisi, nam officiis! Tempora, saepe dolore nam tenetur harum
     maiores! Inventore.</p>
   <script>
+    // Document Object Model (DOM) API
     const p = document.querySelector('p');
-    console.log(p);
+    // document.querySelector() method used to select and retrieve the first element that matches a specific CSS selector within the document
+    console.log(p); // <p>Hey How ya doin?</p>
 
+    // Window.scrollTo() scrolls to a particular set of coordinates in the document
     window.scrollTo({ top: 500, bottom: 400, behavior: 'smooth' });
+
+    // Math object is a built-in object that provides mathematical operations and functions
+    // It contains properties and methods for performing common mathematical tasks without the need to create custom functions.
+    const decimal = 4.5555;
+    console.log(Math.floor(decimal)); // 4
+    // Returns the largest integer less than or equal to x.
+
+    console.log(Math.ceil(decimal)); // 5
+    // Returns the smallest integer greater than or equal to x.
+
+    console.log(Math.random());
+    // Returns a random floating-point number between 0 (inclusive) and 1 (exclusive).
   </script>
 </body>
 
