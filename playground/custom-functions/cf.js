@@ -6,7 +6,7 @@ function calculateBill() {
   // Function body or block
 }
 
-// Call, Run or Invoke a function
+// Call, Run, or Invoke a function
 calculateBill();
 
 // PARAMETERS and ARGUMENTS //
