@@ -40,6 +40,10 @@ console.log(greeting); // Hi Luke!
 // Passing expressions or running expressions passed in
 const myTotal2 = calMyBill(20 + 20 + 30 + 20, 0.15);
 console.log(myTotal2); // 103.49999999999999
+// Another example
+const wyattsBill = 100;
+const myTotal3 = calMyBill(wyattsBill + 50, 0.15);
+console.log(myTotal3); // 172.5
 
 // Passing functions as arguments //
 function doctorize(name) {
