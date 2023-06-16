@@ -2,9 +2,15 @@
 function doctorize(firstName) {
   return `Dr. ${firstName}`;
 }
+// A note on HOISTING
+// Function hoisting in JavaScript is a behavior where function declarations
+// are moved to the top of their containing scope during the compilation phase,
+// before the code is executed. This means that you can use a function before
+// it is declared in your code, as if it had been declared at the top.
+// Generally not considered a good practice
 
 // FUNCTION EXPRESSIONS - storing a function as a value in a variable //
-// Note: stored function is an anonymous function - a function with no name
+// Note: The stored function is an anonymous function - a function with no name
 const doctorize2 = function(firstName) {
   return `Dr. ${firstName}`;
 };
