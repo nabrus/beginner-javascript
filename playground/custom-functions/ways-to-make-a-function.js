@@ -16,6 +16,7 @@ const doctorize2 = function(firstName) {
 };
 
 // ARROW FUNCTION //
+// Note: an arrow function can also be considered an anonymous function
 // Function declaration
 function inchToCM(inches) {
   const cm = inches * 2.54;
@@ -64,7 +65,7 @@ const makeACarArrow = (make, model) => ({
 })();
 
 /* eslint-disable */
-// METHOD - a function which is a property of an object. Or simply, functions that live inside objects. //
+// A METHOD - is a function which is a property of an object. Or simply, functions that live inside objects. //
 
 const threepio = {
   name: 'C3PO',
