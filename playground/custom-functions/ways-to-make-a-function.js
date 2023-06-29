@@ -65,7 +65,7 @@ const makeACarArrow = (make, model) => ({
 })();
 
 /* eslint-disable */
-// A METHOD - is a function which is a property of an object. Or simply, functions that live inside objects. //
+// A METHOD - is a function that is a property of an object. Or simply, functions that live inside objects. //
 
 const threepio = {
   name: 'C3PO',
