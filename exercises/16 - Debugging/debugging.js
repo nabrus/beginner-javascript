@@ -47,9 +47,9 @@ people.forEach((person, index) => {
   Example of call stack when en error is thrown in the console:
 
   Uncaught ReferenceError: doesntExist is not defined
-    at greet (debugging.js:65) // function that has an  error in the call stack
+    at greet (debugging.js:65) // function that has an error in the call stack
     at go (debugging.js:70) 
-    at <anonymous>:1:1 // start of call stack
+    at <anonymous>:1:1 // start of call stack, called the function in the browser console
 
   greet	      @	debugging.js:65
   go	        @	debugging.js:70
@@ -62,12 +62,16 @@ people.forEach((person, index) => {
   `$(selector, element)`
   Equivalent to `document.querySelector()
   Looks up a CSS selector string `selector`, returning the first node descended from `element` that matches. If unspecified, `element` defaults to `document`.
+  `$('p')` selects the first paragraph element
 
   `$$(selector, element)`
   Equivalent to document.querySelectorAll()`, but returns an array instead of a NodeList.
+  `$$('p')` selects all paragraph elements
 
   `$0`
   The currently inspected element in the page.
+
+  Remember these are only available in the console
 */
 
 // Breakpoints
