@@ -76,8 +76,8 @@ people.forEach((person, index) => {
 
 // Breakpoints
 /*
-  Adding a `debugger` statement inside your code
-  debugger statement invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.
+  Adding a `debugger;` statements inside your code.
+  A debugger statement invokes any available debugging functionality, such as setting a breakpoint. If no debugging functionality is available, this statement has no effect.
 
   Another way is to set breakpoints right inside the browsers dev tools Sources tab by clicking on the line.
 
@@ -88,10 +88,11 @@ people.forEach((person, index) => {
 // the context in which values and expressions (variables) are visible or can be referenced.
 
 // Network Requests
-// Using the Network tab in dev tools.
+// Using the Network tab in dev tools allows you to see all pages requested.
 
 // Break On Attribute
-// Highlight a line in the Elements tab, select Break on, then the next sub-menu item to
+// Highlight a line in the Elements tab, double-click, select Break on, then the next sub-menu item to break on one of the drop-down selections.
+// sub tree modifications, attribute modifications, or node removal
 
 // Some Setup Code
 
