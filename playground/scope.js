@@ -29,7 +29,7 @@ const age = 100;
 
 function go() {
   const hair = 'blonde'; // Only available within this `go` function
-  // `age` is available do to scope lookup-if var is not found within current scope, it will then go up a level higher to see if var is available there, etc.
+  // `age` is available do to scope lookup-if the variable is not found within current scope, it will then go up a level higher to see if the variable is available there, etc.
   console.log(age); // 100
   /* 
     Be cautious of shadow variables. For example if the fallowing was defined inside this function:
