@@ -13,7 +13,8 @@
   GLOBAL SCOPE - refers to the context within which variables/expressions are accessible to every part of the program.
 
   A browsers global scope is the `Window`
-  **NOTE: declaring variables with `let` or `const` does not attach them to the window unlike `var`. AND global variables are not good practice!
+  **NOTE: declaring variables with `let` or `const` does not attach them to the window unlike `var`. Functions declared in global scope will also be attached 
+  to the window.  **BUT global variables are not good practice!**
 
 *********************************************** */
 // Global variables are variables that exist within global scope.
