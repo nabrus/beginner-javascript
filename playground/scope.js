@@ -69,7 +69,14 @@ for(var i = 0; i < 10; i++) {
 }
 
 /* LEXICAL SCOPE */
+// Lexical scope is a fundamental concept in JavaScript that determines how 
+// variables are accessed and referenced in a program.
+
 // Scope lookup for variables are where functions are defined not where they are run (invoked).
+
+// Lexical scope in JavaScript allows functions to access 
+// variables from their parent functions, creating a 
+// hierarchical structure of variable accessibility.
 
 const dog = 'Sandy';
 
@@ -83,3 +90,15 @@ function goDog() {
 }
 
 goDog();
+
+/* Function Scope */
+function sayHi(name) {
+  function yell() { // `yell` function scoped to parent function `sayHi`
+    console.log(name.toUpperCase())
+  }
+  yell();
+}
+
+yell() // Uncaught ReferenceError: yell is not defined
+
+// NOTE - generally functions inside one another are  rarely used. With the exception of closures.
