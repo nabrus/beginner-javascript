@@ -113,7 +113,7 @@ const somethingNull = null; // `null` has to be explicitly assigned, so it has a
 let isDrawing = false;
 
 const currentAge = 18;
-const ofAge = age > 19;
+const ofAge = currentAge > 19;
 console.log(ofAge); // false
 
 // Equality 
