@@ -20,7 +20,8 @@ function calMyBill(billAmt, taxRate) {
 }
 
 const myTotal = calMyBill(200, 0.13);
-console.log(calMyBill(100, 0.13), myTotal); // 112.99999999999999 225.99999999999997
+console.log(calMyBill(100, 0.13), myTotal);
+// 112.99999999999999 225.99999999999997
 
 // Passing variables as args //
 const theDudesTotal = 500;
