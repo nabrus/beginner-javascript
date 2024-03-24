@@ -52,7 +52,7 @@ function makeACar(make, model) {
   return car;
 }
 
-// Converted to an arrow doesn't have as clear  readability.
+// Converted to an arrow doesn't have as clear readability.
 const makeACarArrow = (make, model) => ({
   vehicle: `${make} ${model}`,
   engineType: 'electric',
