@@ -102,7 +102,7 @@ function doALotOfStuff() {
   console.warn('Watch out, the bridge is out!');
   console.error('Not good');
   console.log('OK, last one of the group.');
-  console.groupEnd('Doing some stuff'); // exits group, note pass in same string used to open group
+  console.groupEnd('Doing some stuff'); // exits group, note: pass in same string used to open group
 }
 
 function doctorize(name) {
