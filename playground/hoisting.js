@@ -16,6 +16,7 @@ function add(a, b) {
 }
 
 // Variable declarations
+// Note only works with var, not let or const
 console.log(age); // undefined because only declarations are hoisted (var age;), no initialization (assigning the value - 10) has happened at this stage
 
 var age = 10;
