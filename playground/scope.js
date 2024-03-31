@@ -62,9 +62,10 @@ function go() {
 function isCool(name) {
   let cool; // exists in function scope
   if (name === 'Steve') {
-    cool = true;
+    cool = true; // blocked scoped - will reach out one level to find declared var
   }
-  return cool;
+  // console.log(cool);
+  return cool; // isCool('Steve'); will return `true`
 }
 /* eslint-disable */
 // Using `var` for this loop will alow the `i` variable to leak out to global scope. So after this loop runs, `i` = 10 outside that scope.  Using `let` here to declare `i` would make it block scoped.
