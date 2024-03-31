@@ -16,6 +16,6 @@ function add(a, b) {
 }
 
 // Variable declarations
-console.log(age); // undefined because only declarations are hoisted, no initialization (assigning the value) has happened at this stage
+console.log(age); // undefined because only declarations are hoisted (var age;), no initialization (assigning the value - 10) has happened at this stage
 
 var age = 10;
