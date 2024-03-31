@@ -104,6 +104,7 @@ function sayHi(name) {
   yell();
 }
 
-yell() // Uncaught ReferenceError: yell is not defined
+sayHi('wyatt'); // WYATT
+yell(); // Uncaught ReferenceError: yell is not defined
 
-// NOTE - generally functions inside one another are  rarely used. With the exception of closures.
+// NOTE - generally functions inside one another are rarely used. With the exception of closures.
