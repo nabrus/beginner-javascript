@@ -86,15 +86,15 @@ for(var i = 0; i < 10; i++) {
 const dog = 'Sandy';
 
 function logDog() {
-  console.log(dog); // `Sandy` will get passed in
+  console.log(dog); // logDog defined: variable look-up, moves onto global scope in this instance; step 3
 }
 
 function goDog() {
   const dog = 'Snoopy';
-  logDog();
+  logDog(); // logDog invoked when goDog is run;  step 2
 }
 
-goDog();
+goDog(); // Invoked goDog function; step 1
 
 /* Function Scope */
 function sayHi(name) {
