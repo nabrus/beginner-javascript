@@ -33,6 +33,8 @@
 
     const innerFn = outer();
     // innerFn();
+    // The inner function still has access to the outer functions variable.
+    // Even though the outer function has completed.
 
     // Example of a closure creating a function
     function createGreeting(greeting = '') {
