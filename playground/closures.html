@@ -57,18 +57,18 @@
       return function win() {
         // eslint-disable-next-line no-plusplus
         score++;
-        return `Your game ${gameName} score is ${score}`;
+        return `Your ${gameName} score is ${score}`;
       };
     }
 
     const hockeyGame = createGame('Hockey');
     const soccerGame = createGame('Soccer');
-    console.log(hockeyGame()); // Your game Hockey score is 1
-    console.log(hockeyGame()); // Your game Hockey score is 2
-    console.log(soccerGame()); // Your game Soccer score is 1
-    console.log(hockeyGame()); // Your game Hockey score is 3
-    console.log(soccerGame()); // Your game Soccer score is 2
-    console.log(hockeyGame()); // Your game Hockey score is 4
+    console.log(hockeyGame()); // Your Hockey score is 1
+    console.log(hockeyGame()); // Your Hockey score is 2
+    console.log(soccerGame()); // Your Soccer score is 1
+    console.log(hockeyGame()); // Your Hockey score is 3
+    console.log(soccerGame()); // Your Soccer score is 2
+    console.log(hockeyGame()); // Your Hockey score is 4
   </script>
 </body>
 
