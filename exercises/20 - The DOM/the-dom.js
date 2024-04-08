@@ -14,12 +14,19 @@ const item2Image = item2.querySelector('img');
 // console.log(item2); // <div class="item item2">...</div>
 // console.log(item2Image); // <img src="https://picsum.photos/200">
 
-const heading = document.querySelector('h2');
+const heading = document.querySelector('h2'); // Selects the `h2` element which is an object
+// console.dir(heading) // h2
+/* The console.dir() static method displays a list of the properties of the 
+specified JavaScript object. In browser consoles, the output is presented as a 
+hierarchical listing with disclosure triangles that let you see the contents of 
+child objects. */
+
 // console.log(heading.textContent); // I am a heading
-// // Set the texContent property on the 'h2' element
+
+// Set the texContent property on the 'h2' element
 // heading.textContent = 'May the force be with you';
-console.log(heading.textContent); // May the force be with you
-console.log(heading.innerText);
+console.log(heading.textContent); // retrieves or sets text within element, regardless of CSS styling
+console.log(heading.innerText); // retrieves or sets text but is aware of CSS styling
 
 console.log(heading.innerHTML);
 console.log(heading.outerHTML);
