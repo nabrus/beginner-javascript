@@ -14,6 +14,18 @@ const item2Image = item2.querySelector('img');
 // console.log(item2); // <div class="item item2">...</div>
 // console.log(item2Image); // <img src="https://picsum.photos/200">
 
+// Nodes vs. Elements (element nodes)
+/* In the DOM, a node is a generic term used to describe any individual object 
+in the document tree. There are several types, including element nodes, text 
+nodes, comment nodes, and attribute nodes. Every element, attribute, and piece 
+of text in an HTML document is represented by a node in the DOM tree. */
+
+/* Elements are one of the most common types of nodes in the DOM and correspond directly to the tags in an HTML document. */
+
+/* While all elements are nodes, not all nodes are elements. Nodes are the 
+building blocks of the DOM, representing any object in the document tree, while 
+elements specifically refer to nodes that represent HTML elements. */
+
 const heading = document.querySelector('h2'); // Selects the `h2` element which is an object
 // console.dir(heading) // h2
 /* The console.dir() static method displays a list of the properties of the 
