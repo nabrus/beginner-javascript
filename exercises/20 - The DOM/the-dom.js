@@ -27,11 +27,13 @@ building blocks of the DOM, representing any object in the document tree, while
 elements specifically refer to nodes that represent HTML elements. */
 
 const heading = document.querySelector('h2'); // Selects the `h2` element which is an object
-// console.dir(heading) // h2
+// console.dir(heading) // h2 (object)
 /* The console.dir() static method displays a list of the properties of the 
 specified JavaScript object. In browser consoles, the output is presented as a 
 hierarchical listing with disclosure triangles that let you see the contents of 
-child objects. */
+child objects. 
+
+console.dir()  provides a detailed representation of the object, including its properties, methods, and their values. */
 
 // console.log(heading.textContent); // I am a heading
 
