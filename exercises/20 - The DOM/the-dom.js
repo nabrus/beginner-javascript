@@ -37,6 +37,7 @@ console.dir()  provides a detailed representation of the object, including its p
 
 // console.log(heading.textContent); // I am a heading
 
+// Getters & Setters - using the properties to 'get' or 'set'
 // Set the texContent property on the 'h2' element
 // heading.textContent = 'May the force be with you';
 console.log(heading.textContent); // retrieves or sets text within element, regardless of CSS styling
@@ -51,7 +52,7 @@ console.log(pizzaList.textContent);
 // One method of adding onto content. Note - can be expensive when adding a lot of content
 // pizzaList.textContent = `${pizzaList.textContent} 🍕`;
 
-// Another way is by using `insertAdjacentText` method
+// Another way is by using `insertAdjacentText()` method
 pizzaList.insertAdjacentText('afterbegin', '🍕');
 pizzaList.insertAdjacentText('beforeend', '🍕');
 
