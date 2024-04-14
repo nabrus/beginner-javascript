@@ -73,7 +73,7 @@
      *  `console.dir()`
      *  Getters & Setters - using properties to 'get' or 'set'
           *  `.textContent` vs. `.innerText`
-          *  `.innerHTML` and `.outerHTML`
+          *  `.innerHTML` & `.outerHTML`
      *  Methods
           *  `insertAdjacentText()`
 
