@@ -68,14 +68,14 @@
 ### The Dom
 
 *  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
-*  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
-*  Nodes vs. Elements
-*  `console.dir()`
-*  Getters & Setters - using properties to 'get' or 'set'
-     *  `.textContent` vs. `.innerText`
-     *  `.innerHTML` and `.outerHTML`
-*  Methods
-     *  `insertAdjacentText()`
+     *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
+     *  Nodes vs. Elements
+     *  `console.dir()`
+     *  Getters & Setters - using properties to 'get' or 'set'
+          *  `.textContent` vs. `.innerText`
+          *  `.innerHTML` and `.outerHTML`
+     *  Methods
+          *  `insertAdjacentText()`
 
 *  [Node/Element - Properties and Methods](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
 *  [Classes - Using Element.classList](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
