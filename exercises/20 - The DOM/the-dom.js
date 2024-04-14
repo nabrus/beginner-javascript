@@ -56,11 +56,11 @@ console.log(pizzaList.textContent);
 pizzaList.insertAdjacentText('afterbegin', '🍕');
 pizzaList.insertAdjacentText('beforeend', '🍕');
 
-/* CLASSES */
+/* CLASSES - interact with the classes of an HTML element */
 const pic = document.querySelector('.animatePic');
-// The `Element.classList` is a read-only property that returns a live
-// DOMTokenList collection of the class attributes of the element. This
-// can then be used to manipulate the class list.
+/* The `Element.classList` is a read-only property that returns a live 
+DOMTokenList collection of the class attributes of the element. This collection 
+represents the classes attached to the element as a space-separated string.Which can then be used to manipulate the class list. */
 pic.classList.add('open');
 pic.classList.remove('anotherClass');
 console.log(pic.classList);
