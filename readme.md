@@ -79,7 +79,7 @@
      * Interacting with classes of an HTML element using `element.classList`
           *  `element.classList.add("newClass");`
           *  `element.classList.remove("class");`
-          *  `element.classList.toggle("active");`
+          *  `element.classList.toggle("class");`
 
 *  [Node/Element - Properties and Methods](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
 *  [Classes - Using Element.classList](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
