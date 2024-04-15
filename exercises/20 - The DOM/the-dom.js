@@ -80,7 +80,7 @@ console.log(pic.naturalWidth); // getter, *note - naturalWidth is a getter only,
 pic.width = 200; // setter
 
 // naturalWidth shows zero on first console log because image not fully loaded yet. So the following can be used to get the correct output of 500...
-window.addEventListener('load', () => {
+pic.addEventListener('load', () => {
   console.log(pic.naturalWidth);
 });
 
