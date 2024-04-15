@@ -74,7 +74,7 @@ pic.addEventListener('click', toggleRound);
 
 // Attributes - additional info for elements. Examples `id`, `class`, `src`, `alt`...
 // Updating, adding, getters/setters
-pic.alt = 'another random  pic'; // setter
+pic.alt = 'another random pic'; // setter - setting the `alt` attribute
 console.log(pic.alt); // getter
 console.log(pic.naturalWidth); // getter, *note - naturalWidth is a getter only, you cannot set
 pic.width = 200; // setter
