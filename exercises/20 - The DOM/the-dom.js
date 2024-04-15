@@ -72,7 +72,7 @@ function toggleRound() {
 
 pic.addEventListener('click', toggleRound);
 
-// Attributes - examples `id`, `class`, `src`...
+// Attributes - additional info for elements. Examples `id`, `class`, `src`, `alt`...
 // Updating, adding, getters/setters
 pic.alt = 'another random  pic'; // setter
 console.log(pic.alt); // getter
