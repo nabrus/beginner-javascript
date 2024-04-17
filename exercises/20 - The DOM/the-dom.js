@@ -105,11 +105,11 @@ pic.setAttribute('alt', 'no description available');
 console.log(pic.getAttribute('alt'));
 
 // Data Attributes
-/* `data-* attributes allow us to store extra information on standard, semantic
+/* `data-*` attributes allow us to store extra information on standard, semantic
 HTML elements without other hacks such as non-standard attributes, or extra
 properties on DOM. */
 const custom = document.querySelector('.custom');
-// To get the 'data-` attribute you call `dataset`, which returns an object with all the property values.
+// To get the 'data-` attribute you call `dataset`, which returns an DOMStringMap object with all the property values.
 console.log(custom.dataset);
 
 // An example of why you would use data attributes
