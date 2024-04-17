@@ -38,6 +38,12 @@ console.dir()  provides a detailed representation of the object, including its p
 // console.log(heading.textContent); // I am a heading
 
 // Getters & Setters - using the properties to 'get' or 'set'
+/* Properties are the dynamic values that represent the current state of an 
+HTML element, accessible via JavaScript.
+
+Properties are often used to interact with and manipulate elements dynamically 
+during runtime. */
+
 // Set the texContent property on the 'h2' element
 // heading.textContent = 'May the force be with you';
 console.log(heading.textContent); // retrieves or sets text within element, regardless of CSS styling
@@ -72,7 +78,13 @@ function toggleRound() {
 
 pic.addEventListener('click', toggleRound);
 
-// Attributes - additional info for elements. Examples `id`, `class`, `src`, `alt`...
+// ATTRIBUTES - additional info for elements. Examples `id`, `class`, `src`, `alt`...
+// Attributes are the initial values specified in the HTML markup of an element. Static
+
+/* NOTE: The main difference between attributes and properties is that 
+attributes are defined in the HTML markup, while properties are accessed and 
+manipulated via JavaScript. */
+
 // Updating, adding, getters/setters
 pic.alt = 'another random pic'; // setter - setting the `alt` attribute
 console.log(pic.alt); // getter
