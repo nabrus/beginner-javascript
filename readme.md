@@ -74,8 +74,12 @@
      *  Getters & Setters - using properties to 'get' or 'set'
           *  `.textContent` vs. `.innerText`
           *  `.innerHTML` & `.outerHTML`
+     *  Attributes - updating, adding, getters/setters
+          * `.alt`, `.naturalWidth`, `.width`
      *  Methods
           *  `insertAdjacentText()`
+          *  `setAttribute()`
+          *  `getAttribute()`
      * Interacting with classes of an HTML element using `element.classList`
           *  `element.classList.add("newClass");`
           *  `element.classList.remove("class");`
