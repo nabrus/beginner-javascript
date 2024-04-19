@@ -16,7 +16,7 @@ newDiv.style.padding = '10px';
 document.body.appendChild(newDiv);
 */
 
-// A deeper dive...
+// Now a deeper dive...
 /*
   `document.createElement()` method creates the HTML element specified by tagName (ex. `div`, `p`, `span`, `img`, etc)
 */
