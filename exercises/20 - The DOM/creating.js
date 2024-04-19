@@ -44,9 +44,9 @@ The Node.appendChild() method adds a node to the end of the list of children of 
 // myDiv.appendChild(myParagraph);
 // myDiv.appendChild(myImage);
 
-myDiv.appendChild(myParagraph);
+myDiv.appendChild(myParagraph); // appending to the div, stored in memory
 myDiv.appendChild(myImage);
-// Now dump it into the DOM once
+// Now dump it into the DOM once - appending the completed div
 document.body.appendChild(myDiv);
 
 // Adding something on top, like a heading;
