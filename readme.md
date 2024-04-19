@@ -83,10 +83,11 @@
           *  `insertAdjacentText()`
           *  `setAttribute()`
           *  `getAttribute()`
-     * Interacting with classes of an HTML element using `element.classList`
+     *  Interacting with classes of an HTML element using `element.classList`
           *  `element.classList.add("newClass");`
           *  `element.classList.remove("class");`
           *  `element.classList.toggle("class");`
 *  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating.js)
+     *  `document.createElement()`
 *  [HTML from strings and XSS](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating-with-strings.js)
 *  [Traversing and Removing Nodes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/traversing.js)
