@@ -1,6 +1,6 @@
 // Creating HTML elements
 
-/* An overview of the flow
+/* A brief overview of creating then adding elements to the document
 // Create a new <div> element
 const newDiv = document.createElement('div');
 
@@ -16,6 +16,7 @@ newDiv.style.padding = '10px';
 document.body.appendChild(newDiv);
 */
 
+// A deeper dive...
 /*
   `document.createElement()` method creates the HTML element specified by tagName (ex. `div`, `p`, `span`, `img`, etc)
 */
