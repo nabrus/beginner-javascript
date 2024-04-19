@@ -1,4 +1,21 @@
 // Creating HTML elements
+
+/* An overview of the flow
+// Create a new <div> element
+const newDiv = document.createElement('div');
+
+// Set some attributes and content
+newDiv.id = 'dynamicDiv';
+newDiv.textContent = 'This is a dynamically created div.';
+
+// Style the element
+newDiv.style.backgroundColor = 'lightblue';
+newDiv.style.padding = '10px';
+
+// Append the new element to the document body
+document.body.appendChild(newDiv);
+*/
+
 /*
   `document.createElement()` method creates the HTML element specified by tagName (ex. `div`, `p`, `span`, `img`, etc)
 */
