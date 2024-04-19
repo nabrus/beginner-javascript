@@ -39,7 +39,7 @@ console.log(myDiv);
 /* 
 The Node.appendChild() method adds a node to the end of the list of children of a specified parent node.
 */
-// To avoid having to much re-painting, as would be with the order commented out below, change the order so it only re-paints once (twice for the image)
+// To avoid having to much re-painting, as would be with the order commented out below, change the order so it only re-paints once (technically twice, once to add div then again for the image)
 // document.body.appendChild(myDiv);
 // myDiv.appendChild(myParagraph);
 // myDiv.appendChild(myImage);
