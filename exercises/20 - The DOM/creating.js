@@ -50,16 +50,16 @@ myDiv.appendChild(myImage); //  appending the image to the div, stored in memory
 // Now dump it into the DOM once - appending the completed div
 document.body.appendChild(myDiv);
 
-// Adding something on top, like a heading;
+// Adding something on top (before the paragraph), like a heading;
 
 const heading = document.createElement('h2');
 
 heading.textContent = 'Shake and bake!';
 
-myDiv.insertAdjacentElement('afterbegin', heading);
+myDiv.insertAdjacentElement('afterbegin', heading); // inserts before <p>
 
-// Creating an unordered list and adding it to the DOM
-
+// Creating an unordered list and adding it to the DOM by using API's discussed for practice.
+// My example first, then wes'. I inserted list at bottom
 // Create elements ul and li
 const list = document.createElement('ul');
 const itemOne = document.createElement('li');
@@ -86,7 +86,7 @@ itemThree.textContent = 'Three';
 
 itemTwo.insertAdjacentElement('afterend', itemThree);
 
-// Wes' example of ul
+// Wes' example of ul - inserted at top
 const wesList = document.createElement('ul');
 const li = document.createElement('li');
 li.textContent = 'Three';
@@ -98,7 +98,8 @@ const li5 = document.createElement('li');
 li5.textContent = 'Five';
 wesList.append(li5);
 
-const li1 = li5.cloneNode(); // has the option of 'true' for deep-the whole subtree including text in the child
+// .cloneNode() method  returns a duplicate of the node on which this method was called. Its parameter controls if the subtree contained in a node is also cloned or not.
+const li1 = li5.cloneNode(true); // `deep` (optional) parameter has the option of 'true'-the whole subtree including text in the child
 li1.textContent = 'One';
 wesList.insertAdjacentElement('afterbegin', li1);
 
