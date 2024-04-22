@@ -124,8 +124,22 @@ both:
 parentElement.append(node1, node2, ...);
 
 */
-
+// Create and append a <div> element
 const newDiv = document.createElement('div');
 newDiv.classList.add('container');
-
 document.body.append(newDiv);
+
+// Create three <p> elements
+const paraOne = document.createElement('p');
+const paraTwo = document.createElement('p');
+const paraThree = document.createElement('p');
+
+// Add text and class's to the <p> elements
+paraOne.textContent = 'May the force be with you.';
+paraOne.classList.add('jedi');
+paraTwo.textContent = 'Yes...yes, release your anger!';
+paraTwo.classList.add('dark-side');
+paraThree.textContent = 'A long time ago, in a galaxy far far away...';
+
+// Append all three <p> elements to div
+newDiv.append(paraOne, paraTwo, paraThree);
