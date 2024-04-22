@@ -141,5 +141,5 @@ paraTwo.textContent = 'Yes...yes, release your anger!';
 paraTwo.classList.add('dark-side');
 paraThree.textContent = 'A long time ago, in a galaxy far far away...';
 
-// Append all three <p> elements to div
-newDiv.append(paraOne, paraTwo, paraThree);
+// Append all three <p> elements and text  to div
+newDiv.append(paraOne, paraTwo, paraThree, 'Star Wars');
