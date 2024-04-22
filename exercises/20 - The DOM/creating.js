@@ -110,3 +110,22 @@ li5.insertAdjacentElement('beforebegin', li4);
 const li2 = document.createElement('li');
 li2.textContent = 'Two';
 li1.insertAdjacentElement('afterend', li2);
+
+/*
+
+Element: `append()` method
+
+The Element.append() method inserts a set of Node objects or string objects 
+after the last child of the Element.
+
+The append() method can be called on any parent element and accepts one or more 
+arguments, which can be Node objects, string objects, or a combination of 
+both:
+parentElement.append(node1, node2, ...);
+
+*/
+
+const newDiv = document.createElement('div');
+newDiv.classList.add('container');
+
+document.body.append(newDiv);
