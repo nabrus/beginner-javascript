@@ -47,8 +47,8 @@ into the document.
 const myFragment = document.createRange().createContextualFragment(myHTML);
 
 // Now the HTML is elements and can be selected
-// console.log(myFragment.querySelector('img'));
+console.log(myFragment.querySelector('img'));
 console.log(myFragment);
 
 // Then attach to the DOM
-// document.body.appendChild(myFragment);
+document.body.appendChild(myFragment);
