@@ -1,10 +1,15 @@
+// Cardio take two...
 // Make a div
+const newDiv = document.createElement('div');
 
 // add a class of wrapper to it
+newDiv.classList.add('wrapper');
 
 // put it into the body
+document.body.insertAdjacentElement('afterbegin', newDiv);
 
 // make an unordered list
+const newList = document.createElement('ul');
 
 // add three list items with the words "one, two, three" in them
 // put that list into the above wrapper
