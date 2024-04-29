@@ -13,14 +13,28 @@ const newList = document.createElement('ul');
 
 // add three list items with the words "one, two, three" in them
 // put that list into the above wrapper
+const newItems = `
+  <li>One</li>
+  <li>Two</li>
+  <li>Three</li>
+`;
+const fragItems = document.createRange().createContextualFragment(newItems);
+newList.append(fragItems);
+newDiv.append(newList);
 
 // create an image
+const newImg = document.createElement('img');
 
 // set the source to an image
 // set the width to 250
 // add a class of cute
 // add an alt of Cute Puppy
+newImg.src = '../../images/function-definition.jpg';
+newImg.width = 250;
+newImg.classList.add('functDef');
+newImg.alt = 'Parts of functions diagram';
 // Append that image to the wrapper
+newDiv.append(newImg);
 
 // with HTML string, make a div, with two paragraphs inside of it
 // put this div before the unordered list from above
