@@ -38,6 +38,13 @@ newDiv.append(newImg);
 
 // with HTML string, make a div, with two paragraphs inside of it
 // put this div before the unordered list from above
+const someHTML = `
+  <div>
+    <p></p>
+    <p></p>
+  </div>
+`;
+newDiv.insertAdjacentHTML('afterbegin', someHTML);
 
 // add a class to the second paragraph called warning
 // remove the first paragraph
