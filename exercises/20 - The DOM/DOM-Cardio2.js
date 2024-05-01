@@ -44,10 +44,15 @@ const someHTML = `
     <p></p>
   </div>
 `;
-newDiv.insertAdjacentHTML('afterbegin', someHTML);
+
+const fragHTML = document.createRange().createContextualFragment(someHTML);
+// node.insertBefore(new, existing)
+newDiv.insertBefore(fragHTML, newList);
 
 // add a class to the second paragraph called warning
 // remove the first paragraph
+const paraOne = newDiv.querySelector('p');
+paraOne.remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
