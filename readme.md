@@ -90,9 +90,10 @@
 *  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating.js)
      *  `document.createElement()` - creates HTML elements specified by tagName
      *  Adding the newly created elements to the document
-          *  `Node.appendChild()` method
-          *  `Element.append()` method
-          *  `Element.insertAdjacentElement()` method
+          *  `node.appendChild()` method
+          *  `node.insertBefore()` method
+          *  `element.append()` method
+          *  `element.insertAdjacentElement()` method
 *  [Creating HTML from strings](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating-with-strings.js)
      *  `Document.createRange()` method to create a *range*
      *  `createContextualFragment()` method available on the Range object
