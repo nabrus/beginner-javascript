@@ -50,7 +50,12 @@ const fragHTML = document.createRange().createContextualFragment(someHTML);
 newDiv.insertBefore(fragHTML, newList);
 
 // add a class to the second paragraph called warning
+const paraTwo = newDiv.children[0].children[1];
+paraTwo.classList.add('warning');
+
 // remove the first paragraph
+const paraOne = paraTwo.previousElementSibling;
+paraOne.remove();
 
 // create a function called generatePlayerCard that takes in three arguments: name, age, and height
 
