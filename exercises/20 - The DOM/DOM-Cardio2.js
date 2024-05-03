@@ -76,6 +76,8 @@ function generatePlayerCard(name, age, height) {
 }
 
 // make a new div with a class of cards
+const cardDiv = document.createElement('div');
+cardDiv.classList.add('cards');
 
 // make 4 player cards using generatePlayerCard
 
