@@ -65,6 +65,16 @@ paraOne.remove();
 //   <p>They are HEIGHT and AGE years old. In Dog years this person would be AGEINDOGYEARS. That would be a tall dog!</p>
 // </div>
 
+function generatePlayerCard(name, age, height) {
+  return `
+  <div className="playerCard">
+    <h2>${name} - ${age}</h2>
+    <p>They are ${height} and ${age} years old. In Dog years this person would be ${age +
+    7}. That would be a tall dog!</p>
+  </div>
+  `;
+}
+
 // make a new div with a class of cards
 
 // make 4 player cards using generatePlayerCard
