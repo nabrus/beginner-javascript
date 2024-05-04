@@ -85,7 +85,7 @@ cardDiv.classList.add('cards');
 const playerOne = generatePlayerCard('Ezra', 17, 68);
 const playerTwo = generatePlayerCard('Hera', 32, 59);
 const playerThree = generatePlayerCard('Zeb', 42, 97);
-const playerFour = generatePlayerCard('Sabine', 26, 67);
+const playerFour = generatePlayerCard('Sabine', 23, 67);
 
 // append those cards to the div
 cardDiv.append(playerOne, playerTwo, playerThree, playerFour);
