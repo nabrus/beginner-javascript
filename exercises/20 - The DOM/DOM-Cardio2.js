@@ -66,13 +66,15 @@ paraOne.remove();
 // </div>
 
 function generatePlayerCard(name, age, height) {
-  return `
+  const rawHtml = `
   <div className="playerCard">
     <h2>${name} - ${age}</h2>
-    <p>They are ${height}" tall and ${age} years old. In Dog years this person would be ${age +
+    <p>They are ${height}" tall and ${age} years old. In Dog years this person would be ${age *
     7}. That would be a old dog!</p>
   </div>
   `;
+  const html = document.createRange().createContextualFragment(rawHtml);
+  return html;
 }
 
 // make a new div with a class of cards
@@ -86,7 +88,11 @@ const playerThree = generatePlayerCard('Zeb', 42, 97);
 const playerFour = generatePlayerCard('Sabine', 26, 67);
 
 // append those cards to the div
+cardDiv.append(playerOne, playerTwo, playerThree, playerFour);
+
 // put the div into the DOM just before the wrapper element
+document.body.insertBefore(cardDiv, newDiv);
+
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
 
 // select all the buttons!
