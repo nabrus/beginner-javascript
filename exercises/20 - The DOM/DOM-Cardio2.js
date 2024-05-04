@@ -69,8 +69,8 @@ function generatePlayerCard(name, age, height) {
   return `
   <div className="playerCard">
     <h2>${name} - ${age}</h2>
-    <p>They are ${height} and ${age} years old. In Dog years this person would be ${age +
-    7}. That would be a tall dog!</p>
+    <p>They are ${height}" tall and ${age} years old. In Dog years this person would be ${age +
+    7}. That would be a old dog!</p>
   </div>
   `;
 }
@@ -80,6 +80,10 @@ const cardDiv = document.createElement('div');
 cardDiv.classList.add('cards');
 
 // make 4 player cards using generatePlayerCard
+const playerOne = generatePlayerCard('Ezra', 17, 68);
+const playerTwo = generatePlayerCard('Hera', 32, 59);
+const playerThree = generatePlayerCard('Zeb', 42, 97);
+const playerFour = generatePlayerCard('Sabine', 26, 67);
 
 // append those cards to the div
 // put the div into the DOM just before the wrapper element
