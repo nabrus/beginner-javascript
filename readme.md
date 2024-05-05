@@ -76,11 +76,12 @@
           *  `element.classList.remove("class");`
           *  `element.classList.toggle("class");`
      *  `console.dir()` displays a list of the properties of the specified JavaScript object
-     *  Getters & Setters - using properties to 'get' or 'set'
-          *  `.textContent` vs. `.innerText`
-          *  `.innerHTML` & `.outerHTML`
-     *  Attributes - updating, adding, getters/setters
-          * `.alt`, `.naturalWidth`, `.width`
+     *  Getters & Setters - using properties and/or attributes to 'get' or 'set'
+          *  Properties:
+               *  `.textContent` vs. `.innerText`
+               *  `.innerHTML` & `.outerHTML`
+          *  Attributes:
+               * `.id`, `.alt`, `.naturalWidth`, `.width`
      *  HTML Data Attributes
           *  Prefix `data-*` to an attribute name
           *  Accessing the data stored in `data-*` attributes using the `dataset` property
