@@ -69,6 +69,7 @@
 
 *  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
      *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
+          *  by class `('.className')` or element `('p')`
      *  Nodes vs. Elements
      *  `console.dir()` displays a list of the properties of the specified JavaScript object
      *  Getters & Setters - using properties to 'get' or 'set'
