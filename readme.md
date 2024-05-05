@@ -76,7 +76,7 @@
           *  `element.classList.remove("class");`
           *  `element.classList.toggle("class");`
      *  `console.dir()` displays a list of the properties of the specified JavaScript object
-     *  Getters & Setters - using properties and/or attributes to 'get' or 'set'
+     *  Getters & Setters - using properties and/or attributes to "get" or "set"
           *  Properties:
                *  `.textContent` vs. `.innerText`
                *  `.innerHTML` & `.outerHTML`
