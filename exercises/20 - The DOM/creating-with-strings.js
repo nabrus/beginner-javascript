@@ -16,7 +16,7 @@ const myHTML = `
 </div>
 `;
 
-// This string can be dumped into to an element with innerHTML
+// This string can be dumped into an element with innerHTML
 item.innerHTML = myHTML;
 
 // or if you need to access each node of the HTML
