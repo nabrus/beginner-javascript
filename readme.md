@@ -71,6 +71,10 @@
      *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
           *  by class `('.className')` or element `('p')`
      *  Nodes vs. Elements
+     *  Interacting with classes of an HTML element using `element.classList`
+          *  `element.classList.add("newClass");`
+          *  `element.classList.remove("class");`
+          *  `element.classList.toggle("class");`
      *  `console.dir()` displays a list of the properties of the specified JavaScript object
      *  Getters & Setters - using properties to 'get' or 'set'
           *  `.textContent` vs. `.innerText`
@@ -84,10 +88,6 @@
           *  `insertAdjacentText()`
           *  `setAttribute()`
           *  `getAttribute()`
-     *  Interacting with classes of an HTML element using `element.classList`
-          *  `element.classList.add("newClass");`
-          *  `element.classList.remove("class");`
-          *  `element.classList.toggle("class");`
 *  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating.js)
      *  `document.createElement()` - creates HTML elements specified by tagName
      *  Adding the newly created elements to the document
