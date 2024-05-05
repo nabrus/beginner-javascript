@@ -59,6 +59,7 @@ console.log(pizzaList.textContent);
 // pizzaList.textContent = `${pizzaList.textContent} 🍕`;
 
 // Another way is by using `insertAdjacentText()` method
+// This method inserts a new text node at the given position relative to the element it is called from.
 pizzaList.insertAdjacentText('afterbegin', '🍕');
 pizzaList.insertAdjacentText('beforeend', '🍕');
 
