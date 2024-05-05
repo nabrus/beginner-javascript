@@ -65,7 +65,7 @@
 
 *  High level overview of a *closure*
 
-### The Dom
+### The DOM
 
 *  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
      *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
