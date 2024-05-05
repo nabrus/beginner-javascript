@@ -40,8 +40,8 @@ newDiv.append(newImg);
 // put this div before the unordered list from above
 const someHTML = `
   <div>
-    <p></p>
-    <p></p>
+    <p>First paragraph.</p>
+    <p>Second paragraph.</p>
   </div>
 `;
 
@@ -67,10 +67,11 @@ paraOne.remove();
 
 function generatePlayerCard(name, age, height) {
   const rawHtml = `
-  <div className="playerCard">
+  <div class="playerCard">
     <h2>${name} - ${age}</h2>
     <p>They are ${height}" tall and ${age} years old. In Dog years this person would be ${age *
     7}. That would be a old dog!</p>
+    <button class="rm-button" type="button">Remove</button>
   </div>
   `;
   const html = document.createRange().createContextualFragment(rawHtml);
@@ -94,7 +95,15 @@ cardDiv.append(playerOne, playerTwo, playerThree, playerFour);
 document.body.insertBefore(cardDiv, newDiv);
 
 // Bonus, put a delete Button on each card so when you click it, the whole card is removed
-
 // select all the buttons!
-// make out delete function
+const buttons = document.querySelectorAll('.rm-button');
+console.log(buttons);
+
+// Wes' solution
+// make a delete function
+function deleteCard(event) {
+  const buttonThatGotClicked = event.currentTarget;
+  buttonThatGotClicked.closest('.playerCard').remove();
+}
 // loop over them and attach a listener
+buttons.forEach(button => button.addEventListener('click', deleteCard));
