@@ -33,7 +33,7 @@ specified JavaScript object. In browser consoles, the output is presented as a
 hierarchical listing with disclosure triangles that let you see the contents of 
 child objects. 
 
-console.dir()  provides a detailed representation of the object, including its properties, methods, and their values. */
+console.dir() provides a detailed representation of the object, including its properties, methods, and their values. */
 
 // console.log(heading.textContent); // I am a heading
 
