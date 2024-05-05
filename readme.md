@@ -69,7 +69,7 @@
 
 *  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
      *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
-          *  by class `('.className')` or element `('p')`
+          *  by class `('.className')` or element `('p')` examples
      *  Nodes vs. Elements
      *  Interacting with classes of an HTML element using `element.classList`
           *  `element.classList.add("newClass");`
