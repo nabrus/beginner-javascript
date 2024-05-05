@@ -86,7 +86,7 @@
           *  Prefix `data-*` to an attribute name
           *  Accessing the data stored in `data-*` attributes using the `dataset` property
      *  Methods
-          *  `insertAdjacentText()`
+          *  `insertAdjacentText(position, text)` insert text adjacent to an element 
           *  `setAttribute()`
           *  `getAttribute()`
 *  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating.js)
@@ -95,7 +95,7 @@
           *  `node.appendChild()` 
           *  `node.insertBefore()` 
           *  `element.append()` 
-          *  `element.insertAdjacentElement()`
+          *  `element.insertAdjacentElement(position, element)`
 *  [Creating HTML from strings](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating-with-strings.js)
      *  `Document.createRange()` method to create a *range*
      *  `createContextualFragment()` method available on the Range object
