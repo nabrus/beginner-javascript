@@ -99,7 +99,7 @@
 *  [Creating HTML from strings](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating-with-strings.js)
      *  Use backticks ` `` `
      *  `element.innerHTML` property gets or sets the HTML or XML markup contained within the element
-     *  Accessing each node of the string using:
+     *  Generating and accessing DOM elements from a string using:
           *  `Document.createRange()` method to create a *range*
           *  `createContextualFragment()` method available on the Range object
 *  [Traversing and Removing Nodes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/traversing.js)
