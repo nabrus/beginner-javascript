@@ -56,3 +56,10 @@ console.log(p); // <p>I will be removed</p>
 The removeChild() method of the Node interface removes a child node from the
 DOM and returns the removed node.
 */
+const newDiv = document.createElement('div');
+const newP = document.createElement('p');
+newP.textContent = 'I will also be removed';
+newDiv.appendChild(newP); // attache `p` element to the new `div`
+steve.append(newDiv); // attach the new `div` to `p` element with class of `.steve`
+
+newDiv.removeChild(newP);
