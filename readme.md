@@ -103,9 +103,13 @@
           *  `Document.createRange()` method to create a *range*
           *  `createContextualFragment()` method available on the Range object
 *  [Traversing and Removing Nodes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/traversing.js)
-     *  Using Node and Element properties to traverse the DOM:
+     *  Review of Nodes vs Elements
+     *  Using Node and Element properties to traverse the DOM by position:
           *  `Element.children`
           *  `Element.firstElementChild`
           *  `Node.childNodes`
           *  `Node.firstChild`
           *  And more...
+     *  Removing nodes/elements
+          *  `element.remove(element)`
+          *  `node.removeChild(child)`
