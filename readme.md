@@ -113,3 +113,6 @@
      *  Removing nodes/elements
           *  `element.remove(element)`
           *  `node.removeChild(child)`
+*  "Cardio" -  An exercise to work through more examples of working with the DOM.
+     *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
+     *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
