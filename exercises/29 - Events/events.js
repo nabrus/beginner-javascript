@@ -30,10 +30,27 @@ the event appropriately.
 const butts = document.querySelector('.butts');
 // Passing in an anonymous function
 // butts.addEventListener('click', () => alert('Downloading Virus'));
+const secondButts = document.querySelector('.numTwo');
+const thirdButts = document.querySelector('.numThree');
 
-// or passing in a named function
+// or passing in a named function - one benefit is it can be used for multiple instead of repeating the same function (DRY-don't repeat yourself coding). Another is having access to the function for removing event listeners.
 function handleClick() {
   alert('!!Downloading Virus!! pwnd');
 }
 
+// Arrow functions stored in variables is another option
+const party = () => console.log('PARTY TIME!!');
+
 butts.addEventListener('click', handleClick);
+secondButts.addEventListener('click', handleClick);
+thirdButts.addEventListener('click', party);
+
+/*
+removeEventListener() is a method in JavaScript used to remove an event listener from an HTML element. This method is the counterpart of addEventListener() and is used when you want to stop listening for a specific event on an element.
+
+syntax:
+element.removeEventListener(event, callbackFunction);
+
+NOTE: a named function or an arrow function that is stored in a variable must be used in order to remove an event listener. Will not work with an event listener created with an anonymous function passed in.
+*/
+butts.removeEventListener('click', handleClick);
