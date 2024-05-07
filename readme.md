@@ -116,3 +116,13 @@
 *  "Cardio" -  An exercise to practice more examples of things covered in this section.
      *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
      *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
+
+### Events
+
+*  [Intro to Event Listeners](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/events.js)
+     *  `element.addEventListener(event, function, options)`
+     *  `element.removeEventListener(event, callbackFunction)`
+     *  Listen on multiple items
+          *  Intro to `forEach()` method
+
+
