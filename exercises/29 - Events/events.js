@@ -54,3 +54,18 @@ element.removeEventListener(event, callbackFunction);
 NOTE: a named function or an arrow function that is stored in a variable must be used in order to remove an event listener. Will not work with an event listener created with an anonymous function passed in.
 */
 butts.removeEventListener('click', handleClick);
+
+/*
+How to listen on multiple items
+*/
+const buyButtons = document.querySelectorAll('button.buy');
+
+function purchase() {
+  console.log('Item purchased');
+}
+
+// You have to loop over each button and add the event listener
+// `forEach()` method is used to iterate over elements of an array/items in NodeList. It executes a provided function once for each array element/NodeList item.
+buyButtons.forEach(button => {
+  button.addEventListener('click', purchase);
+});
