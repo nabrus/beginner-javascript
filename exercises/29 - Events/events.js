@@ -33,7 +33,7 @@ const butts = document.querySelector('.butts');
 const secondButts = document.querySelector('.numTwo');
 const thirdButts = document.querySelector('.numThree');
 
-// or passing in a named function - one benefit is it can be used for multiple instead of repeating the same function (DRY-don't repeat yourself coding). Another is having access to the function for removing event listeners.
+// or passing in a named function - one benefit is it can be used for multiple instead of repeating the same function (DRY-don't repeat yourself coding). Another is having access to the function for removing the event listener.
 function handleClick() {
   alert('!!Downloading Virus!! pwnd');
 }
