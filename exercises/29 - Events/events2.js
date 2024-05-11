@@ -18,8 +18,8 @@ function handleBuyButtonClick(event) {
   // console.log(parseInt(event.target.dataset.price));
   // console.log(button.textContent);
   const button = event.target;
-  console.log(event.target);
-  console.log(event.currentTarget);
+  console.log(event.target); // What was actually clicked
+  console.log(event.currentTarget); // What fires the event
   console.log(event.target === event.currentTarget);
 }
 
@@ -50,4 +50,20 @@ Event Bubbling and Event Capturing:
   By default, events bubble up from the target element to its ancestors. This is called event bubbling.
   Event capturing is the opposite of event bubbling. Events are captured from the top-level ancestor down to the target element.
   You can use the addEventListener() method with the third parameter useCapture to specify whether to use event capturing (true) or event bubbling (false, default).
+*/
+
+/*
+Propagation refers to the process by which an event travels through the DOM (Document Object Model) hierarchy from the target element to its ancestors or descendants. There are two main phases of event propagation: capturing and bubbling.
+
+Capturing Phase:
+During the capturing phase, the event is first captured by the outermost ancestor of the target element and then progressively moves inward toward the target element.
+In this phase, the event starts from the top-level ancestor (usually the <html> element) and travels down the DOM hierarchy to the target element.
+Event listeners attached with the useCapture option set to true are triggered during the capturing phase.
+Target Phase:
+Once the event reaches the target element, it enters the target phase. This is where event listeners attached directly to the target element are triggered.
+At this stage, the event is said to be "at target".
+Bubbling Phase:
+After the target phase, the event starts bubbling up through the DOM hierarchy, from the target element back to the top-level ancestor.
+During this phase, event listeners attached to ancestor elements are triggered. These event listeners are not executed until the event finishes its target phase.
+Event listeners attached with the useCapture option set to false (or omitted, as it's the default) are triggered during the bubbling phase.
 */
