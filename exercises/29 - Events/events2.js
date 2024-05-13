@@ -83,3 +83,21 @@ Bubbling Phase:
   During this phase, event listeners attached to ancestor elements are triggered. These event listeners are not executed until the event finishes its target phase.
   Event listeners attached with the useCapture option set to false (or omitted, as it's the default) are triggered during the bubbling phase.
 */
+
+// Example using a different events and overview of the `this` keyword
+const photoElement = document.querySelector('.photo');
+const photoElTwo = document.querySelector('.photoTwo');
+
+// NOTE: `this` keyword used in arrow function does not have its own `this`, it is determined by the surrounding lexical context (the scope in which the arrow function is defined) rather than the function's caller.
+// photoElement.addEventListener('mousemove', e => {
+//   console.count(e.currentTarget);
+// });
+
+/*
+The `this` keyword  refers to the current execution context. The value of `this` is determined by how a function is called and where it is called, rather than where it is defined.
+*/
+// The `this` keyword references what is left of the addEventListener
+photoElTwo.addEventListener('mouseenter', function(e) {
+  console.log(e.currentTarget);
+  console.log(this);
+});
