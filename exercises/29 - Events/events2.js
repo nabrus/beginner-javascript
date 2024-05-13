@@ -13,16 +13,17 @@ When an event occurs and triggers an event handler function (also known as a cal
 
 // Handler function
 function handleBuyButtonClick(event) {
-  // name of arg doesn't matter, the first arg will return the event object
+  // name of arg (in this case `event`) doesn't matter, the first arg will return the event object
   // console.log(event); // PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
   // console.log(parseInt(event.target.dataset.price));
   // console.log(button.textContent);
   // const button = event.target;
+  console.log('You clicked a button');
   console.log(event.target); // What was actually clicked
   console.log(event.currentTarget); // What fires the event
   console.log(event.target === event.currentTarget);
   // Stop this event from bubbling up
-  event.stopPropagation();
+  // event.stopPropagation();
 }
 
 /*
@@ -47,10 +48,16 @@ buyButtons.forEach(function(buyButton) {
 });
 
 // Event on the window for bubbling/capturing example
-window.addEventListener('click', e => {
-  console.log('You clicked the window');
-  console.log(e.target);
-});
+window.addEventListener(
+  'click',
+  e => {
+    console.log('You clicked the window');
+    console.log(e.target);
+    console.log(e.type);
+    console.log(e.bubbles);
+  },
+  { capture: true } // This option triggers this event during capture phase
+);
 
 /*
 Event Bubbling and Event Capturing Overview:
