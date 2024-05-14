@@ -124,5 +124,10 @@
      *  `element.removeEventListener(event, callbackFunction)`
      *  Listen on multiple items
           *  Intro to `forEach()` method
+*  [Event Object](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/events2.js)
+     *  `event.target` vs `event.currentTarget`
+     *  Propagation
+          *  Event Bubbling and Event Capturing
+     *  Overview on the `this` keyword 
 
 
