@@ -128,6 +128,7 @@
      *  `event.target` vs `event.currentTarget`
      *  Propagation
           *  Event Bubbling and Event Capturing
+          *  `stopPropagation()`
      *  Overview on the `this` keyword 
 
 
