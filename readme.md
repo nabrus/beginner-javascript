@@ -131,5 +131,10 @@
           *  `stopPropagation()`
      *  Overview on the `this` keyword 
 *  [Preventing Default Actions](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/forms.js)
+     *  Examples of using `event.preventDefault()` on form events
+          *  `click`
+          *  `submit`
+          *  `keyup` & `keydown`
+          *  `focus` & `blur`
 
 
