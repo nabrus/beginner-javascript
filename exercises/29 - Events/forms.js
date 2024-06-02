@@ -56,3 +56,6 @@ signup.name.addEventListener('keyup', logEvent);
 signup.name.addEventListener('keydown', logEvent);
 signup.name.addEventListener('focus', logEvent);
 signup.name.addEventListener('blur', logEvent);
+
+// Note on Accessibility
+// Never use a link as a button
