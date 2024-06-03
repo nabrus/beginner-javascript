@@ -57,5 +57,15 @@ signup.name.addEventListener('keydown', logEvent);
 signup.name.addEventListener('focus', logEvent);
 signup.name.addEventListener('blur', logEvent);
 
-// Note on Accessibility
-// Never use a link as a button
+// Notes on Accessibility
+
+// Never mix up buttons and links. Do not use a button as a link. Keep both of them in their proper roles. A button is used for actions that happen inside an app/site. Links are used to change the page.
+
+// A valid use case of prevent default on a link would be to have the user sign into site before following a link.
+
+// Another accessibility issue to watch out for - click event on an image. User will not be able to use the keyboard and tab to it.
+const myPhoto = document.querySelector('.photo');
+
+myPhoto.addEventListener('click', function(event) {
+  console.log('You clicked the photo');
+});
