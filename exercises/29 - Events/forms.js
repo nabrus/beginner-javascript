@@ -63,7 +63,10 @@ signup.name.addEventListener('blur', logEvent);
 
 // A valid use case of prevent default on a link would be to have the user sign into site before following a link.
 
-// Another accessibility issue to watch out for - click event on an image. User will not be able to use the keyboard and tab to it.
+/*
+Another accessibility issue to watch out for - click event on an image. User will not be able to use the keyboard and tab to it.
+*/
+
 // One option is to wrap it in a button or you can add `role=button` and `tabindex=0` attributes in the HTML.
 
 const myPhoto = document.querySelector('.photo');
