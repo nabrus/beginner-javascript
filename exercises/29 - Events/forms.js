@@ -64,8 +64,24 @@ signup.name.addEventListener('blur', logEvent);
 // A valid use case of prevent default on a link would be to have the user sign into site before following a link.
 
 // Another accessibility issue to watch out for - click event on an image. User will not be able to use the keyboard and tab to it.
+// One option is to wrap it in a button or you can add `role=button` and `tabindex=0` attributes in the HTML.
+
 const myPhoto = document.querySelector('.photo');
 
-myPhoto.addEventListener('click', function(event) {
-  console.log('You clicked the photo');
-});
+// function handlePhotoClick() {
+//   console.log('You clicked the photo');
+// }
+
+// // Tabbing to the photo will trigger the `handlePhotoClick`
+// myPhoto.addEventListener('click', handlePhotoClick);
+
+// // `keyup` listener will allow any key to fire `handlePhotoClick` after focused on it.
+// myPhoto.addEventListener('keyup', handlePhotoClick);
+
+// Better solution, having only the enter key invoke `handlePhotoClick` using some flow control. Using event.type and event.key
+function handlePhotoClick(event) {
+  if (event.type === 'click' || event.key === 'Enter')
+    console.log('You clicked the photo with Enter!!!');
+}
+
+myPhoto.addEventListener('keyup', handlePhotoClick);
