@@ -136,5 +136,9 @@
           *  `submit`
           *  `keyup` & `keydown`
           *  `focus` & `blur`
+     *  Accessibility Notes
+          *  Do not use links as buttons and vice versa
+          *  Allowing keyboard use for `click` events
+               *  `event.key`
 
 
