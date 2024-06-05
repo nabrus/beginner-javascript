@@ -23,7 +23,11 @@
     </form>
   </div>
 
-  <img class="photo" src="https://picsum.photos/200" alt="random pictures">
+  <!-- If you need to use another element as a button, you need the following attributes. Not very good practice, use semantic HTML!! -->
+  <div role="button" tabindex="0">Div Button?</div>
+
+  <!-- Adding tabindex will allow you to focus on the element using the tab key. -->
+  <img class="photo" tabindex="0" src="https://picsum.photos/200" alt="random pictures">
 
   <script src="./forms.js"></script>
 </body>
