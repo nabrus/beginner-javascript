@@ -17,6 +17,8 @@ This can be changed into a shorter form, which is called "destructuring"
 */
 const { width, height } = canvas;
 
+// Create random x and y starting points on the canvas
+
 console.log(width, height);
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
