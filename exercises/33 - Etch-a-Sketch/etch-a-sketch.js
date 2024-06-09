@@ -18,6 +18,8 @@ This can be changed into a shorter form, which is called "destructuring"
 const { width, height } = canvas;
 
 // Create random x and y starting points on the canvas
+const x = Math.floor(Math.random() * width);
+const y = Math.floor(Math.random() * height);
 
 console.log(width, height);
 ctx.lineJoin = 'round';
@@ -25,14 +27,22 @@ ctx.lineCap = 'round';
 ctx.lineWidth = 10;
 
 ctx.beginPath(); // start the drawing
-ctx.moveTo(200, 200); // location
-ctx.lineTo(200, 200); // location
+ctx.moveTo(x, y); // location
+ctx.lineTo(x, y); // location
 ctx.stroke(); // draw it
 
 // Write a draw function
 
 // Write a handler for the keys
+function handleKey(event) {
+  if (event.key.includes('Arrow')) {
+    event.preventDefault(); // So arrow keys don't scroll screen
+    console.log('Handling Key');
+    console.log(event.key);
+  }
+}
 
 // Clear or shake function
 
 // Listen for arrow keys
+window.addEventListener('keydown', handleKey);
