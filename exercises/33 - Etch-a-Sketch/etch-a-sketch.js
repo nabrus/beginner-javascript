@@ -7,6 +7,7 @@ const canvas = document.querySelector('#etch-a-sketch');
 // `.getContext()` method gets that element's context—the thing onto which the drawing will be rendered.
 const ctx = canvas.getContext('2d');
 const shakeButt = document.querySelector('.shake');
+const MOVE_AMOUNT = 10;
 
 // Setup our canvas for drawing
 // Make a variable called width and height from the same properties on our canvas
@@ -18,14 +19,17 @@ This can be changed into a shorter form, which is called "destructuring"
 const { width, height } = canvas;
 
 // Create random x and y starting points on the canvas
-const x = Math.floor(Math.random() * width);
-const y = Math.floor(Math.random() * height);
+let x = Math.floor(Math.random() * width);
+let y = Math.floor(Math.random() * height);
 
 console.log(width, height);
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
-ctx.lineWidth = 10;
+ctx.lineWidth = MOVE_AMOUNT;
 
+// Color changing setup using `hsl` for page load
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
 ctx.beginPath(); // start the drawing
 ctx.moveTo(x, y); // location
 ctx.lineTo(x, y); // location
@@ -38,6 +42,31 @@ ctx.stroke(); // draw it
 function draw({ key }) {
   // `{key}` -  object destructuring - taking properties and renaming into proper variables
   console.log(key);
+  // Increment hue
+  hue += 1;
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  // Start the path
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  // Move the x and y values based on user input. Using a `switch` statement
+  switch (key) {
+    case 'ArrowUp':
+      y -= MOVE_AMOUNT;
+      break;
+    case 'ArrowLeft':
+      x -= MOVE_AMOUNT;
+      break;
+    case 'ArrowDown':
+      y += MOVE_AMOUNT;
+      break;
+    case 'ArrowRight':
+      x += MOVE_AMOUNT;
+      break;
+    default:
+      break;
+  }
+  ctx.lineTo(x, y);
+  ctx.stroke();
 }
 
 // Write a handler for the keys
