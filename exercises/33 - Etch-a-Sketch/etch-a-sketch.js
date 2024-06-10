@@ -31,14 +31,20 @@ ctx.moveTo(x, y); // location
 ctx.lineTo(x, y); // location
 ctx.stroke(); // draw it
 
+/*
+'options object' is a common pattern used to pass a set of named parameters to a function. This approach allows for more flexible and readable function calls, especially when a function has multiple parameters or when some parameters are optional.
+*/
 // Write a draw function
+function draw({ key }) {
+  // object destructuring - taking properties and renaming into proper variables
+  console.log(key);
+}
 
 // Write a handler for the keys
 function handleKey(event) {
   if (event.key.includes('Arrow')) {
     event.preventDefault(); // So arrow keys don't scroll screen
-    console.log('Handling Key');
-    console.log(event.key);
+    draw({ key: event.key });
   }
 }
 
