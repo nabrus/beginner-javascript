@@ -36,7 +36,7 @@ ctx.stroke(); // draw it
 */
 // Write a draw function
 function draw({ key }) {
-  // object destructuring - taking properties and renaming into proper variables
+  // `{key}` -  object destructuring - taking properties and renaming into proper variables
   console.log(key);
 }
 
