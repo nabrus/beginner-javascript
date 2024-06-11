@@ -43,7 +43,7 @@ function draw({ key }) {
   // `{key}` -  object destructuring - taking properties and renaming into proper variables
   console.log(key);
   // Increment hue
-  hue += 1;
+  hue += 5;
   ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
   // Start the path
   ctx.beginPath();
@@ -78,6 +78,13 @@ function handleKey(event) {
 }
 
 // Clear or shake function
+function clearCanvas() {
+  if (canvas.classList !== 'shake') {
+    canvas.classList.add('shake');
+  } else {
+    canvas.classList.remove('shake');
+  }
+}
 
 // Listen for arrow keys
 window.addEventListener('keydown', handleKey);
