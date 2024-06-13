@@ -79,12 +79,24 @@ function handleKey(event) {
 
 // Clear or shake function
 function clearCanvas() {
-  if (canvas.classList !== 'shake') {
-    canvas.classList.add('shake');
-  } else {
-    canvas.classList.remove('shake');
-  }
+  canvas.classList.add('shake');
+  canvas.addEventListener(
+    'animationend',
+    function() {
+      console.log('Done the shake');
+      canvas.classList.remove('shake');
+    },
+    { once: true } // This option will automatically remove the listener **
+  );
+  ctx.reset();
+  ctx.lineJoin = 'round';
+  ctx.lineCap = 'round';
+  ctx.lineWidth = MOVE_AMOUNT;
 }
+// ** If `once` option not used the function would keep adding event listeners
 
 // Listen for arrow keys
 window.addEventListener('keydown', handleKey);
+
+// Listen for shake button click
+shakeButt.addEventListener('click', clearCanvas);
