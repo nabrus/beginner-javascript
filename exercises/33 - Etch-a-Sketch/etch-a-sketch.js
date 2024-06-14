@@ -7,7 +7,7 @@ const canvas = document.querySelector('#etch-a-sketch');
 // `.getContext()` method gets that element's context—the thing onto which the drawing will be rendered.
 const ctx = canvas.getContext('2d');
 const shakeButt = document.querySelector('.shake');
-const MOVE_AMOUNT = 10;
+const MOVE_AMOUNT = 20;
 
 // Setup our canvas for drawing
 // Make a variable called width and height from the same properties on our canvas
@@ -80,6 +80,7 @@ function handleKey(event) {
 // Clear or shake function
 function clearCanvas() {
   canvas.classList.add('shake');
+  ctx.clearRect(0, 0, width, height);
   canvas.addEventListener(
     'animationend',
     function() {
@@ -88,10 +89,6 @@ function clearCanvas() {
     },
     { once: true } // This option will automatically remove the listener **
   );
-  ctx.reset();
-  ctx.lineJoin = 'round';
-  ctx.lineCap = 'round';
-  ctx.lineWidth = MOVE_AMOUNT;
 }
 // ** If `once` option not used the function would keep adding event listeners
 
