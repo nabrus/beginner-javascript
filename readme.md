@@ -143,7 +143,7 @@
 
 ### Exercises Part 1
 
-[Etch-A-Sketch](https://github.com/nabrus/beginner-javascript/blob/master/exercises/33%20-%20Etch-a-Sketch/etch-a-sketch.js)
+*  [Etch-A-Sketch](https://github.com/nabrus/beginner-javascript/blob/master/exercises/33%20-%20Etch-a-Sketch/etch-a-sketch.js)
      *  Canvas API
      *  Options Object
      *  Destructuring
