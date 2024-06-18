@@ -152,7 +152,7 @@
           *  `animationend` event
           *  `once` option
 *  [Click Outside a Modal to Close]()
-     *  Some CSS tidbits
+     *  [Some CSS tidbits]()
           *  `opacity: 0;` and `pointer-events: none;`
 
 
