@@ -154,5 +154,6 @@
 *  [Click Outside a Modal to Close]()
      *  [Some CSS tidbits]()
           *  `opacity: 0;` and `pointer-events: none;`
+     *  `.closest()` method
 
 
