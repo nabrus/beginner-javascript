@@ -155,5 +155,7 @@
      *  [Some CSS tidbits]()
           *  `opacity: 0;` and `pointer-events: none;`
      *  `.closest()` method
+     *  `querySelector('img').src;`
+     *  `dataset`
 
 
