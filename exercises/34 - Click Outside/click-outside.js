@@ -10,8 +10,12 @@ function handleCardButtonClick(event) {
   const desc = card.dataset.description;
   const name = card.querySelector('h2').textContent;
   // Populate modal with new info
+  // Add width and height to image to correct loading of image delay in animation of modal drop down
   modalInner.innerHTML = `
-  <img src="${imgSrc.replace('200', '600')}" alt="${name}" />
+  <img width="600" height="600" src="${imgSrc.replace(
+    '200',
+    '600'
+  )}" alt="${name}" />
   <p>${desc}</p>
   `;
   // Show the modal
