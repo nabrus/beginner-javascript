@@ -1,4 +1,11 @@
 // Intersection Observer API
+/*
+The Intersection Observer API is a web API that allows developers to asynchronously 
+observe changes in the intersection of a target element with an ancestor element or 
+the top-level document’s viewport. This API is useful for implementing 
+functionality such as lazy loading of images, infinite scrolling, and triggering 
+animations when elements come into view.
+*/
 
 /*
 1st example - when is the strong tag visible on page
@@ -22,4 +29,24 @@ will then execute its callback function whenever the target element intersects w
 the root container at specified threshold levels.
 */
 
-// const terms = document.querySelector('.terms-and-conditions');
+/*
+2nd example - Accept terms after reading them: making the accept button available only after the user has scrolled all the way down to bottom.
+*/
+
+const terms = document.querySelector('.terms-and-conditions');
+const button = document.querySelector('.accept');
+
+function obCallbackTwo(payload) {
+  console.log(payload[0].intersectionRatio);
+  if (payload[0].intersectionRatio === 1) {
+    button.disabled = false;
+    // Stop observing the button-preventing unnecessary process of observing happening in background
+    ob.unobserve(terms.lastElementChild);
+  }
+}
+const obTwo = new IntersectionObserver(obCallbackTwo, {
+  root: terms,
+  threshold: 1, // tells us when 100% on page
+});
+
+obTwo.observe(terms.lastElementChild);
