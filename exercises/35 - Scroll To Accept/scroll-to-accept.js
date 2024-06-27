@@ -23,6 +23,7 @@ const ob = new IntersectionObserver(obCallback);
 // ob.observe(watch);
 
 /*
+In summary:
 When you call `observer.observe(target)`, you are instructing the 
 IntersectionObserver instance to begin watching the target element. The observer 
 will then execute its callback function whenever the target element intersects with 
