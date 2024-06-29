@@ -151,11 +151,15 @@
      *  `addEventListener(type, listener, options)`
           *  `animationend` event
           *  `once` option
-*  [Click Outside a Modal to Close]()
-     *  [Some CSS tidbits]()
+*  [Click Outside a Modal to Close](https://github.com/nabrus/beginner-javascript/blob/master/exercises/34%20-%20Click%20Outside/click-outside.js)
+     *  [Some CSS tidbits](https://github.com/nabrus/beginner-javascript/blob/master/exercises/34%20-%20Click%20Outside/click-outside.html)
           *  `opacity: 0;` and `pointer-events: none;`
      *  `.closest()` method
      *  `querySelector('img').src;`
      *  `dataset`
+*  [Scroll to end of page to enable "Accept" button](https://github.com/nabrus/beginner-javascript/blob/master/exercises/35%20-%20Scroll%20To%20Accept/scroll-to-accept.js)
+    *  Intersection Observer API
+         *  `observer.observe(target)`
+    * [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
 
