@@ -1,7 +1,7 @@
 // Selecting elements
 const tabs = document.querySelector('.tabs');
 const tabButtons = tabs.querySelectorAll('[role="tab"]');
-const tabPanels = tabs.querySelectorAll('[role="tabpanel"]');
+const tabPanels = Array.from(tabs.querySelectorAll('[role="tabpanel"]'));
 
 // Handler function
 function handleTabClick(event) {
@@ -21,7 +21,18 @@ function handleTabClick(event) {
 
   // Find the associated tabPanel and show it
   const { id } = event.currentTarget; // Note: destructuring
+
+  /*
+  Method 1
   const tabPanel = tabs.querySelector(`[aria-labelledby="${id}"]`);
+  tabPanel.hidden = false;
+*/
+
+  // Method 2 - using the `find()` method on the array of tabPanels
+  // Note: used `Array.from` to convert tabPanels variable (nodeList) into an array
+  const tabPanel = tabPanels.find(
+    panel => panel.getAttribute(`aria-labelledby`) === id
+  );
   tabPanel.hidden = false;
 }
 
