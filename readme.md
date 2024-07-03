@@ -161,5 +161,16 @@
     *  Intersection Observer API
          *  `observer.observe(target)`
     * [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
+*  [Tabs](https://github.com/nabrus/beginner-javascript/blob/master/exercises/36%20-%20Tabs/tabs.js)
+     *  [ARIA (Accessible Rich Internet Applications) attributes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/36%20-%20Tabs/index.html)
+     *  `Array.from` method
+          *  `Array.from(arrayLike, mapFn, thisArg);`
+     *  `forEach()` method
+          *  `array.forEach(callback(currentValue, index, array), thisArg);`
+     *  `setAttribute` method
+          *  `element.setAttribute(name, value);`
+     *  `find()` method
+          *  `array.find(callback(element, index, array), thisArg);`
+
 
 
