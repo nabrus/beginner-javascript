@@ -172,5 +172,14 @@
      *  `find()` method
           *  `array.find(callback(element, index, array), thisArg);`
 
+### Logic and Flow Control
+
+*  [Order of operations](https://github.com/nabrus/beginner-javascript/blob/master/playground/bedmas.html)
+     *  BEDMAS, another version of PEMDAS
+          *  **P**arentheses
+          *  **E**xponents (ie powers)
+          *  **M**ultiplication and **D**ivision (left to right)
+          *  **A**ddition and **S**ubtraction (left to right)
+
 
 
