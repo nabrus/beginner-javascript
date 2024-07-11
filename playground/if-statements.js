@@ -19,14 +19,48 @@ Syntax
 
 /* eslint-disable */
 
-if (10 > 2) {
-  console.log('Yes it is!');
+const age = 50;
+
+// `if` statement with `else if` and `else`
+if (age > 70 ) {
+  console.log('You are in your seventies');
+} else if (age > 60) {
+  console.log('You are in your sixties');
+} else if (age > 50) {
+  console.log('You are in your fifties');
+} else {
+  console.log('You are a young blood');
 }
 
+// `if` statement in a function
 function slugify(sentence, lowercase) {
   const slug = sentence.replace(/\s/g, '-');
   if (lowercase) {
     return slug.toLowerCase();
   }
+  // else
   return slug;
+}
+
+console.log(slugify('Why You LITTLE...', true));
+console.log(slugify('Why YOU little...'));
+
+
+// `==` vs `===` refresher and the bang `!` (not)
+console.log(undefined == null) // true
+console.log(undefined === null) // false
+
+const simpsonsChar = 'Homer';
+
+console.log(simpsonsChar === 'Homer'); // true
+console.log(simpsonsChar === 'Bart'); // false
+console.log(simpsonsChar !== 'Bart'); // true , note font changes ! = = to !==
+
+// && (And), || (Or)
+if (simpsonsChar === 'Homer' || simpsonsChar === 'Bart') { // Homer or Bart equals simpsonsChar
+  console.log('D\'oh!'); // D'oh!
+}
+
+if (simpsonsChar === 'Homer' && simpsonsChar === 'Bart') { // Homer and Bart equals simpsonsChar
+  console.log('D\'oh!'); // no output
 }
