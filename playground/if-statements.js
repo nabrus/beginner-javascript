@@ -57,10 +57,10 @@ console.log(simpsonsChar === 'Bart'); // false
 console.log(simpsonsChar !== 'Bart'); // true , note font changes ! = = to !==
 
 // && (And), || (Or)
-if (simpsonsChar === 'Homer' || simpsonsChar === 'Bart') { // Homer or Bart equals simpsonsChar
+if (simpsonsChar === 'Homer' || simpsonsChar === 'Bart') { // Homer OR Bart equals simpsonsChar
   console.log('D\'oh!'); // D'oh!
 }
 
-if (simpsonsChar === 'Homer' && simpsonsChar === 'Bart') { // Homer and Bart equals simpsonsChar
+if (simpsonsChar === 'Homer' && simpsonsChar === 'Bart') { // Homer AND Bart equals simpsonsChar
   console.log('D\'oh!'); // no output
 }
