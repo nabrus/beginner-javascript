@@ -51,6 +51,7 @@ console.log(undefined == null) // true
 console.log(undefined === null) // false
 
 const simpsonsChar = 'Homer';
+const simpsonsChar2 = 'Bart';
 
 console.log(simpsonsChar === 'Homer'); // true
 console.log(simpsonsChar === 'Bart'); // false
@@ -63,4 +64,16 @@ if (simpsonsChar === 'Homer' || simpsonsChar === 'Bart') { // Homer OR Bart equa
 
 if (simpsonsChar === 'Homer' && simpsonsChar === 'Bart') { // Homer AND Bart equals simpsonsChar
   console.log('D\'oh!'); // no output
+}
+
+// `includes` method on strings performs a case-sensitive search returning true or false
+if ('Bartholomew'.includes(simpsonsChar2)) {
+  console.log('Eat my shorts!')
+}
+
+// or for readability use a variable...for example
+const fullName = ('Bartholomew'.includes(simpsonsChar2));
+
+if (fullName) {
+  console.log('Don\'t have a cow man!')
 }
