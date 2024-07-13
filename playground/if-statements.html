@@ -9,18 +9,42 @@
 </head>
 
 <body>
-  * empty array
-  * empty object
-  * 1
-  * -10
-  * full string
-  * a string of "0"
-  * 0
-  * undefined variable
-  * Variable set to null
-  * a variable set to `"hello" - 10` NaN
-  * empty string
 
+  <!-- Truth and Falsy lists -->
+
+  <!-- Truthy -->
+  <h2>Truthy Values</h2>
+  <ul class="list">
+    <li><code>true</code></li>
+    <li>1</li>
+    <li>-10</li>
+    <li>A string of zero ("0")</li>
+    <li>A full string ("Any non-empty string")</li>
+    <li>An empty array (<code>[]</code>)</li>
+    <li>An empty object (<code>{}</code>)</li>
+  </ul>
+
+  <!-- Falsy -->
+  <h2>Falsy Values</h2>
+  <ul class="list">
+    <li><code>false</code></li>
+    <li>0</li>
+    <li>Empty string (<code>""</code>)</li>
+    <li><code>undefined</code> variable</li>
+    <li>Variable set to <code>null</code></li>
+    <li>A variable set to `"hello" - 10`. Which is NaN</li>
+  </ul>
+
+  <style>
+    h2 {
+      padding: 0 5px;
+      margin-bottom: -20px;
+    }
+
+    .list {
+      color: whitesmoke;
+    }
+  </style>
 
   <script src="if-statements.js"></script>
 </body>
