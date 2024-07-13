@@ -122,7 +122,25 @@ if (empty) {
   console.log('It\'s falsy!');
 }
 
-Object.keys({})
+/*
+The Object.keys() method in JavaScript is used to return an array of a given object's own enumerable property names (keys).
+*/
+const person = {
+  name: "Yoda",
+  age: 900,
+  planet: "Dagobah"
+};
+
+const keys = Object.keys(person);
+console.log(keys); // Output: ["name", "age", "planet"]
+
+// Using `Object.keys()` to get truthy/falsy values out of objects
+// Can be used for example to see if an object is empty
+console.log(Object.keys({})); // [] - returns an empty array, then use `.length`
+console.log(Object.keys({}).length); // 0 - returns zero (falsy)
+
+// Or to show the length of properties of an object
+console.log(Object.keys(person).length); // 3 (truthy)
 
 /*
 Summary of each:
@@ -130,3 +148,16 @@ Falsy Values: Evaluate to false in Boolean contexts. Include false, 0, -0, 0n, "
 
 Truthy Values: Evaluate to true in Boolean contexts. Include all values not listed as falsy, such as non-zero numbers, non-empty strings, objects, arrays, and functions.
 */
+
+// Example of an `if` statement determining truthy/falsy 
+const values = [[], {}, -10, 1, 0, '', 'Full string', ' ', undefined, null, NaN];
+
+console.group('Truthy or Falsy Values')
+values.forEach(value => {
+  if (value) {
+    console.log(value, 'Is truthy');
+  } else {
+    console.log(value, 'Is falsy');
+  }
+})
+console.groupEnd();
