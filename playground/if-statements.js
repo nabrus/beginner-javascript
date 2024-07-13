@@ -33,7 +33,7 @@ if (age > 70 ) {
 }
 
 // `if` statement in a function
-function slugify(sentence, lowercase) {
+function slugify(sentence, lowercase) { // `lowercase` takes a boolean (true, false)
   const slug = sentence.replace(/\s/g, '-');
   if (lowercase) {
     return slug.toLowerCase();
@@ -57,7 +57,7 @@ console.log(simpsonsChar === 'Homer'); // true
 console.log(simpsonsChar === 'Bart'); // false
 console.log(simpsonsChar !== 'Bart'); // true , note font changes ! = = to !==
 
-// && (And), || (Or)
+// && (And) - || (Or)
 if (simpsonsChar === 'Homer' || simpsonsChar === 'Bart') { // Homer OR Bart equals simpsonsChar
   console.log('D\'oh!'); // D'oh!
 }
@@ -77,3 +77,56 @@ const fullName = ('Bartholomew'.includes(simpsonsChar2));
 if (fullName) {
   console.log('Don\'t have a cow man!')
 }
+
+// Truthy and Falsy
+/*
+The concept of "truthy" and "falsy" refers to how values are evaluated in Boolean contexts, such as in conditional statements (if, while, etc.).
+*/
+
+// Truthy/Falsy examples
+
+// const ship = ''; // Empty string = falsy
+const ship = "The Millennium Falcon";
+
+if (ship) {
+  console.log('You have a ship!');
+} else {
+  console.log('You don\'t have a ship');
+}
+
+// const score = 0; // zero = falsy
+const score = "0"; // 1, -10, or a string of zero = truthy
+
+if (score){
+  console.log('They scored!!');
+} else {
+  console.log('No score yet.');
+}
+
+// let game; // undefined = falsy
+// const game = null; // null = falsy
+const game = "hello" - 10; // NaN = falsy
+
+if (game) {
+  console.log('That\'s my favorite game!!');
+} else {
+  console.log('I\'ve never heard of that one!?');
+}
+
+// const empty = {}; // empty object = truthy
+const empty = []; // empty array = truthy
+
+if (empty) {
+  console.log('Yep, it\'s truthy!');
+} else {
+  console.log('It\'s falsy!');
+}
+
+Object.keys({})
+
+/*
+Summary of each:
+Falsy Values: Evaluate to false in Boolean contexts. Include false, 0, -0, 0n, "", null, undefined, and NaN.
+
+Truthy Values: Evaluate to true in Boolean contexts. Include all values not listed as falsy, such as non-zero numbers, non-empty strings, objects, arrays, and functions.
+*/
