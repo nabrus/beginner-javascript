@@ -180,6 +180,15 @@
           *  **E**xponents (ie powers)
           *  **M**ultiplication and **D**ivision (left to right)
           *  **A**ddition and **S**ubtraction (left to right)
+*  [Flow Control](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.js)
+     *  `if..else` Statements
+     *  Refresher on `==` vs `===`
+     *  Logical NOT `!`
+     *  `&&` and `||`
+     *  `includes(searchString)` method
+     *  Truthy and Falsy
+          *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.html)
+          *  Intro to `Object.keys()` method
 
 
 
