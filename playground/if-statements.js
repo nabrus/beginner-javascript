@@ -46,7 +46,7 @@ console.log(slugify('Why You LITTLE...', true));
 console.log(slugify('Why YOU little...'));
 
 
-// `==` vs `===` refresher and the bang `!` (not)
+// `==` vs `===` refresher and the logical `!` (not)
 console.log(undefined == null) // true
 console.log(undefined === null) // false
 
