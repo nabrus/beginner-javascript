@@ -183,12 +183,11 @@
 *  [Flow Control](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.js)
      *  `if..else` Statements
      *  Refresher on `==` vs `===`
-     *  Logical NOT `!`
-     *  `&&` and `||`
+     *  Logical operators - `&&` (AND), `||` (OR), and `!` (NOT) 
      *  `includes(searchString)` method
      *  Truthy and Falsy
           *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.html)
-          *  Intro to `Object.keys()` method
+               *  Intro to `Object.keys()` method
 
 
 
