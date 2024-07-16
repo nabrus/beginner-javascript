@@ -13,6 +13,8 @@ When you use the `!` operator on a value:
 */
 
 const smugglerName = 'han';
+const pilotName = 'luke';
+const bountyHunter = '';
 
 console.log(smugglerName); // han - string
 console.log(!smugglerName); // false - inverted boolean
@@ -24,3 +26,7 @@ The `!!` operator in JavaScript is a common idiom used to convert any value to i
 Boolean equivalent. It involves using the logical NOT operator `!` twice. The first `!` converts the value to a Boolean and inverts it, and the second `!` inverts it
 again, resulting in the original Boolean representation of the value.
 */
+
+// Checking for Existence: Often used to check if a variable or object property exists or is not null/undefined or any falsy value.
+console.log(!!pilotName); // true
+console.log(!!bountyHunter); // false
