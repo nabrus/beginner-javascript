@@ -30,3 +30,35 @@ again, resulting in the original Boolean representation of the value.
 // Checking for Existence: Often used to check if a variable or object property exists or is not null/undefined or any falsy value.
 console.log(!!pilotName); // true
 console.log(!!bountyHunter); // false
+
+// TERNARY
+
+/*
+A ternary operator in JavaScript is a concise way to perform conditional
+operations. It is the only operator in JavaScript that takes three operands, hence
+the name "ternary". It is also known as the conditional operator.
+*/
+
+// Syntax: condition ? expressionIfTrue : expressionIfFalse
+
+const count = 100;
+// convert the following into a ternary
+// let word;
+
+// if (count === 1) {
+//   word = 'item';
+// } else {
+//   word = 'items';
+// }
+
+const word = count === 1 ? 'item' : 'items';
+
+const sentence = `You have ${count} ${word} in your cart.`;
+console.log(sentence);
+
+// Ternary used write in the variable
+const sentence2 = `You have ${count} item${
+  count === 1 ? '' : 's'
+} in your cart`;
+
+console.log(sentence2);
