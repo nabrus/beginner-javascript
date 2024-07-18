@@ -62,3 +62,12 @@ const sentence2 = `You have ${count} item${
 } in your cart`;
 
 console.log(sentence2);
+
+// Using ternary in a function
+
+function showAdminBar() {
+  console.log('Displaying Admin Menu');
+}
+
+const isAdmin = true;
+isAdmin ? showAdminBar() : null;
