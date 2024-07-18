@@ -63,11 +63,12 @@ const sentence2 = `You have ${count} item${
 
 console.log(sentence2);
 
-// Using ternary in a function
-
+// Using ternary to run a function
 function showAdminBar() {
-  console.log('Displaying Admin Menu');
+  console.log('Displaying Admin Bar');
 }
 
 const isAdmin = true;
 isAdmin ? showAdminBar() : null;
+
+// AND AND Trick
