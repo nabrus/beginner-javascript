@@ -188,6 +188,11 @@
      *  Truthy and Falsy
           *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.html)
                *  Intro to `Object.keys()` method
-
+*  [Flow Control 2](https://github.com/nabrus/beginner-javascript/blob/master/playground/conditional.js)
+     *  Logical NOT operator `!`
+     *  Coercion using `!!`
+     *  Ternary
+          *  `condition ? expressionIfTrue : expressionIfFalse`
+     *  Using an `&&` trick
 
 
