@@ -72,3 +72,26 @@ const isAdmin = true;
 isAdmin ? showAdminBar() : null;
 
 // AND AND Trick
+function check1() {
+  console.log('Running check 1');
+  return true;
+}
+function check2() {
+  console.log('Running check 2');
+  return false;
+}
+function check3() {
+  console.log('Running check 3');
+  return true;
+}
+
+// "short circuiting" in JS
+if (check1() && check2() && check3()) {
+  console.log('All checks pass!');
+} else {
+  console.log('Some checks failed!');
+}
+
+// Used on example on the isAdmin from above `isAdmin ? showAdminBar() : null;`
+// Checking if isAdmin is `true`. If true function runs if not nothing happens
+isAdmin && showAdminBar();
