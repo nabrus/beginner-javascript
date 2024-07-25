@@ -11,10 +11,12 @@
 
 <body>
   <style>
-    /* CSS variables */
+    /* CSS custom properties (variables) */
     .turtle {
       position: relative;
-      transform: translateX(10px) translateY(10px);
+      --x: 10px;
+      --y: 10px;
+      transform: translateX(var(--x)) translateY(var(--y));
     }
   </style>
   <img width="200" src="./turtle.png" alt="Turtle" class="turtle">
@@ -67,8 +69,9 @@
           break;
         default:
           console.log('Not an option!');
+          break;
       }
-      console.log(x, y);
+      turtle.setAttribute('style', `--x: ${x}px; --y: ${y}px`);
     }
 
     window.addEventListener('keydown', handleKeyDown);
