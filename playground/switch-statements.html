@@ -10,8 +10,69 @@
 
 
 <body>
-  <img width="200" src="./turtle.png" alt="Turt" class="turt">
+  <style>
+    /* CSS variables */
+    .turtle {
+      position: relative;
+      transform: translateX(10px) translateY(10px);
+    }
+  </style>
+  <img width="200" src="./turtle.png" alt="Turtle" class="turtle">
 
+  <script>
+    /*
+    The switch statement evaluates an expression, matching the expression's value
+    against a series of case clauses, and executes statements after the first case
+    clause with a matching value, until a break statement is encountered. The
+    default clause of a switch statement will be jumped to if no case matches the
+    expression's value.
+
+    Syntax:
+
+    switch (expression) {
+  case value1:
+    // Code to execute when expression === value1
+    break;
+  case value2:
+    // Code to execute when expression === value2
+    break;
+  // More cases...
+  default:
+    // Code to execute when no cases match
+}
+
+    */
+    const turtle = document.querySelector('.turtle');
+    let x = 0;
+    let y = 0;
+
+    function handleKeyDown(event) {
+      // If it's not an arrow key, ignore
+      if (!event.key.includes('Arrow')) {
+        return;
+      }
+      // Switch statement for up, right, down, left
+      switch (event.key) {
+        case 'ArrowUp':
+          y -= 1;
+          break;
+        case 'ArrowRight':
+          x += 1;
+          break;
+        case 'ArrowDown':
+          y += 1;
+          break;
+        case 'ArrowLeft':
+          x -= 1;
+          break;
+        default:
+          console.log('Not an option!');
+      }
+      console.log(x, y);
+    }
+
+    window.addEventListener('keydown', handleKeyDown);
+  </script>
 </body>
 
 </html>
