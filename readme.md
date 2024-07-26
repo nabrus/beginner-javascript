@@ -194,5 +194,8 @@
      *  Ternary
           *  `condition ? expressionIfTrue : expressionIfFalse`
      *  Using an `&&` trick
+*  [`switch` Statement](https://github.com/nabrus/beginner-javascript/blob/master/playground/switch-statements.html)
+     *  Animating a turtle when pressing arrow keys
+     *  CSS Custom Properties (Variables)
 
 
