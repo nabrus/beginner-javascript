@@ -15,16 +15,16 @@
 
     Method on the `Window`, global API (so no need to type in `window.`, especially since Node.JS has `setTimeout()` but no `Window`)
   
-    Returns a Timeout ID: This ID can be used with clearTimeout() to cancel the execution if needed.
+    Returns a Timeout ID: This ID can be used with `clearTimeout()` to cancel the execution if needed.
   
     Delay: Specified in milliseconds.
   
-    Single Execution: Unlike setInterval(), setTimeout() executes the function only once.
+    Single Execution: Unlike `setInterval()`, `setTimeout()` executes the function only once.
   
     Passing Arguments: Additional arguments can be passed to the function.
   
     Syntax:
-    let timeoutID = setTimeout(function (callback), delay (ms), optional...arguments);
+    `let timeoutID = setTimeout(function (callback), delay (ms), optional...arguments);`
     */
 
     console.log('Wait for it...');
@@ -38,8 +38,20 @@
       console.log(`Hi, my name is ${name}`);
     }
 
-    // Callback function, with 5 secs delay, and the argument for the callback
+    // Pass in a reference to a callback function, with 5 secs delay, and the argument for the callback
     setTimeout(sayHi, 5000, 'C3PO');
+
+    /*
+    `setInterval()` is used to repeatedly execute a function or code snippet with a fixed time delay.
+
+    It returns an interval ID, which can be used with `clearInterval()` to stop the execution.
+
+    The delay is specified in milliseconds.
+
+    You can pass additional arguments to the function when using `setInterval()`.
+    
+    Common use cases include animations, periodic data fetching, and updating dynamic content like clocks or timers.
+    */
   </script>
 </body>
 
