@@ -32,7 +32,7 @@
     // Anonymous function with 2 secs delay
     setTimeout(() => {
       console.log('...and finished!!');
-    }, 2000);
+    }, 500);
 
     function sayHi(name) {
       console.log(`Hi, my name is ${name}`);
@@ -52,6 +52,55 @@
     
     Common use cases include animations, periodic data fetching, and updating dynamic content like clocks or timers.
     */
+
+    function alarm() {
+      console.log('Beep');
+    }
+
+    // setInterval(alarm, 2000);
+
+    // An example of how to have `setInterval` run immediately instead of waiting the initial delay, then continue with the set delay as normal
+    function setImmediateInterval(funcToRun, ms) {
+      // Call the passed in function right away
+      funcToRun();
+      // Run the regular interval
+      return setInterval(funcToRun, ms);
+    }
+
+    setImmediateInterval(alarm, 2000);
+
+    /*
+    `clearInterval` is a function in JavaScript used to stop the repeated execution 
+    of a function that was started using `setInterval`. When you set an interval with `setInterval`, it returns a unique interval ID. This ID can then be used with `clearInterval` to cancel the interval.
+
+    Syntax:
+    `clearInterval(intervalID);`
+
+    */
+
+    function destroy() {
+      document.body.innerHTML = `<p>DESTROYED</p>`;
+    }
+    // Save reference to this timer number in a variable
+    const bombTimer = setTimeout(destroy, 5000);
+
+    console.log(bombTimer); // 4 (this timers number out of all timers running)
+
+    window.addEventListener('click', function () {
+      console.log('You clicked! You stopped the destruction!');
+      // Stops the timer from running
+      clearTimeout(bombTimer);
+    });
+
+    // Stopping `setInterval` works in the same way but using `clearInterval`
+    const spam = setInterval(() => {
+      console.log('SPAM!!');
+      console.log('SPAM!!!');
+    }, 100);
+
+    setTimeout(() => {
+      clearInterval(spam);
+    }, 10000);
   </script>
 </body>
 
