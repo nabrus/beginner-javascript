@@ -10,6 +10,7 @@
 
 <body>
   <script>
+    // TIMERS & INTERVALS
     /*
     `setTimeout()`: Executes a function or code snippet after a specified delay.
 
@@ -24,7 +25,7 @@
     Passing Arguments: Additional arguments can be passed to the function.
   
     Syntax:
-    `setTimeout(function(callback), delay(ms), param1, param2, ...);`
+    `setTimeout(function(callback), delay(ms), [param1, param2, ...]);`
     */
 
     console.log('Wait for it...');
@@ -51,6 +52,9 @@
     You can pass additional arguments to the function when using `setInterval()`.
     
     Common use cases include animations, periodic data fetching, and updating dynamic content like clocks or timers.
+
+    Syntax:
+    `setInterval(function, delay, [param1, param2, ...]);`
     */
 
     function alarm() {
@@ -69,13 +73,17 @@
 
     setImmediateInterval(alarm, 2000);
 
+    // STOPPING TIMERS & INTERVALS
     /*
-    `clearInterval` is a function in JavaScript used to stop the repeated execution 
-    of a function that was started using `setInterval`. When you set an interval with `setInterval`, it returns a unique interval ID. This ID can then be used with `clearInterval` to cancel the interval.
+
+    `clearTimeout` is  used to cancel a timeout that was previously set with the 
+    `setTimeout` function. When you set a timeout with `setTimeout`, it returns a 
+    unique timeout ID. This ID can then be used with `clearTimeout` to cancel the 
+    timeout before it executes.
 
     Syntax:
-    `clearInterval(intervalID);`
-
+    `clearTimeout(timeoutID);`
+    
     */
 
     function destroy() {
@@ -92,7 +100,17 @@
       clearTimeout(bombTimer);
     });
 
-    // Stopping `setInterval` works in the same way but using `clearInterval`
+    /*
+    `clearInterval` is used to stop the repeated execution of a function that was 
+    started using `setInterval`. When you set an interval with `setInterval`, it 
+    returns a unique interval ID. This ID can then be used with `clearInterval` to 
+    cancel the interval.
+
+    Syntax:
+    `clearInterval(intervalID);`
+
+    */
+
     const spam = setInterval(() => {
       console.log('SPAM!!');
       console.log('SPAM!!!');
