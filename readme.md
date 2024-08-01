@@ -197,5 +197,13 @@
 *  [`switch` Statement](https://github.com/nabrus/beginner-javascript/blob/master/playground/switch-statements.html)
      *  Animating a turtle when pressing arrow keys
      *  CSS Custom Properties (Variables)
+*  [Timers & Intervals](https://github.com/nabrus/beginner-javascript/blob/master/playground/intervals.html)
+     *  Setting Timers & Intervals
+          *  `setTimeout(function(callback), delay(ms), [param1, param2, ...]);`
+          *  `setInterval(function(callback), delay(ms), [param1, param2, ...]);`
+     *  Stopping Timers & Intervals
+          *  `clearTimeout(timeoutID);`
+          *  `clearInterval(intervalID);`
+     
 
 
