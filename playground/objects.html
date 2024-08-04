@@ -20,16 +20,81 @@
       Objects are collections of properties, where each property is an association between a key (also known as a property name) and a value.
 
       Property names can be strings or symbols, and values can be any data type, including other objects and functions.
+
+      Note: the order of the properties does not matter (see 'NOTE: The order of
+      properties' below)
+
+      Syntax:
+      Object Literal Syntax = `const objName = {};`
+      `new Object()` Syntax =  `const objName = new Object({});`
     */
 
+    /* eslint-disable */
+    const gamer = true;
+
     const person = {
-      firstName: 'Wyatt', // key (property name) = firsName, value = 'Wyatt'
+      firstName: 'Wyatt', // key (property name) = firstName, value = 'Wyatt'
       lastName: 'Urban',
       age: 8,
-      isEmployed: false,
+      gamer, // shorthand for `gamer: gamer`
+      'super awesome': true, // quotes can be used for property names
+      games: { // nested object
+        minecraft: 3,
+        zelda: 2,
+        sasquatch: 1
+      }
+    };
+    // Dot Notation and Bracket Notation
+    console.group('Examples of dot/bracket notation.');
+    console.log(person.lastName); // Urban
+    console.log(person.gamer); // true
+    console.log(person['age']); // 8
+    console.log(person['super awesome']); // true
+    console.groupEnd('Examples of dot/bracket notation.');
+
+    // Adding properties to an object
+    person.isEmployed = false;
+    console.log(person.isEmployed); // false
+    // Overwriting a keys value
+    person.age = 9;
+    console.log(person.age); // 9
+    console.log(person); // 9
+
+    /*
+    NOTE: The order of properties in an object is generally consistent but follows 
+    specific rules. The properties of an object are enumerated in the following 
+    order:
+
+      1. Integer Keys: Properties with keys that are non-negative integers (e.g., 0,
+      1, 2, etc.) are enumerated first, in ascending numerical order.
+
+      2. String Keys: Properties with keys that are strings (but not valid
+      non-negative integers) are enumerated next, in the order in which they were
+      added to the object.
+
+      3. Symbol Keys: Properties with keys that are symbols are enumerated last, in
+      the order in which they were added to the object.
+
+    */
+    const obj = {
+      b: "string",
+      3: "number",
+      a: "another string",
+      1: "another number",
+      [Symbol('symbol')]: "symbol",
+      2: "yet another number"
     };
 
-    console.log(person.lastName); // Urban
+    console.log(Object.keys(obj)); // Output: ["1", "2", "3", "b", "a"]
+    /*
+    Integer keys (1, 2, 3) are listed first in ascending numerical order.
+
+    String keys (b, a) follow in the order they were added.
+
+    Symbol keys are not included in the output of Object.keys but would be
+    enumerated last if included.
+    */
+
   </script>
 </body>
 
