@@ -204,6 +204,18 @@
      *  Stopping Timers & Intervals
           *  `clearTimeout(timeoutID);`
           *  `clearInterval(intervalID);`
-     
+
+### Data Types
+
+*  [Objects](https://github.com/nabrus/beginner-javascript/blob/master/playground/objects.html)
+     *  Object literal
+     *  Dot Notation and Bracket Notation
+     *  Optional Chaining (?.)
+     *  Adding, Deleting, and changing the value of properties
+          *  `delete` keyword
+     *  Method - A function that is a property of an object
+          *  `this` keyword
+     *  `Object.freeze()` method
+     *  The order of properties in an object
 
 
