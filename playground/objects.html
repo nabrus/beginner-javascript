@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <!-- <input type="text" name="first" value="Homer"> --> <!-- input commented out for optional operator example -->
 
   <!-- <script src="https://unpkg.com/lodash"></script> -->
   <script>
@@ -36,29 +36,101 @@
       firstName: 'Wyatt', // key (property name) = firstName, value = 'Wyatt'
       lastName: 'Urban',
       age: 8,
+      schoolName: 'MPT',
       gamer, // shorthand for `gamer: gamer`
       'super awesome': true, // quotes can be used for property names
       games: { // nested object
         minecraft: 3,
         zelda: 2,
         sasquatch: 1
-      }
+      },
+      // greeting: function (sayHi = 'Hey, I am') {
+      //   return `${sayHi} ${this.firstName}!`;
+      // },
+
+      // Method shorthand - removal of the colon and function keyword, neither are needed
+      greeting(sayHi = 'Hey, I am') {
+        return `${sayHi} ${this.firstName}!`;
+      },
     };
-    // Dot Notation and Bracket Notation
-    console.group('Examples of dot/bracket notation.');
+
+    // Accessing properties with Dot Notation and Bracket Notation
+    console.group('Examples of dot/bracket notation.'); // group start
+
     console.log(person.lastName); // Urban
     console.log(person.gamer); // true
+    console.log(person.games.minecraft); // 3 (nested values)
     console.log(person['age']); // 8
     console.log(person['super awesome']); // true
+
+    // Example of use case for bracket notation - when a property is stored in a variable
+    const propertyValue = prompt('What value do you want?');
+    console.log(propertyValue); // Logs what is typed in
+    console.log(person[propertyValue]); // Logs value of property name entered at prompt
+
     console.groupEnd('Examples of dot/bracket notation.');
 
-    // Adding properties to an object
+    /*
+    A deep check example:
+
+    The optional chaining (?.) operator accesses an object's property or calls a
+    function. If the object accessed or function called using this operator is
+    `undefined` or `null`, the expression short circuits and evaluates to
+    `undefined` instead of throwing an error.
+    
+    key1?.key2?.key3
+    Checks each property name to see if it exists, if one found that doesn't then returns `undefined`
+    */
+
+    console.group('Optional chaining "?." operator example (deep check)');
+
+    // console.log(person.books.minecraft); // TypeError:...
+    console.log(person?.books?.minecraft); // undefined
+
+    // Input element commented out, when uncommented typed input/`Homer` will log
+    const nameInput = document.querySelector('[name="first"]');
+    const name = nameInput?.value; // check to see if input exists to avoid error
+    console.log(name); // undefined
+
+    console.groupEnd('Optional chaining "?." operator example (deep check)');
+
+
+    // Adding, Deleting, and changing the value of  properties to an object
     person.isEmployed = false;
+    delete person.schoolName; // delete properties from an object using the `delete` operator
+
+    console.group('Adding, deleting, and changing properties.'); // group start
+
     console.log(person.isEmployed); // false
+    console.log(person.schoolName); // undefined
     // Overwriting a keys value
-    person.age = 9;
-    console.log(person.age); // 9
-    console.log(person); // 9
+    person.age = 12;
+    console.log(person.age); // 12
+    console.log(person); // {firstName: 'Wyatt', ...}
+
+    console.groupEnd('Adding, deleting, and changing properties.');
+
+    /*
+    METHODS
+
+    A method is a function that is a property of an object. Methods are used to
+    define behaviors or actions that the object can perform. They can manipulate
+    the object's properties, perform calculations, or execute other tasks
+
+    `this` Keyword
+    When a function is called as a method of an object, `this` refers to the object
+    that owns the method
+
+    Simple trick: When looking at a method, `this` is equal to the left of the dot
+    `person.greeting()`: `this` is equal to the person object
+    */
+
+    console.group('Methods!');
+
+    console.log(person.greeting()); // Hey, I am Wyatt!
+    console.log(person.greeting('Hello, my name is')); // Hello, my name is Wyatt!
+
+    console.groupEnd('Methods!');
 
     /*
     The `Object.freeze()` static method freezes an object. A frozen object can no
@@ -66,7 +138,22 @@
     be removed, their enumerability, configurability, writability, or value cannot
     be changed, and the object's prototype cannot be re-assigned. `freeze()` returns
     the same object that was passed in.
+
+    Note: the freeze is shallow-meaning that immediate properties are immutable but objects contained within those properties are not frozen.
     */
+    const pc = {
+      cpu: 'AMD 7600X',
+      gpu: 'RX 7900XT',
+    };
+
+    Object.freeze(pc); // freezes the object pc
+
+    console.group('Object.freeze() example')
+    console.log(Object.isFrozen(pc)); // True
+
+    pc.cpu = 'Intel'; // Property is now immutable
+    console.log(pc.cpu); // AMD 7699X
+    console.groupEnd('Object.freeze() example')
 
 
     /*
@@ -94,7 +181,9 @@
       2: "yet another number"
     };
 
+    console.group('How the order of properties in an object work.')
     console.log(Object.keys(obj)); // Output: ["1", "2", "3", "b", "a"]
+    console.groupEnd('How the order of properties in an object work.')
     /*
     Integer keys (1, 2, 3) are listed first in ascending numerical order.
 
@@ -103,6 +192,8 @@
     Symbol keys are not included in the output of Object.keys but would be
     enumerated last if included.
     */
+
+
 
   </script>
 </body>
