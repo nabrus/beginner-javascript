@@ -208,7 +208,7 @@
 
     console.group('Primitive types');
 
-    // Using triple `=` checks if the value and type are the same
+    // Using the strict equality operator `===` checks if the value and type are the same
     console.log(rebel1 === rebel2); // true
 
     rebel1 = 'Han';
@@ -228,7 +228,19 @@
     memory location where the data is stored, rather than the data itself.
     */
 
+    const car1 = {
+      make: 'Honda',
+      model: 'CRV',
+    }
 
+    const car2 = {
+      make: 'Honda',
+      model: 'CRV',
+    }
+
+    // Objects are compared by reference
+    // So the following results in `false` because we have two different instances of objects
+    console.log(car1 === car2); // false
 
   </script>
 </body>
