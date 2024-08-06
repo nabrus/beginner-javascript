@@ -193,6 +193,31 @@
     enumerated last if included.
     */
 
+    /*
+    Understanding how references work in JS
+
+    Primitives vs. Reference Types
+
+    Primitive Types: These include `number`, `string`, `boolean`, `null`,
+    `undefined`, `symbol`, and `bigint`. Primitive values are stored directly in
+    the variable, and each variable holds its own copy of the data.
+    */
+
+    let rebel1 = 'Luke';
+    let rebel2 = 'Luke';
+
+    // Using triple `=` checks if the value and type are the same
+    console.log(rebel1 === rebel2); // true
+
+    rebel1 = 'Han';
+    rebel2 = rebel1; // rebel2 is a copy of rebel1
+    console.log(rebel1, rebel2); // Han Han
+
+    // So changing one of the now matching variables, does not change the other.
+    rebel2 = 'Chewie';
+    console.log(rebel1 === rebel2); // false
+    console.log(rebel1, rebel2); // Han Chewie
+
 
 
   </script>
