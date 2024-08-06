@@ -206,6 +206,8 @@
     let rebel1 = 'Luke';
     let rebel2 = 'Luke';
 
+    console.group('Primitive types');
+
     // Using triple `=` checks if the value and type are the same
     console.log(rebel1 === rebel2); // true
 
@@ -217,6 +219,14 @@
     rebel2 = 'Chewie';
     console.log(rebel1 === rebel2); // false
     console.log(rebel1, rebel2); // Han Chewie
+
+    console.groupEnd('Primitive types');
+
+    /*
+    Reference Types: These include objects, arrays, functions, and instances of
+    classes. For reference types, variables hold a reference (or pointer) to the
+    memory location where the data is stored, rather than the data itself.
+    */
 
 
 
