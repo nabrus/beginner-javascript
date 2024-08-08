@@ -292,11 +292,23 @@
     libraries like lodash or structured cloning methods.
     */
 
-    const keyboard1 = {
-      mechanical: true,
-      switchType: 'brown',
-
+    const superHero1 = {
+      powers: 'flight',
+      cape: true,
+      secretId: {
+        name: 'henry',
+        age: '205',
+      }
     }
+
+    // Deep copy using Lodash
+    const superHero2 = _.cloneDeep(superHero1);
+    console.log(superHero2); // {powers: 'flight', cape: true, secretId: {…}}
+    console.log(superHero2.secretId); // {{name: 'henry', age: '205'}}
+
+    superHero2.secretId.name = 'Tony';
+    console.log(superHero2.secretId); // {name: 'Tony', age: '205'}
+    console.log(superHero1.secretId); // {name: 'henry', age: '205'}
 
   </script>
 </body>
