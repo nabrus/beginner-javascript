@@ -11,7 +11,7 @@
 <body>
   <!-- <input type="text" name="first" value="Homer"> --> <!-- input commented out for optional operator example -->
 
-  <!-- <script src="https://unpkg.com/lodash"></script> -->
+  <script src="https://unpkg.com/lodash"></script>
   <script>
     // An object is a complex data type that allows you to store collections of data and more complex entities.
 
@@ -238,9 +238,65 @@
       model: 'CRV',
     }
 
+    console.group('Variables hold a reference to the object');
+
     // Objects are compared by reference
     // So the following results in `false` because we have two different instances of objects
     console.log(car1 === car2); // false
+
+    const car3 = car1; // car3 is a reference to car1
+    console.log(car3); // {make: 'Honda', model: 'CRV'}
+
+    /*
+    When you assign an object to another variable, both variables refer to the same object
+    in memory. Any modifications through one variable affect the same object.
+    */
+    car3.model = 'Passport';
+    console.log(car3); // {make: 'Honda', model: 'Passport'}
+    console.log(car1); // {make: 'Honda', model: 'Passport'}
+
+    console.log(car2); // {make: 'Honda', model: 'CRV'}
+
+    console.groupEnd('Variables hold a reference to the object');
+
+    /*
+    To create a true copy of an object or array (a shallow copy), you need to create a new
+    object or array and copy the values manually.
+    */
+
+    // The spread operator `...`  or `Object.assign({}, obj)` can be used to create a shallow copy of an object.
+    const player1 = {
+      weapon: 'bow',
+      tool: 'pickaxe',
+      armor: {
+        helmut: 'gold',
+        chestPlate: 'diamond',
+      }
+    }
+
+    const player2 = { ...player1 };
+    // const player2 = Object.assign({}, player1); // Note another way to make a copy
+    console.log(player2); // {weapon: 'bow', tool: 'pickaxe', armor: {…}}
+
+    player2.weapon = 'mace';
+    console.log(player2); // {weapon: 'mace', tool: 'pickaxe', armor: {…}}
+    console.log(player1); // {weapon: 'bow', tool: 'pickaxe', armor: {…}}
+
+    // Note: shallow copy means that nested objects are not copied
+    player2.armor.helmut = 'diamond';
+    console.log(player2.armor.helmut); // diamond
+    console.log(player1.armor.helmut); // diamond
+
+    /*
+    For deep copying (where nested objects and arrays are also copied), you can use
+    libraries like lodash or structured cloning methods.
+    */
+
+    const keyboard1 = {
+      mechanical: true,
+      switchType: 'brown',
+
+    }
 
   </script>
 </body>
