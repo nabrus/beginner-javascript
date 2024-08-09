@@ -269,7 +269,7 @@
     object or array and copy the values manually.
     */
 
-    // The spread operator `...`  or `Object.assign({}, obj)` can be used to create a shallow copy of an object.
+    // The spread operator (`...`)  or `Object.assign({}, obj)` can be used to create a shallow copy of an object.
     const player1 = {
       weapon: 'bow',
       tool: 'pickaxe',
@@ -292,9 +292,47 @@
     console.log(player2.armor.helmet); // diamond
     console.log(player1.armor.helmet); // diamond
 
+    // See below for creating a deep copy using lodash.
+
+    // Other uses for the spread operator (`...`)
+    // Combining Objects: spread operator can be used to merge two or more objects
+    const ores = {
+      copper: 64,
+      iron: 60,
+      diamond: 25,
+    }
+
+    const trees = {
+      oak: 64,
+      spruce: 45,
+      'dark oak': 60,
+    }
+
+    const buildingInv = { ...ores, ...trees };
+    console.log(buildingInv); // {copper: 64, iron: 60, diamond: 25, oak: 64, spruce: 45, …}
+
+    // Add properties when combining
+    const newBuildInv = {
+      ...ores,
+      ...trees,
+      stone: 30,
+      tuff: 55,
+    }
+
+    console.log(newBuildInv); //{copper: 64, iron: 60 … stone: 30, tuff: 55,}
+
+    // Note: duplicate properties will get overwritten
+    const overWriteInv = {
+      ...ores,
+      ...trees,
+      diamond: 15,
+    }
+
+    console.log(overWriteInv); //{copper: 64, iron: 60, diamond: 15, …}
+
     /*
     For deep copying (where nested objects and arrays are also copied), you can use
-    libraries like lodash or structured cloning methods.
+    libraries like lodash.
     */
 
     const superHero1 = {
@@ -315,6 +353,24 @@
     console.log(superHero2.secretId); // {name: 'Tony', age: '205'}
     console.log(superHero1.secretId); // {name: 'henry', age: '205'}
 
+    // Functions and Reference
+    function doStuff(data) {
+      data = 'something else';
+      console.log(data);
+    }
+
+    doStuff(rebel1); // something else
+    console.log(rebel1); // Han
+
+    function doStuff2(data) {
+      data.diamond = 128;
+      console.log(data); // {copper: 64, iron: 60, diamond: 128}
+    }
+    // Passing in a reference to an object as an argument
+    doStuff2(ores);
+
+    // The `ores` object will be updated
+    console.log(ores); // {copper: 64, iron: 60, diamond: 128}
   </script>
 </body>
 
