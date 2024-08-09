@@ -9,8 +9,10 @@
 </head>
 
 <body>
-  <!-- <input type="text" name="first" value="Homer"> --> <!-- input commented out for optional operator example -->
+  <!-- <input type="text" name="first" value="Homer"> -->
+  <!-- <input> commented out for the 'optional chaining operator' example below -->
 
+  <!-- Access to lodash library  -->
   <script src="https://unpkg.com/lodash"></script>
   <script>
     // An object is a complex data type that allows you to store collections of data and more complex entities.
@@ -44,7 +46,8 @@
         zelda: 2,
         sasquatch: 1
       },
-      // greeting: function (sayHi = 'Hey, I am') {
+      // Method - more on methods below
+      // greeting: function (sayHi = 'Hey, I am') { 
       //   return `${sayHi} ${this.firstName}!`;
       // },
 
@@ -79,7 +82,7 @@
     `undefined` instead of throwing an error.
     
     key1?.key2?.key3
-    Checks each property name to see if it exists, if one found that doesn't then returns `undefined`
+    Checks each property name to see if it exists. Will return `undefined if one doesn't exist
     */
 
     console.group('Optional chaining "?." operator example (deep check)');
@@ -87,7 +90,7 @@
     // console.log(person.books.minecraft); // TypeError:...
     console.log(person?.books?.minecraft); // undefined
 
-    // Input element commented out, when uncommented typed input/`Homer` will log
+    // Input element commented out. If uncommented, input entered/`Homer` will log
     const nameInput = document.querySelector('[name="first"]');
     const name = nameInput?.value; // check to see if input exists to avoid error
     console.log(name); // undefined
@@ -139,7 +142,7 @@
     be changed, and the object's prototype cannot be re-assigned. `freeze()` returns
     the same object that was passed in.
 
-    Note: the freeze is shallow-meaning that immediate properties are immutable but objects contained within those properties are not frozen.
+    Note: the freeze is shallow-meaning that immediate properties are immutable but objects nested within those properties are not frozen.
     */
     const pc = {
       cpu: 'AMD 7600X',
@@ -149,10 +152,12 @@
     Object.freeze(pc); // freezes the object pc
 
     console.group('Object.freeze() example')
+
     console.log(Object.isFrozen(pc)); // True
 
     pc.cpu = 'Intel'; // Property is now immutable
     console.log(pc.cpu); // AMD 7699X
+
     console.groupEnd('Object.freeze() example')
 
 
@@ -269,7 +274,7 @@
       weapon: 'bow',
       tool: 'pickaxe',
       armor: {
-        helmut: 'gold',
+        helmet: 'gold',
         chestPlate: 'diamond',
       }
     }
@@ -283,9 +288,9 @@
     console.log(player1); // {weapon: 'bow', tool: 'pickaxe', armor: {…}}
 
     // Note: shallow copy means that nested objects are not copied
-    player2.armor.helmut = 'diamond';
-    console.log(player2.armor.helmut); // diamond
-    console.log(player1.armor.helmut); // diamond
+    player2.armor.helmet = 'diamond';
+    console.log(player2.armor.helmet); // diamond
+    console.log(player1.armor.helmet); // diamond
 
     /*
     For deep copying (where nested objects and arrays are also copied), you can use
