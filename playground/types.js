@@ -42,11 +42,12 @@ const html1 = `
 
 /* NUMBER */
 
-// Use the operator `typeof` to indicate the type of an operand.
+// Use the operator `typeof` to indicate the type of an operand's value.
 const year = 2021;
 const name = 'Tony Stark';
 
-console.log(typeof(year)); // number 
+console.log(typeof(year)); // number
+console.log(typeof(name)); // string
 
 // JS doesn't define different types of numbers, like integers, short, long, floating-point etc.
 // JS numbers are stored as floating point numbers.
@@ -83,12 +84,12 @@ console.log(typeof(NaN)); // number
 /* OBJECT */
 
 const person = {
-  first: 'Han', // property and value
+  first: 'Han', // key (property name) and value
   last: 'Solo',
   age: 45,
 };
 
-// Access properties for the values
+// Access properties for the values using dot notation
 console.log(person.first); // Han
 console.log(person.age);   // 45
 
