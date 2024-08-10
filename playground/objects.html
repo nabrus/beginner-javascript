@@ -46,7 +46,7 @@
         zelda: 2,
         sasquatch: 1
       },
-      // Method - more on methods below
+      // Method - see below for more on methods
       // greeting: function (sayHi = 'Hey, I am') { 
       //   return `${sayHi} ${this.firstName}!`;
       // },
@@ -82,7 +82,7 @@
     `undefined` instead of throwing an error.
     
     key1?.key2?.key3
-    Checks each property name to see if it exists. Will return `undefined if one doesn't exist
+    Checks each property name to see if it exists. Returns `undefined if one doesn't exist
     */
 
     console.group('Optional chaining "?." operator example (deep check)');
@@ -279,6 +279,8 @@
       }
     }
 
+    console.group('Spread operator');
+
     const player2 = { ...player1 };
     // const player2 = Object.assign({}, player1); // Note another way to make a copy
     console.log(player2); // {weapon: 'bow', tool: 'pickaxe', armor: {…}}
@@ -330,6 +332,8 @@
 
     console.log(overWriteInv); //{copper: 64, iron: 60, diamond: 15, …}
 
+    console.groupEnd('Spread operator');
+
     /*
     For deep copying (where nested objects and arrays are also copied), you can use
     libraries like lodash.
@@ -346,6 +350,8 @@
 
     // Deep copy using Lodash
     const superHero2 = _.cloneDeep(superHero1);
+
+    console.group('Deep cloning with lodash');
     console.log(superHero2); // {powers: 'flight', cape: true, secretId: {…}}
     console.log(superHero2.secretId); // {{name: 'henry', age: '205'}}
 
@@ -353,7 +359,12 @@
     console.log(superHero2.secretId); // {name: 'Tony', age: '205'}
     console.log(superHero1.secretId); // {name: 'henry', age: '205'}
 
+    console.groupEnd('Deep cloning with lodash');
+
     // Functions and Reference
+
+    console.group('Functions and reference');
+
     function doStuff(data) {
       data = 'something else';
       console.log(data);
@@ -371,6 +382,8 @@
 
     // The `ores` object will be updated
     console.log(ores); // {copper: 64, iron: 60, diamond: 128}
+
+    console.groupEnd('Functions and reference');
   </script>
 </body>
 
