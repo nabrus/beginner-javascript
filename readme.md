@@ -226,7 +226,7 @@
      *  `Object.freeze()` method
      *  The order of properties in an object
      *  How reference works in JS
-          *  Primitives vs. Reference Types
+          *  Primitive vs. Reference Types
      *  Creating a copy of a reference type 
           *  Shallow copy vs. Deep copy
           *  Spread operator (`...`)
