@@ -10,8 +10,16 @@
 *  `var`, `let`, and `const`
 
 ### [JS Data Types](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
+*  `typeof` operator
 *  String
+     *  Single & Double Quotes
+     *  Backticks
 *  Number
+     *  Floating Point
+     *  `Math` method
+     *  Remainder (`%`)
+     *  Exponent
+     *  NaN
 *  Object
 *  `null` and `undefined`
 *  Boolean
