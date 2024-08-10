@@ -59,10 +59,15 @@ const num = 22.65;
 console.log(Math.round(num)); // 23
 
 // Remainder (%)
+console.log(13 % 5); // 3
+console.log(4 % 2); // 0
+
 const blueberries = 20;
 const kids = 3;
 const eachKidGets = Math.floor(blueberries / kids);
 const dadGets = blueberries % kids;
+
+console.log(eachKidGets, dadGets); // 6 2
 
 // Floating point math
 // Enter the following into the browser console:
@@ -76,7 +81,7 @@ console.log(1000 ** 200); // Infinity
 
 // Note Typeof Infinity and -Infinity = number
 
-// NAN (not a number)
+// NaN (not a number)
 console.log(10 / 'dog') // NaN
 console.log(typeof(NaN)); // number
 
@@ -93,6 +98,7 @@ const person = {
 console.log(person.first); // Han
 console.log(person.age);   // 45
 
+// For more in depth on objects see Objects in Data Types section (objects.html)
 
 /* NULL and UNDEFINED */
 
