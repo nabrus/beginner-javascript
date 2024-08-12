@@ -14,8 +14,63 @@
     /*
     The `Map` object holds key-value pairs and remembers the original insertion order of the
     keys. Any value (both objects and primitive values) may be used as either a key or a
-    value.
-    */
+
+    Key Features of a `Map`:
+
+    Key-Value Pairs: A `Map` stores data in pairs, where each key is unique. You can
+    retrieve, update, or delete values based on their keys.
+
+    Maintains Order: The order of entries in a `Map` is preserved based on the order of
+    insertion. When you iterate over the entries of a `Map`, they appear in the order they
+    were added.
+
+    Any Data Type as Key: Unlike objects, where keys are implicitly converted to strings, a
+    `Map` can use any type of value as a key. For example, you can use an object, a function,
+    or even another map as a key.
+
+    Size Property: The `Map` object has a `size` property that returns the number of
+    key-value pairs currently in the map.
+
+    Methods: `Map` provides several methods for working with its elements:
+
+      `set(key, value)`: Adds or updates an entry with the specified key and value.
+
+      `get(key)`: Returns the value associated with the specified key, or undefined if the
+      key is not in the map.
+
+      `has(key)`: Returns true if the map contains the specified key, otherwise false.
+
+      `delete(key)`: Removes the specified key and its associated value from the map.
+
+      `clear()`: Removes all entries from the map.
+
+      `forEach(callback)`: Executes a provided function once for each key-value pair in the
+      map.
+
+      `keys()`, `values()`, `entries()`: Return iterators for the keys, values, or key-value
+      pairs, respectively.
+  */
+
+    const person1 = {
+      name: 'Yoda',
+      age: 800,
+    };
+
+    const myMap = new Map();
+    // `set()` - Adding key-value pairs to the Map
+    myMap.set('name', 'Chopper');
+    myMap.set(400, 'This is a number');
+    myMap.set({ droidType: 'astromech' }, 'C1 series droid'); // Object as a key
+    myMap.set(person1, 'The force is strong'); // Reference to an object as a key
+
+    // `get()` - Retrieving key-value pairs
+    console.log(myMap.get('name')); // Chopper
+    console.log(myMap.get(400)); // This is a number
+    console.log(myMap.get(person1)); // The force is strong
+
+    // `has()` - Checking for a key
+    // `delete()` - Deleting key=value pairs
+    console.log(myMap);
   </script>
 </body>
 
