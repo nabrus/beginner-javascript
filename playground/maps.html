@@ -14,6 +14,7 @@
     /*
     The `Map` object holds key-value pairs and remembers the original insertion order of the
     keys. Any value (both objects and primitive values) may be used as either a key or a
+    value.
 
     Key Features of a `Map`:
 
@@ -60,16 +61,27 @@
     // `set()` - Adding key-value pairs to the Map
     myMap.set('name', 'Chopper');
     myMap.set(400, 'This is a number');
+    myMap.set('Rebel', true);
     myMap.set({ droidType: 'astromech' }, 'C1 series droid'); // Object as a key
     myMap.set(person1, 'The force is strong'); // Reference to an object as a key
 
     // `get()` - Retrieving key-value pairs
     console.log(myMap.get('name')); // Chopper
     console.log(myMap.get(400)); // This is a number
+    console.log(myMap.get('Rebel')); // True
     console.log(myMap.get(person1)); // The force is strong
 
     // `has()` - Checking for a key
     // `delete()` - Deleting key=value pairs
+
+    const score = 300;
+
+    const prizes = new Map();
+    prizes.set(100, 'sm Plushy');
+    prizes.set(200, 'lg Plushy');
+    prizes.set(300, 'Go Cart');
+
+    console.log(`You won a ${prizes.get(score)}`);
     console.log(myMap);
   </script>
 </body>
