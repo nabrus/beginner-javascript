@@ -9,7 +9,7 @@
 </head>
 
 <body>
-
+  <ul class="prizes"></ul>
   <script>
     /*
     The `Map` object holds key-value pairs and remembers the original insertion order of the
@@ -71,9 +71,19 @@
     console.log(myMap.get('Rebel')); // True
     console.log(myMap.get(person1)); // The force is strong
 
-    // `has()` - Checking for a key
-    // `delete()` - Deleting key=value pairs
+    // Size property
+    console.log(myMap.size); // 5
 
+    // `has()` - Checking for a key
+    console.log(myMap.has('Rebel')); // True
+    console.log(myMap.has(1000)); // False
+
+    // `delete()` - Deleting key=value pairs
+    console.log(myMap); // Map(5) {'name' => ...}
+    myMap.delete(400);
+    console.log(myMap); // Map(4) {'name' => ...} (400, This is a number is now deleted)
+
+    // Simple example showing how the order of entries of a `Map` being maintained is beneficial
     const score = 300;
 
     const prizes = new Map();
@@ -82,7 +92,9 @@
     prizes.set(300, 'Go Cart');
 
     console.log(`You won a ${prizes.get(score)}`);
-    console.log(myMap);
+
+    // Select <ul> element
+    const prizeList = document.querySelector('.prizes');
   </script>
 </body>
 
