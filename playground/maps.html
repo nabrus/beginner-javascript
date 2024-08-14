@@ -57,6 +57,10 @@
       age: 800,
     };
 
+    const sayHi = (name = 'Homer') => {
+      console.log(`Hi, my name is ${name}!`);
+    };
+
     const myMap = new Map();
     // `set()` - Adding key-value pairs to the Map
     myMap.set('name', 'Chopper');
@@ -64,12 +68,17 @@
     myMap.set('Rebel', true);
     myMap.set({ droidType: 'astromech' }, 'C1 series droid'); // Object as a key
     myMap.set(person1, 'The force is strong'); // Reference to an object as a key
+    myMap.set('addition', function (a, b) {
+      return a + b;
+    }); // A function set as value
+    myMap.set('hello-func', sayHi); // Reference to a function as a value
 
     // `get()` - Retrieving key-value pairs
     console.log(myMap.get('name')); // Chopper
     console.log(myMap.get(400)); // This is a number
     console.log(myMap.get('Rebel')); // True
     console.log(myMap.get(person1)); // The force is strong
+    console.log(myMap.get('addition')(5, 6)); // 11
 
     // Size property
     console.log(myMap.size); // 5
@@ -95,6 +104,17 @@
 
     // Select <ul> element
     const prizeList = document.querySelector('.prizes');
+
+    // Loop over each using `for…of`
+    // for (const prize of prizes) {
+    //   console.log(prize[0], prize[1]);
+    // }
+
+    // Destructuring - instead of referencing by index create variables that are in those indexes.
+    for (const [points, prize] of prizes) {
+      const li = `<li>${points} - ${prize}</li>`;
+      prizeList.insertAdjacentHTML('beforeend', li);
+    }
   </script>
 </body>
 
