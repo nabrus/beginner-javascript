@@ -232,5 +232,8 @@
           *  Spread operator (`...`)
           *  Lodash
      * Functions and Reference
+*  [`Map` Object](https://github.com/nabrus/beginner-javascript/blob/master/playground/maps.html)
+     *  `size` Property
+     *  Methods - `set()`, `get()`, `has()`, `delete()`...
 
 
