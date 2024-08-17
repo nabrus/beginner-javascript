@@ -45,16 +45,30 @@
       `reduce()`: Accumulate values into a single result.
     */
 
-    const planets = [
-      'Mercury',
-      'Venus',
-      'Earth',
-      'Mars',
-      'Jupiter',
-      'Saturn',
-      'Uranus',
-      'Neptune',
-    ];
+    const animals = ['dog', 'cat', 'bird', 'mouse', 'rabbit'];
+
+    // Check to see if `planets` is an array using the static method `isArray`
+    console.log(Array.isArray(animals)); // true
+
+    // Accessing items in an array using it's index
+    console.log(animals[0]); // dog
+    console.log(animals[2]); // bird
+
+    // `length`: Check an arrays size - how many items are in it
+    console.log(animals.length); // 5
+
+    // `length` can also be used to modify the size of an array
+    animals.length = 3; // Reduces the array - eliminating 'mouse', 'rabbit'
+    console.log(animals.length); // 3
+    // This mutates the array
+    console.log(animals); // (3)['dog', 'cat', 'bird']
+
+    animals.length = 6; // Increasing the array - empty slots will be added
+    console.log(animals); // (6)['dog', 'cat', 'bird', empty × 3]
+
+    // Accessing the last item in an array
+    const numArray = [1, 2, 3, 4, 5, 6, 7, 8];
+    console.log(numArray[numArray.length - 1]); // 8
   </script>
 </body>
 
