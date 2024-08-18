@@ -98,6 +98,21 @@
     numbers.unshift(11);
     console.log(numbers); // (11)[11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
+    // `splice()` - allows you to add, remove, or replace elements in an array by modifying original array in place.
+    // Removing items
+    const removedNums = numbers.splice(2, 4); // Starts at 8 and removes up to 5
+    console.log(numbers); // (7)[11, 9, 4, 3, 2, 1, 0]
+    console.log(removedNums); // (4)[8, 7, 6, 5]
+
+    // Adding items (elements)
+    numbers.splice(2, 0, 8, 7); // Adds 8 and 7 starting after 9 (2 index)
+    // Note the delete count is set to 0
+    console.log(numbers); // (9)[11, 9, 8, 7, 4, 3, 2, 1, 0]
+
+    // Replacing elements
+    numbers.splice(4, 2, 'a', 'b'); // Removes 4 and 3, replacing them with a and b
+    console.log(numbers); // (9)[11, 9, 8, 7, 'a', 'b', 2, 1, 0]
+
     const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn'];
 
     /* 
@@ -105,7 +120,7 @@
     */
 
     // `slice()` - returns a shallow copy of a portion of an array into a new array. Leaving the original unmodified
-    // Syntax: `slice()`, `slice(start)`, and `slice(start, end)`
+    // Syntax: `slice()`, `slice(start)`, and `slice(start, end)` NOTE: end not included
     const similarPlanets = planets.slice(2, 4);
     console.log(similarPlanets); // (2)['Earth', 'Mars']
     console.log(planets); // (6)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
