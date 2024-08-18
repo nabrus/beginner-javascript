@@ -45,6 +45,7 @@
       `reduce()`: Accumulate values into a single result.
     */
 
+    // An array of different animals
     const animals = ['dog', 'cat', 'bird', 'mouse', 'rabbit'];
 
     // Check to see if `animals` is an array, using the static method `isArray`
@@ -73,10 +74,14 @@
 
     console.groupEnd('length property');
 
-    // METHODS
+    /*
+    METHODS
+    */
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-    // Mutation Methods - directly change or modify the original data structure
+    /* 
+    Mutation Methods - directly change or modify the original data structure
+    */
 
     // `reverse()` - reverses the order of items in an array
     const countdown = numbers.reverse();
@@ -89,9 +94,15 @@
     console.log(numbers.push(0)); // 10
     console.log(numbers); // (10)[9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
+    // `unshift()` - Adds elements to the beginning of an array
+    numbers.unshift(11);
+    console.log(numbers); // (11)[11, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+
     const planets = ['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn'];
 
-    // Immutable Methods - do not modify the original data structure
+    /* 
+    Immutable Methods - do not modify the original data structure
+    */
 
     // `slice()` - returns a shallow copy of a portion of an array into a new array. Leaving the original unmodified
     // Syntax: `slice()`, `slice(start)`, and `slice(start, end)`
@@ -102,7 +113,9 @@
     console.log(planets.slice(3)); // (3)['Mars', 'Jupiter', 'Saturn']
     console.log(planets); // (6)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
 
-    // Using mutable methods on arrays without changing the original array by making a copy of the array first.
+    /*
+    Using mutable methods on arrays without changing the original array by making a copy of the array first.
+    */
 
     // Using the spread operator to create a shallow copy...
     const planetsCopy = [...planets];
@@ -122,9 +135,14 @@
     const addSun = [...planets];
     addSun.unshift('sun');
     console.log(addSun); // (7)['sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+    // or just use the spread operator with new items placed before
+    const addSun2 = ['sun', ...planets];
+    console.log(addSun2); // (7)['sun', 'Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
 
     // `push()` - adds the specified elements to the end of an array, returns the new length
-    const newPlanets
+    const allPlanets = [...planets, 'Uranus', 'Neptune'];
+    console.log(allPlanets); // (7)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
+    console.log(planets); // (6)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
   </script>
 </body>
 
