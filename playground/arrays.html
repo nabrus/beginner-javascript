@@ -158,6 +158,34 @@
     const allPlanets = [...planets, 'Uranus', 'Neptune'];
     console.log(allPlanets); // (7)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn', 'Uranus', 'Neptune']
     console.log(planets); // (6)['Mercury', 'Venus', 'Earth', 'Mars', 'Jupiter', 'Saturn']
+
+    // Adding and removing example using spread instead of the mutable method `splice()`
+    const lightSaberColors = ['blue', 'purple', 'green', 'white'];
+
+    // Adding an item
+    const newSaberColors = [
+      ...lightSaberColors.slice(0, 2),
+      'red',
+      ...lightSaberColors.slice(2),
+    ];
+    console.log(newSaberColors); // (5)['blue', 'purple', 'red', 'green', 'white']
+
+    // Removing an item
+    const newSaberColors2 = [
+      ...newSaberColors.slice(0, 1), // include 0 (blue)
+      ...newSaberColors.slice(2), // include 2 to the end
+    ];
+    // Removes purple
+    console.log(newSaberColors2); // (4) ['blue', 'red', 'green', 'white']
+
+    // Another example since this this add/remove technique is common practice. Especially in React
+    const comments = [
+      { text: 'Awesome', id: 123 },
+      { text: 'Well no duh', id: 133 },
+      { text: 'Love this', id: 233 },
+      { text: 'Worst blog ever', id: 333 },
+      { text: 'So informative', id: 433 },
+    ];
   </script>
 </body>
 
