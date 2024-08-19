@@ -176,10 +176,10 @@
       ...newSaberColors.slice(2), // include 2 to the end
     ];
     // Removes purple
-    console.log(newSaberColors2); // (4) ['blue', 'red', 'green', 'white']
+    console.log(newSaberColors2); // (4)['blue', 'red', 'green', 'white']
 
-    // A "real world" example since  this add/remove technique is common practice. Especially in React
-    const comments = [
+    // A "real world" example since this add/remove technique is common practice. Especially in React
+    const commentList = [
       { text: 'Awesome', id: 123 },
       { text: 'Well no duh', id: 133 },
       { text: 'Love this', id: 233 },
@@ -187,11 +187,19 @@
       { text: 'So informative', id: 433 },
     ];
 
-    function removeComment(id, comment) {
+    function removeComment(id, comments) {
       // First, find the item index in the array; using `findIndex()` (see below for example)
-      // Second, create new array excluding that item in it
-      // Third, return the new array
+      const commentIndex = comments.findIndex(comment => comment.id === id);
+
+      // Second, return a new array excluding that item in it
+      return [
+        ...comments.slice(0, commentIndex),
+        ...comments.slice(commentIndex + 1),
+      ];
     }
+
+    console.log(removeComment(233, commentList)); // (4)[{…}, {…}, {…}, {…}]
+    //  `{ text: 'Love this', id: 233 }` is now removed
 
     // `findIndex()` returns the index of the first element in an array that satisfies the provided testing function
     const imperialShips = [
