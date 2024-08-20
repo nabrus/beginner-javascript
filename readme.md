@@ -235,5 +235,12 @@
 *  [`Map` Object](https://github.com/nabrus/beginner-javascript/blob/master/playground/maps.html)
      *  `size` Property
      *  Methods - `set()`, `get()`, `has()`, `delete()`...
+*  [Arrays](https://github.com/nabrus/beginner-javascript/blob/master/playground/arrays.html)
+     *  Array literal: `const newArray = ['item1', 'item2']`
+     *  Accessing items using it's index
+     *  `length` Property
+     *  Array Methods - `slice()`, `splice()`, `findIndex()`, etc
+          *  Mutable vs. Immutable
+     *  Adding and removing items
 
 
