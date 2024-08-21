@@ -55,11 +55,17 @@
       Static Methods
     */
 
-    // Array.of();
+    // Array.of(): static method creates a new Array instance from a variable number of arguments regardless of number or type of the arguments.
+    const array1 = Array.of('x-wing', 100, 'Wookie', true, 'hyper-drive');
+    console.log(array1); // (5) ['x-wing', 100, 'Wookie', true, 'hyper-drive']
 
     // Make a function that creates a range from x to y with Array.from();
+    function createArray(x, y) {
+      return Array.of(x, y);
+    }
 
-    // Check if the last array you created is really an array with Array.isArray();
+    const createdArray = createArray('do', 'do not');
+    console.log(createdArray); // (2) ['do', 'do not']
 
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
 
