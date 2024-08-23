@@ -59,13 +59,17 @@
     const array1 = Array.of('x-wing', 100, 'Wookie', true, 'hyper-drive');
     console.log(array1); // (5) ['x-wing', 100, 'Wookie', true, 'hyper-drive']
 
-    // Make a function that creates a range from x to y with Array.from();
-    function createArray(x, y) {
-      return Array.of(x, y);
-    }
+    const array2 = Array.of(...'boom');
+    console.log(array2); // (4) ['b', 'o', 'o', 'm']
 
-    const createdArray = createArray('do', 'do not');
-    console.log(createdArray); // (2) ['do', 'do not']
+    // Creating an array with a literal achieves the same result
+    // Any item with a length can be spread into that array
+    const array3 = [...'BOOM'];
+    console.log(array3); // (4) ['B', 'O', 'O', 'M']
+
+    // Make a function that creates a range from x to y with Array.from();
+
+    // Check if the last array you created is really an array with Array.isArray();
 
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
 
