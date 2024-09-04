@@ -68,6 +68,11 @@
     console.log(array3); // (4) ['B', 'O', 'O', 'M']
 
     // `Array.from()` - syntax: `Array.from(arrayLike, mapFn, thisArg)`
+    const array4 = Array.from('hello');
+    console.log(array4); // ['h', 'e', 'l', 'l', 'o']
+
+    const array5 = Array.from([1, 2, 3], x => x * 2);
+    console.log(array5); // [2, 4, 6]
 
     // Make a function that creates a range from x to y with Array.from();
 
