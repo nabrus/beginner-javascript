@@ -93,6 +93,9 @@
     return index;
     });
 
+    This example has an object with a length property and a mapping function passed
+    in as two arguments for Array.from
+    
     Mapping functions take two arguments.
     
     The first which is is the current element (NOTE when item is not used - an underscore is convention to indicate that it's not used as in the example above).
@@ -102,17 +105,30 @@
    */
     // Generate a sequence of numbers
     // Since the array is initialized with `undefined` on each position,
-    // the value of `v` below will be `undefined`
-    const array6 = Array.from({ length: 6 }, (_, i) => i);
+    // the value of `_v` below will be `undefined`
+    const array6 = Array.from({ length: 6 }, (_v, i) => i);
     console.log(array6); // [0, 1, 2, 3, 4, 5]
 
     // Make a function that creates a range from x to y with Array.from();
+    function createRange(start, end) {
+      const range2 = Array.from({ length: end - start + 1 }, function (
+        _item,
+        index
+      ) {
+        return index + start;
+      });
+      return range2;
+    }
+
+    const createRange2 = (start, end) =>
+      Array.from({ length: end - start + 1 }, (_, index) => index + start);
+
+    // Another example of range function
     const range = (start, stop, step) =>
       Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
     console.log(range(5, 12, 1)); // (8) [5, 6, 7, 8, 9, 10, 11, 12]
     console.log(range(5, 12, 2)); // (4) [5, 7, 9, 11]
-
     // Check if the last array you created is really an array with Array.isArray();
 
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
