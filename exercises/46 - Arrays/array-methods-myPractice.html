@@ -74,6 +74,12 @@
     const array5 = Array.from([1, 2, 3], x => x * 2);
     console.log(array5); // [2, 4, 6]
 
+    // Generate a sequence of numbers
+    // Since the array is initialized with `undefined` on each position,
+    // the value of `v` below will be `undefined`
+    const array6 = Array.from({ length: 6 }, (v, i) => i);
+    console.log(array6); // [0, 1, 2, 3, 4, 5]
+
     // Make a function that creates a range from x to y with Array.from();
 
     // Check if the last array you created is really an array with Array.isArray();
