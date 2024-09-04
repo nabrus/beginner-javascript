@@ -56,6 +56,7 @@
     */
 
     // Array.of(): static method creates a new Array instance from a variable number of arguments regardless of number or type of the arguments.
+
     const array1 = Array.of('x-wing', 100, 'Wookie', true, 'hyper-drive');
     console.log(array1); // (5) ['x-wing', 100, 'Wookie', true, 'hyper-drive']
 
@@ -68,6 +69,7 @@
     console.log(array3); // (4) ['B', 'O', 'O', 'M']
 
     // `Array.from()` - syntax: `Array.from(arrayLike, mapFn, thisArg)`
+
     const array4 = Array.from('hello');
     console.log(array4); // ['h', 'e', 'l', 'l', 'o']
 
@@ -81,6 +83,11 @@
     console.log(array6); // [0, 1, 2, 3, 4, 5]
 
     // Make a function that creates a range from x to y with Array.from();
+    const range = (start, stop, step) =>
+      Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
+
+    console.log(range(5, 12, 1)); // (8) [5, 6, 7, 8, 9, 10, 11, 12]
+    console.log(range(5, 12, 2)); // (4) [5, 7, 9, 11]
 
     // Check if the last array you created is really an array with Array.isArray();
 
