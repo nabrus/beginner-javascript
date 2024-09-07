@@ -193,15 +193,61 @@
     console.log(bbqString); // (4) ['hot dogs', 'hamburgers', 'sausages', 'corn']
 
     // take the last item off toppings with pop()
+    console.log(toppings.pop()); // Cheese
+
     // add it back with push()
+    toppings.push('Cheese');
+    console.log(toppings);
+
     // take the first item off toppings with shift()
+    toppings.shift();
+    console.log(toppings);
+
     // add it back in with unshift()
+    toppings.unshift('Mushrooms');
+    console.log(toppings);
+
     // Do the last four,but immutable (with spreads and new variables)
+    // pop()
+    const newToppings = [...toppings];
+    newToppings.pop();
+    console.log(newToppings); // (removes the last item) results in array without 'Cheese'
+    console.log(toppings); // Original remains the same
+
+    // push()
+    newToppings.push('Cheese');
+    console.log(newToppings); // Adds 'Cheese' as the last item
+
+    // shift()
+    newToppings.shift();
+    console.log(newToppings); // Removes the first item ('Mushrooms')
+
+    // unshift()
+    newToppings.unshift('Mushrooms');
+    console.log(newToppings);
 
     // Make a copy of the toppings array with slice()
+    console.log(toppings.slice());
+    console.log(toppings);
+
     // Make a copy of the toppings array with a spread
+    const spreadToppings = [...toppings];
+    console.log(spreadToppings);
+
     // take out items 3 to 5 of your new toppings array with splice()
+    console.log(spreadToppings.splice(3, 3)); // (3) ['Chili', 'Lettuce', 'Avocado']
+    console.log(spreadToppings);
+
     // find the index of Avocado with indexOf() / lastIndexOf()
+    console.log(toppings.indexOf('Avocado')); // 5
+    console.log(toppings.lastIndexOf('Avocado')); // 5
+
+    const multiAvos = [...toppings];
+    multiAvos.splice(2, 0, 'Avocado');
+    console.log(multiAvos);
+    multiAvos.splice(9, 0, 'Avocado');
+    console.log(multiAvos.lastIndexOf('Avocado')); // 9
+
     // Check if hot sauce is in the toppings with includes()
     // add it if it's not
     // flip those toppings around with reverse()
