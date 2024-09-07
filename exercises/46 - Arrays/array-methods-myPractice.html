@@ -93,18 +93,19 @@
     return index;
     });
 
-    This example has an object with a length property and a mapping function passed
-    in as two arguments for Array.from
+    This example has an object with a length property and a mapping function passed in as two arguments for Array.from
     
-    Mapping functions take two arguments.
+    Mapping function takes two arguments.
     
-    The first which is is the current element (NOTE when item is not used - an underscore is convention to indicate that it's not used as in the example above).
+    The first is the current element which returns undefined (NOTE when
+    item is not used - an underscore is convention to indicate that it's
+    not used as in the example above).
 
     The second is the index
     
    */
     // Generate a sequence of numbers
-    // Since the array is initialized with `undefined` on each position,
+    // Since the array is initialized with `undefined` on each element,
     // the value of `_v` below will be `undefined`
     const array6 = Array.from({ length: 6 }, (_v, i) => i);
     console.log(array6); // [0, 1, 2, 3, 4, 5]
@@ -119,19 +120,30 @@
       });
       return range2;
     }
-
+    // Another way using arrow functions
     const createRange2 = (start, end) =>
       Array.from({ length: end - start + 1 }, (_, index) => index + start);
 
-    // Another example of range function
+    const range1 = createRange2(5, 9);
+    console.log(range1); // [5, 6, 7, 8, 9]
+
+    // Another example of range function with a third argument
     const range = (start, stop, step) =>
       Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
     console.log(range(5, 12, 1)); // (8) [5, 6, 7, 8, 9, 10, 11, 12]
     console.log(range(5, 12, 2)); // (4) [5, 7, 9, 11]
+
     // Check if the last array you created is really an array with Array.isArray();
+    console.log(Array.isArray(range1)); // true
+
+    // NOTE: using `typof` will return object so use `isArray()`
+    console.log(typeof range1); // object
 
     // Take the meats object and make three arrays with Object.entries(), Object.keys, Object.values()
+    console.log(Object.entries(meats)); // (3) [Array(2), Array(2), Array(2)]
+    console.log(Object.keys(meats)); // (3) ['beyond', 'beef', 'pork']
+    console.log(Object.values(meats)); // (3) [10, 5, 7]
 
     /*
       Instance Methods
