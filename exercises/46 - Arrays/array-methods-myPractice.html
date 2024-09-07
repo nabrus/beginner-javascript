@@ -54,8 +54,9 @@
     /*
       Static Methods
 
-      A static array method is a method that is called directly on the Array class itself, rather than on an instance of an
-      array. These methods are used to perform operations related to arrays but don't operate on a specific array instance.
+      A static array method is a method that is called directly on the Array class itself,
+      rather than on an instance of an array. These methods are used to perform operations
+      related to arrays but don't operate on a specific array instance.
 
     */
 
@@ -64,13 +65,14 @@
     const array1 = Array.of('x-wing', 100, 'Wookie', true, 'hyper-drive');
     console.log(array1); // (5) ['x-wing', 100, 'Wookie', true, 'hyper-drive']
 
+    // Using the spread operator
     const array2 = Array.of(...'boom');
     console.log(array2); // (4) ['b', 'o', 'o', 'm']
 
     // Creating an array with a literal achieves the same result
     const array1a = ['light saber', 5, false, 'Jawa'];
 
-    // Any item with a length can be spread into that array
+    // Any item with a length can be spread into that array, no need to use `Array.of()`
     const array3 = [...'BOOM'];
     console.log(array3); // (4) ['B', 'O', 'O', 'M']
 
@@ -98,8 +100,8 @@
     Mapping function takes two arguments.
     
     The first is the current element which returns undefined (NOTE when
-    item is not used - an underscore is convention to indicate that it's
-    not used as in the example above).
+    item is not used - an underscore or underscore with a name is convention
+    to indicate that it's not used as in the example above).
 
     The second is the index
     
@@ -127,7 +129,7 @@
     const range1 = createRange2(5, 9);
     console.log(range1); // [5, 6, 7, 8, 9]
 
-    // Another example of range function with a third argument
+    // Another example of range function with a third argument `step`
     const range = (start, stop, step) =>
       Array.from({ length: (stop - start) / step + 1 }, (_, i) => start + i * step);
 
@@ -173,11 +175,21 @@
 
     /*
       Instance Methods
+
+      Are functions that are called on instances of objects, and in the case of arrays, they are methods
+      that can be used directly on an array object. These methods operate on the array itself or return
+      some derived value.
     */
 
     // Display all bun types with " or " - use join()
+    console.log(buns.join(' or ')); // egg or wonder or brioche
 
-    // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a string
+    // The .split() method in JavaScript is used to split a string into an array of substrings,
+    // based on a specified delimiter. The method returns a new array, and the original string
+    // remains unchanged.
+    // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into a array of strings
+    const bbqString = 'hot dogs,hamburgers,sausages,corn'.split(',');
+    console.log(bbqString); // (4) ['hot dogs', 'hamburgers', 'sausages', 'corn']
 
     // take the last item off toppings with pop()
     // add it back with push()
@@ -192,6 +204,12 @@
     // Check if hot sauce is in the toppings with includes()
     // add it if it's not
     // flip those toppings around with reverse()
+
+    /*
+    Static vs. Instance Methods:
+    While instance methods are used on individual array objects, static methods like Array.from() are
+    called directly on the array constructor (i.e., Array) and are not tied to a specific array instance.
+    */
 
     /*
       Callback Methods
