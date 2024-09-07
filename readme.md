@@ -6,10 +6,10 @@
 
 ## Index
 
-### [Variables](https://github.com/nabrus/beginner-javascript/blob/master/playground/variables.html)
+### [Variables](https://github.com/nabrus/beginner-javascript/blob/main/playground/variables.html)
 *  `var`, `let`, and `const`
 
-### [JS Data Types](https://github.com/nabrus/beginner-javascript/blob/master/playground/types.js)
+### [JS Data Types](https://github.com/nabrus/beginner-javascript/blob/main/playground/types.js)
 *  `typeof` operator
 *  String
      *  Single & Double Quotes
@@ -28,8 +28,8 @@
 
 ### Functions
 
-*  [Built In](https://github.com/nabrus/beginner-javascript/blob/master/playground/functions.html)
-*  [Custom](https://github.com/nabrus/beginner-javascript/blob/master/playground/custom-functions/cf.js)
+*  [Built In](https://github.com/nabrus/beginner-javascript/blob/main/playground/functions.html)
+*  [Custom](https://github.com/nabrus/beginner-javascript/blob/main/playground/custom-functions/cf.js)
      *  Basic function structure
      *  Parameters and Arguments
      *  Default Parameters
@@ -38,7 +38,7 @@
 
 ![Function Definition Diagram](images/function-definition.jpg)
 
-*  [Declaring Functions](https://github.com/nabrus/beginner-javascript/blob/master/playground/custom-functions/ways-to-make-a-function.js)
+*  [Declaring Functions](https://github.com/nabrus/beginner-javascript/blob/main/playground/custom-functions/ways-to-make-a-function.js)
      *  Function Declaration (Function Statement, Function Definition)
      *  Function Expression
         *  Anonymous Function
@@ -47,7 +47,7 @@
      *  Method
      *  Callback Function
 
-### [Debugging](https://github.com/nabrus/beginner-javascript/blob/master/exercises/16%20-%20Debugging/debugging.js)
+### [Debugging](https://github.com/nabrus/beginner-javascript/blob/main/exercises/16%20-%20Debugging/debugging.js)
 
 *  Console Methods
 *  Call Stack
@@ -57,7 +57,7 @@
      *  Setting breakpoints using browsers dev tools
 *  Network Requests
 
-### [Scope](https://github.com/nabrus/beginner-javascript/blob/master/playground/scope.js)
+### [Scope](https://github.com/nabrus/beginner-javascript/blob/main/playground/scope.js)
 
 *  Global Scope
      *  Global Variable
@@ -65,17 +65,17 @@
 *  Block Scope
 *  Lexical Scope
 
-### [Hoisting](https://github.com/nabrus/beginner-javascript/blob/master/playground/hoisting.js)
+### [Hoisting](https://github.com/nabrus/beginner-javascript/blob/main/playground/hoisting.js)
 
 *  Hoisting of function and variable declarations
 
-### [Closures](https://github.com/nabrus/beginner-javascript/blob/master/playground/closures.html)
+### [Closures](https://github.com/nabrus/beginner-javascript/blob/main/playground/closures.html)
 
 *  High level overview of a *closure*
 
 ### The DOM
 
-*  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/the-dom.js)
+*  [Intro to the document](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/the-dom.js)
      *  Selecting Elements - `document.querySelector()` & `document.querySelectorAll()`
           *  by class `('.className')` or element `('p')` examples
      *  Nodes vs. Elements
@@ -97,20 +97,20 @@
           *  `insertAdjacentText(position, text)` insert text adjacent to an element 
           *  `setAttribute()`
           *  `getAttribute()`
-*  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating.js)
+*  [Creating HTML](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/creating.js)
      *  `document.createElement()` - creates HTML elements specified by tagName
      *  Methods for adding the created elements to the document
           *  `node.appendChild()` 
           *  `node.insertBefore()` 
           *  `element.append()` 
           *  `element.insertAdjacentElement(position, element)`
-*  [Creating HTML from strings](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/creating-with-strings.js)
+*  [Creating HTML from strings](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/creating-with-strings.js)
      *  Use backticks ` `` `
      *  `element.innerHTML` property gets or sets the HTML or XML markup contained within the element
      *  Generating and accessing DOM elements from a string using:
           *  `Document.createRange()` method to create a *range*
           *  `createContextualFragment()` method available on the Range object
-*  [Traversing and Removing Nodes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/traversing.js)
+*  [Traversing and Removing Nodes](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/traversing.js)
      *  Review of Nodes vs Elements
      *  Using Node and Element properties to traverse the DOM by position:
           *  `Element.children`
@@ -122,23 +122,25 @@
           *  `element.remove(element)`
           *  `node.removeChild(child)`
 *  "Cardio" -  An exercise to practice more examples of things covered in this section.
-     *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
-     *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/master/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
+     *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/main
+/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
+     *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/main
+/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
 
 ### Events
 
-*  [Intro to Event Listeners](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/events.js)
+*  [Intro to Event Listeners](https://github.com/nabrus/beginner-javascript/blob/main/exercises/29%20-%20Events/events.js)
      *  `element.addEventListener(event, function, options)`
      *  `element.removeEventListener(event, callbackFunction)`
      *  Listen on multiple items
           *  Intro to `forEach()` method
-*  [Event Object](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/events2.js)
+*  [Event Object](https://github.com/nabrus/beginner-javascript/blob/main/exercises/29%20-%20Events/events2.js)
      *  `event.target` vs `event.currentTarget`
      *  Propagation
           *  Event Bubbling and Event Capturing
           *  `stopPropagation()`
      *  Overview on the `this` keyword 
-*  [Preventing Default Actions](https://github.com/nabrus/beginner-javascript/blob/master/exercises/29%20-%20Events/forms.js)
+*  [Preventing Default Actions](https://github.com/nabrus/beginner-javascript/blob/main/exercises/29%20-%20Events/forms.js)
      *  Examples of using `event.preventDefault()` on form events
           *  `click`
           *  `submit`
@@ -151,7 +153,7 @@
 
 ### Exercises Part 1
 
-*  [Etch-A-Sketch](https://github.com/nabrus/beginner-javascript/blob/master/exercises/33%20-%20Etch-a-Sketch/etch-a-sketch.js)
+*  [Etch-A-Sketch](https://github.com/nabrus/beginner-javascript/blob/main/exercises/33%20-%20Etch-a-Sketch/etch-a-sketch.js)
      *  Canvas API
      *  Options Object
      *  Destructuring
@@ -159,18 +161,20 @@
      *  `addEventListener(type, listener, options)`
           *  `animationend` event
           *  `once` option
-*  [Click Outside a Modal to Close](https://github.com/nabrus/beginner-javascript/blob/master/exercises/34%20-%20Click%20Outside/click-outside.js)
-     *  [Some CSS tidbits](https://github.com/nabrus/beginner-javascript/blob/master/exercises/34%20-%20Click%20Outside/click-outside.html)
+*  [Click Outside a Modal to Close](https://github.com/nabrus/beginner-javascript/blob/main/exercises/34%20-%20Click%20Outside/click-outside.js)
+     *  [Some CSS tidbits](https://github.com/nabrus/beginner-javascript/blob/main
+/exercises/34%20-%20Click%20Outside/click-outside.html)
           *  `opacity: 0;` and `pointer-events: none;`
      *  `.closest()` method
      *  `querySelector('img').src;`
      *  `dataset`
-*  [Scroll to end of page to enable "Accept" button](https://github.com/nabrus/beginner-javascript/blob/master/exercises/35%20-%20Scroll%20To%20Accept/scroll-to-accept.js)
+*  [Scroll to end of page to enable "Accept" button](https://github.com/nabrus/beginner-javascript/blob/main/exercises/35%20-%20Scroll%20To%20Accept/scroll-to-accept.js)
     *  Intersection Observer API
          *  `observer.observe(target)`
     * [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
-*  [Tabs](https://github.com/nabrus/beginner-javascript/blob/master/exercises/36%20-%20Tabs/tabs.js)
-     *  [ARIA (Accessible Rich Internet Applications) attributes](https://github.com/nabrus/beginner-javascript/blob/master/exercises/36%20-%20Tabs/index.html)
+*  [Tabs](https://github.com/nabrus/beginner-javascript/blob/main/exercises/36%20-%20Tabs/tabs.js)
+     *  [ARIA (Accessible Rich Internet Applications) attributes](https://github.com/nabrus/beginner-javascript/blob/main
+/exercises/36%20-%20Tabs/index.html)
      *  `Array.from` method
           *  `Array.from(arrayLike, mapFn, thisArg);`
      *  `forEach()` method
@@ -182,30 +186,31 @@
 
 ### Logic and Flow Control
 
-*  [Order of operations](https://github.com/nabrus/beginner-javascript/blob/master/playground/bedmas.html)
+*  [Order of operations](https://github.com/nabrus/beginner-javascript/blob/main/playground/bedmas.html)
      *  BEDMAS, another version of PEMDAS
           *  **P**arentheses
           *  **E**xponents (ie powers)
           *  **M**ultiplication and **D**ivision (left to right)
           *  **A**ddition and **S**ubtraction (left to right)
-*  [Flow Control](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.js)
+*  [Flow Control](https://github.com/nabrus/beginner-javascript/blob/main/playground/if-statements.js)
      *  `if..else` Statements
      *  Refresher on `==` vs `===`
      *  Logical operators - `&&` (AND), `||` (OR), and `!` (NOT) 
      *  `includes(searchString)` method
      *  Truthy and Falsy
-          *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/master/playground/if-statements.html)
+          *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/main
+     /playground/if-statements.html)
                *  Intro to `Object.keys()` method
-*  [Flow Control 2](https://github.com/nabrus/beginner-javascript/blob/master/playground/conditional.js)
+*  [Flow Control 2](https://github.com/nabrus/beginner-javascript/blob/main/playground/conditional.js)
      *  Logical NOT operator `!`
      *  Coercion using `!!`
      *  Ternary
           *  `condition ? expressionIfTrue : expressionIfFalse`
      *  Using an `&&` trick
-*  [`switch` Statement](https://github.com/nabrus/beginner-javascript/blob/master/playground/switch-statements.html)
+*  [`switch` Statement](https://github.com/nabrus/beginner-javascript/blob/main/playground/switch-statements.html)
      *  Animating a turtle when pressing arrow keys
      *  CSS Custom Properties (Variables)
-*  [Timers & Intervals](https://github.com/nabrus/beginner-javascript/blob/master/playground/intervals.html)
+*  [Timers & Intervals](https://github.com/nabrus/beginner-javascript/blob/main/playground/intervals.html)
      *  Setting Timers & Intervals
           *  `setTimeout(function(callback), delay(ms), [param1, param2, ...]);`
           *  `setInterval(function(callback), delay(ms), [param1, param2, ...]);`
@@ -215,7 +220,7 @@
 
 ### Data Types
 
-*  [Objects](https://github.com/nabrus/beginner-javascript/blob/master/playground/objects.html)
+*  [Objects](https://github.com/nabrus/beginner-javascript/blob/main/playground/objects.html)
      *  Object literal - `const objName = {};`
      *  Dot Notation and Bracket Notation
      *  Optional Chaining (?.)
@@ -232,10 +237,10 @@
           *  Spread operator (`...`)
           *  Lodash
      * Functions and Reference
-*  [`Map` Object](https://github.com/nabrus/beginner-javascript/blob/master/playground/maps.html)
+*  [`Map` Object](https://github.com/nabrus/beginner-javascript/blob/main/playground/maps.html)
      *  `size` Property
      *  Methods - `set()`, `get()`, `has()`, `delete()`...
-*  [Arrays](https://github.com/nabrus/beginner-javascript/blob/master/playground/arrays.html)
+*  [Arrays](https://github.com/nabrus/beginner-javascript/blob/main/playground/arrays.html)
      *  Array literal: `const arrayName = ['item1', 'item2']`
      *  Accessing items using it's index
      *  `length` Property
