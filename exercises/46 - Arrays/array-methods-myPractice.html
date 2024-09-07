@@ -145,6 +145,32 @@
     console.log(Object.keys(meats)); // (3) ['beyond', 'beef', 'pork']
     console.log(Object.values(meats)); // (3) [10, 5, 7]
 
+    // Common example of using `forEach` to loop through and get a value
+    Object.values(meats).forEach(qty => {
+      console.log(qty);
+    });
+
+    Object.keys(meats).forEach(key => {
+      console.log(key);
+    });
+
+    Object.entries(meats).forEach(entry => {
+      const key = entry[0];
+      const value = entry[1];
+      console.log(key, value);
+    });
+
+    // Destructuring
+    Object.entries(meats).forEach(entry => {
+      const [key, value] = entry;
+      console.log(key, value);
+    });
+
+    // Or another way is to destructure even further
+    Object.entries(meats).forEach(([meat, qty]) => {
+      console.log(meat, qty);
+    });
+
     /*
       Instance Methods
     */
