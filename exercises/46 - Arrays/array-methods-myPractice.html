@@ -184,11 +184,11 @@
     // Display all bun types with " or " - use join()
     console.log(buns.join(' or ')); // egg or wonder or brioche
 
-    // The .split() method in JavaScript is used to split a string into an array of substrings,
+    // The .split() method (string method) in JavaScript is used to split a string into an array of substrings,
     // based on a specified delimiter. The method returns a new array, and the original string
     // remains unchanged.
     // Syntax: `string.split(separator, limit)`
-    // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into an array strings
+    // We have a string "hot dogs,hamburgers,sausages,corn" - use split() to turn it into an array
     const bbqString = 'hot dogs,hamburgers,sausages,corn'.split(',');
     console.log(bbqString); // (4) ['hot dogs', 'hamburgers', 'sausages', 'corn']
 
@@ -200,12 +200,13 @@
     console.log(toppings);
 
     // take the first item off toppings with shift()
-    toppings.shift();
-    console.log(toppings);
+    const firstItem = toppings.shift();
+    console.log(firstItem); // Mushrooms
+    console.log(toppings); // Array without `Mushrooms'
 
     // add it back in with unshift()
-    toppings.unshift('Mushrooms');
-    console.log(toppings);
+    toppings.unshift(firstItem);
+    console.log(toppings); // Mushrooms added back to array
 
     // Do the last four,but immutable (with spreads and new variables)
     // pop()
@@ -276,9 +277,19 @@
     /*
       Callback Methods
     */
-    // the object is 'feedback'
+
     // find the first rating that talks about a burger with find()
-    const firstBurgerRating = feedback.find(({ burger }) => burger === 'Burgers');
+    function isMention(burger) {
+      return burger.comment.toLowerCase().includes('burg');
+    }
+
+    console.log(feedback.find(isMention)); // {comment: 'Love the burgs', rating: 4}
+
+    const rating = feedback.find(({ comment, rating }) =>
+      comment.toLowerCase().includes('burg')
+    );
+
+    console.log(rating); // {comment: 'Love the burgs', rating: 4}
 
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
