@@ -258,8 +258,14 @@
     console.log(multiAvos.lastIndexOf('Avocado')); // 9
 
     // Check if hot sauce is in the toppings with includes()
+    console.log(toppings.includes('Hot Sauce')); // false
+
     // add it if it's not
-    // flip those toppings around with reverse()
+    toppings.splice(4, 0, 'Hot Sauce');
+    console.log(toppings);
+
+    // flip those toppings around with reverse() - NOTE reverse() is mutable
+    console.log(toppings.reverse()); // items in toppings array will be in reverse order
 
     /*
     Static vs. Instance Methods:
@@ -270,8 +276,10 @@
     /*
       Callback Methods
     */
-
+    // the object is 'feedback'
     // find the first rating that talks about a burger with find()
+    const firstBurgerRating = feedback.find(({ burger }) => burger === 'Burgers');
+
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
     // Remove the one star rating however you like!
