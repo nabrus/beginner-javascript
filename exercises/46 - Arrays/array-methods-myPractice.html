@@ -211,12 +211,27 @@
     // Do the last four,but immutable (with spreads and new variables)
     // pop()
     const newToppings = [...toppings];
-    newToppings.pop();
+    const lastItem = newToppings.pop();
+    console.log(lastItem); // Cheese
     console.log(newToppings); // (removes the last item) results in array without 'Cheese'
     console.log(toppings); // Original remains the same
 
+    // Do the last four,but immutable (with spreads and new variables)
+    // Wes' example, another approach
+    let newToppings2 = toppings.slice(0, toppings.length - 1);
+
+    newToppings2 = [...newToppings2, toppings[toppings.length - 1]];
+    console.log(newToppings2); // Will give the array back with 'Cheese'
+
+    // Now to remove the first item and replace
+    newToppings2 = toppings.slice(1, toppings.length);
+    console.log(newToppings2);
+
+    newToppings2 = [toppings[0], ...newToppings2];
+    console.log(newToppings2);
+
     // push()
-    newToppings.push('Cheese');
+    newToppings.push(lastItem);
     console.log(newToppings); // Adds 'Cheese' as the last item
 
     // shift()
@@ -228,7 +243,7 @@
     console.log(newToppings); // Adds 'Mushrooms' as the first item
 
     // Make a copy of the toppings array with slice()
-    const sliceToppings = toppings.slice();
+    const sliceToppings = toppings.slice(0);
     console.log(sliceToppings);
     console.log(toppings);
 
@@ -236,8 +251,11 @@
     const spreadToppings = [...toppings];
     console.log(spreadToppings);
 
-    // take out items 3 to 5 of your new toppings array with splice()
-    console.log(spreadToppings.splice(3, 3)); // (3) ['Chili', 'Lettuce', 'Avocado']
+    // take out items 3 to 5 of your new toppings array with splice() ??
+    // spreadToppings.splice(2, 3); // this removes items 3 through 5
+
+    // But Wes shows the following which is start at index 3 and remove 5 items
+    console.log(spreadToppings.splice(3, 5)); // (5) ['Chili', 'Lettuce', 'Avocado', 'Chiles', 'Bacon']
     console.log(spreadToppings);
 
     // Replace 1 element ('Chiles') at index 6 with 'Olives'
@@ -259,14 +277,20 @@
     console.log(multiAvos.lastIndexOf('Avocado')); // 9
 
     // Check if hot sauce is in the toppings with includes()
-    console.log(toppings.includes('Hot Sauce')); // false
-
+    const isInToppings = toppings.includes('Hot Sauce');
+    console.log(isInToppings); // false
     // add it if it's not
-    toppings.splice(4, 0, 'Hot Sauce');
+    if (!isInToppings) {
+      toppings.push('Hot Sauce');
+    }
     console.log(toppings);
 
     // flip those toppings around with reverse() - NOTE reverse() is mutable
-    console.log(toppings.reverse()); // items in toppings array will be in reverse order
+    // console.log(toppings.reverse()); // items in toppings array will be in reverse order
+    // example using a copy as not to change original
+    const reversedToppings = [...toppings].reverse();
+    console.log(toppings);
+    console.log(reversedToppings);
 
     /*
     Static vs. Instance Methods:
