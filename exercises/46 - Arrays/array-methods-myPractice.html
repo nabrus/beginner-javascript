@@ -352,10 +352,10 @@
     // Then when calling it use `until.findBurgRating`
 
     const burgRating1 = feedback.find(findBurgRating);
-    console.log(burgRating1);
+    console.log(burgRating1?.rating); // 4
 
-    // const burgRating = feedback.find(review => review.comment.includes('burg'));
-    // console.log(burgRating);
+    const burgRating = feedback.find(review => review.comment.includes('burg'));
+    console.log(burgRating);
 
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
