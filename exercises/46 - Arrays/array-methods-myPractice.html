@@ -322,8 +322,40 @@
     console.log(rating); // {comment: 'Love the burgs', rating: 4}
 
     // Wes' example
-    const burgRating = feedback.find(review => review.comment.includes('burg'));
-    console.log(burgRating);
+    /* 
+    `find()` takes a function(callback) as it's argument,
+    which in turns excepts 3 arguments. element (each item in the array),
+    index (optional), array (optional, the array that find was called on)
+
+    Syntax: 
+    array.find((element, index, array) => {
+      // condition to be met
+    });
+
+    */
+
+    function findBurgRating(review) {
+      return review.comment.toLowerCase().includes('burg');
+    }
+
+    // You can use any several ways to write the function, like an arrow...
+    // const findBurgRating = (review) => review.comment.toLowerCase().includes('burg');
+
+    // Or use an object of methods...
+
+    // const until = {
+    //   findBurgRating: function findBurgRating(review) {
+    //     return review.comment.toLowerCase().includes('burg');
+    //   },
+    // };
+
+    // Then when calling it use `until.findBurgRating`
+
+    const burgRating1 = feedback.find(findBurgRating);
+    console.log(burgRating1);
+
+    // const burgRating = feedback.find(review => review.comment.includes('burg'));
+    // console.log(burgRating);
 
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
