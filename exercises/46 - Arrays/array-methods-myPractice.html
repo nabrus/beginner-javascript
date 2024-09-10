@@ -307,13 +307,23 @@
       return burger.comment.toLowerCase().includes('burg');
     }
 
-    console.log(feedback.find(isMention)); // {comment: 'Love the burgs', rating: 4}
+    console.log(feedback.find(isMention)); // {comment: 'Love the burgs', rating: 4};
 
     const rating = feedback.find(({ comment, rating }) =>
       comment.toLowerCase().includes('burg')
     );
 
+    if (rating) {
+      console.log(rating.rating);
+    } else {
+      console.log('No one likes the burgers!');
+    }
+
     console.log(rating); // {comment: 'Love the burgs', rating: 4}
+
+    // Wes' example
+    const burgRating = feedback.find(review => review.comment.includes('burg'));
+    console.log(burgRating);
 
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
