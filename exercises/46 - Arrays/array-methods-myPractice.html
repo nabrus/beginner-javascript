@@ -357,6 +357,16 @@
     const burgRating = feedback.find(review => review.comment.includes('burg'));
     console.log(burgRating);
 
+    // DRY - create a function to search for different words
+    function findByWord(word) {
+      return function (review) {
+        return review.comment.toLowerCase().includes(word);
+      };
+    }
+
+    const findBurg = findByWord('burg');
+    const burgerRating = feedback.find(findBurg);
+
     // find all ratings that are above 2 with filter()
     // find all ratings that talk about a burger with filter()
     // Remove the one star rating however you like!
