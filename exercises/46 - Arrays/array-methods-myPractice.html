@@ -358,17 +358,29 @@
     console.log(burgRating);
 
     // DRY - create a function to search for different words
+    // A function that returns a function
     function findByWord(word) {
       return function (review) {
-        return review.comment.toLowerCase().includes(word);
+        return review.comment.includes(word);
       };
     }
 
-    const findBurg = findByWord('burg');
-    const burgerRating = feedback.find(findBurg);
+    const burgerRating = feedback.find(findByWord('burg'));
+
+    const findSmoothie = findByWord('Smoothie');
+    const smoothRating = feedback.find(findSmoothie);
+
+    console.log(burgerRating); // {comment: 'Love the burgs', rating: 4}
+    console.log(smoothRating); // {comment: 'Smoothies are great, liked the burger too', rating: 5}
 
     // find all ratings that are above 2 with filter()
+    const greaterThanTwo = feedback.filter(({ rating }) => rating > 2);
+    console.log(greaterThanTwo);
+
     // find all ratings that talk about a burger with filter()
+    const burgerFilter = feedback.filter(({ comment }) =>
+      comment.toLowerCase().includes('burg')
+    );
     // Remove the one star rating however you like!
 
     // check if there is at least 5 of one type of meat with some()
