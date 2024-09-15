@@ -217,7 +217,7 @@
     console.log(toppings); // Original remains the same
 
     // Do the last four,but immutable (with spreads and new variables)
-    // Wes' example, another approach
+    // Wes' solution, another approach
     let newToppings2 = toppings.slice(0, toppings.length - 1);
 
     newToppings2 = [...newToppings2, toppings[toppings.length - 1]];
@@ -321,7 +321,7 @@
 
     console.log(rating); // {comment: 'Love the burgs', rating: 4}
 
-    // Wes' example
+    // Wes' solution
     /* 
     `find()` takes a function(callback) as it's argument,
     which in turns excepts 3 arguments. element (each item in the array),
@@ -377,17 +377,48 @@
     const greaterThanTwo = feedback.filter(({ rating }) => rating > 2);
     console.table(greaterThanTwo);
 
-    // Wes' example
+    // Wes' solution of find all ratings that are above 2 with filter()
     const goodReviews = feedback.filter(
       singleFeedback => singleFeedback.rating > 2
     );
+
+    // Or again a function can be created for easy re-use
+    function filterByRating(numberValue) {
+      return function (review) {
+        return review.rating > numberValue;
+      };
+    }
+
+    const higherThanTwo = feedback.filter(filterByRating(2));
+    const higherThanFour = feedback.filter(filterByRating(4));
+
+    console.table(higherThanTwo);
+    console.table(higherThanFour);
 
     // find all ratings that talk about a burger with filter()
     const burgerFilter = feedback.filter(({ comment }) =>
       comment.toLowerCase().includes('burg')
     );
+
+    // Wes' solution
+    /*
+    const burgRatings = feedback.filter(singleFeedback =>
+      singleFeedback.comment.includes('burg')
+    );
+    */
+    // Instead of rewriting code (DRY),  use the `findByWord` function
+    const burgRatingsA = feedback.filter(findByWord('burg'));
+    console.table(burgRatingsA);
+
     // Remove the one star rating however you like!
 
+    function findLowRating(num) {
+      return function (obj) {
+        return obj.rating === num || obj.rating < num;
+      };
+    }
+
+    const noBadRatings = feedback.filter(findLowRating(1));
     // check if there is at least 5 of one type of meat with some()
     // make sure we have at least 3 of every meat with every()
     // sort the toppings alphabetically with sort()
