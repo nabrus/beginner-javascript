@@ -411,16 +411,26 @@
     console.table(burgRatingsA);
 
     // Remove the one star rating however you like!
+    const getRidNegative = feedback.filter(review => review.rating !== 1);
+    console.table(getRidNegative);
 
+    // Finding the lowest rating
     function findLowRating(num) {
       return function (obj) {
         return obj.rating === num || obj.rating < num;
       };
     }
 
-    const noBadRatings = feedback.filter(findLowRating(1));
+    const lowRating = feedback.filter(findLowRating(1));
+
     // check if there is at least 5 of one type of meat with some()
+    const qtyFive = Object.values(meats).some(qty => qty === 5);
+    console.log(qtyFive); // true
+
     // make sure we have at least 3 of every meat with every()
+    const threeOrMore = Object.values(meats).some(qty => qty === 3 || qty > 3);
+    console.log(threeOrMore);
+
     // sort the toppings alphabetically with sort()
     // sort the order totals from most expensive to least with .sort()
     // Sort the prices with sort()
