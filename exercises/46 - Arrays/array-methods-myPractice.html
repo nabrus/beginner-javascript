@@ -84,7 +84,7 @@
     const array5 = Array.from([1, 2, 3], x => x * 2);
     console.log(array5); // [2, 4, 6]
 
-    const arrayCreature = Array.from({ length: 5 }, function () {
+    const arrayCreature = Array.from({ length: 5 }, function() {
       return 'Zombie';
     });
     console.log(arrayCreature); // ['Zombie', 'Zombie', 'Zombie', 'Zombie', 'Zombie']
@@ -114,7 +114,7 @@
 
     // Make a function that creates a range from x to y with Array.from();
     function createRange(start, end) {
-      const range2 = Array.from({ length: end - start + 1 }, function (
+      const range2 = Array.from({ length: end - start + 1 }, function(
         _item,
         index
       ) {
@@ -360,7 +360,7 @@
     // DRY - create a function to search for different words
     // A function that returns a function
     function findByWord(word) {
-      return function (review) {
+      return function(review) {
         return review.comment.includes(word);
       };
     }
@@ -384,7 +384,7 @@
 
     // Or again a function can be created for easy re-use
     function filterByRating(numberValue) {
-      return function (review) {
+      return function(review) {
         return review.rating > numberValue;
       };
     }
@@ -416,7 +416,7 @@
 
     // Finding the lowest rating
     function findLowRating(num) {
-      return function (obj) {
+      return function(obj) {
         return obj.rating === num || obj.rating < num;
       };
     }
@@ -449,6 +449,14 @@
     // One line of code
     const bigToSmall2 = orderTotals.sort((a, b) => b - a);
     console.log(bigToSmall2);
+    /*
+    Note:
+    If the function returns a negative value, `a` will be sorted before `b`.
+
+    If the function returns a positive value, `b` will be sorted before `a`.
+    
+    If the function returns zero, the order of `a` and `b` remains unchanged (they are considered equal in terms of sorting).
+    */
 
     // Sort the prices with sort()
 
