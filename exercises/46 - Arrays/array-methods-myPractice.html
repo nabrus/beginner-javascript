@@ -424,17 +424,35 @@
     const lowRating = feedback.filter(findLowRating(1));
 
     // check if there is at least 5 of one type of meat with some()
-    const qtyFive = Object.values(meats).some(qty => qty === 5);
+    const qtyFive = Object.values(meats).some(qty => qty >= 5);
     console.log(qtyFive); // true
 
     // make sure we have at least 3 of every meat with every()
-    const threeOrMore = Object.values(meats).some(qty => qty === 3 || qty > 3);
-    console.log(threeOrMore);
+    const atLeastThree = Object.values(meats).every(qty => qty >= 3);
+    console.log(atLeastThree); // true
 
     // sort the toppings alphabetically with sort()
     console.log(toppings);
     const inOrder = toppings.sort();
     console.log(inOrder);
+
+    /*
+    `.sort()`: how sorting is handled with numbers
+    
+    Note:
+    If the function returns a negative value, `a` will be sorted before `b`.
+    
+    If the function returns a positive value, `b` will be sorted before `a`.
+    
+    If the function returns zero, the order of `a` and `b` remains unchanged (they are considered equal in terms of sorting).
+    */
+    const numbers = [200, 4, 560, 34, 7, 95, 802];
+
+    const numbersSorted = numbers.sort(function (firstNum, secondNum) {
+      console.log(firstNum, secondNum);
+    });
+
+    console.log(numbersSorted);
 
     // sort the order totals from most expensive to least with .sort()
     console.log(orderTotals);
@@ -444,24 +462,24 @@
     }
 
     const bigToSmall = orderTotals.sort(compareNums);
-    console.log(bigToSmall);
+    console.log(bigToSmall); // (8) [2222, 1644, 1002, 854, 634, 523, 342, 34]
 
     // One line of code
     const bigToSmall2 = orderTotals.sort((a, b) => b - a);
     console.log(bigToSmall2);
-    /*
-    Note:
-    If the function returns a negative value, `a` will be sorted before `b`.
-
-    If the function returns a positive value, `b` will be sorted before `a`.
-    
-    If the function returns zero, the order of `a` and `b` remains unchanged (they are considered equal in terms of sorting).
-    */
 
     // Sort the prices with sort()
     const sortedPrices = Object.values(prices).sort((a, b) => a - b);
-    console.log(sortedPrices);
+    console.log(sortedPrices); // (4) [234, 453, 634, 765]
 
+    // Wes' solution:
+    const productSortedByPrice = Object.entries(prices).sort(function (a, b) {
+      const aPrice = a[1];
+      const bPrice = b[1];
+      return aPrice - bPrice;
+    });
+
+    console.table(productSortedByPrice);
     /*
       Looping Methods (next)
     */
