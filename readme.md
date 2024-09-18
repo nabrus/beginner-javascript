@@ -122,10 +122,8 @@
           *  `element.remove(element)`
           *  `node.removeChild(child)`
 *  "Cardio" -  An exercise to practice more examples of things covered in this section.
-     *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/main
-/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
-     *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/main
-/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
+     *  [My Approach](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/DOM-Cardio2.js)
+     *  [Wes' Approach](https://github.com/nabrus/beginner-javascript/blob/main/exercises/20%20-%20The%20DOM/DOM-Cardio-FINISHED.js)
 
 ### Events
 
@@ -162,8 +160,7 @@
           *  `animationend` event
           *  `once` option
 *  [Click Outside a Modal to Close](https://github.com/nabrus/beginner-javascript/blob/main/exercises/34%20-%20Click%20Outside/click-outside.js)
-     *  [Some CSS tidbits](https://github.com/nabrus/beginner-javascript/blob/main
-/exercises/34%20-%20Click%20Outside/click-outside.html)
+     *  [Some CSS tidbits](https://github.com/nabrus/beginner-javascript/blob/main/exercises/34%20-%20Click%20Outside/click-outside.html)
           *  `opacity: 0;` and `pointer-events: none;`
      *  `.closest()` method
      *  `querySelector('img').src;`
@@ -173,8 +170,7 @@
          *  `observer.observe(target)`
     * [Read more on MDN](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 *  [Tabs](https://github.com/nabrus/beginner-javascript/blob/main/exercises/36%20-%20Tabs/tabs.js)
-     *  [ARIA (Accessible Rich Internet Applications) attributes](https://github.com/nabrus/beginner-javascript/blob/main
-/exercises/36%20-%20Tabs/index.html)
+     *  [ARIA (Accessible Rich Internet Applications) attributes](https://github.com/nabrus/beginner-javascript/blob/main/exercises/36%20-%20Tabs/index.html)
      *  `Array.from` method
           *  `Array.from(arrayLike, mapFn, thisArg);`
      *  `forEach()` method
@@ -198,8 +194,7 @@
      *  Logical operators - `&&` (AND), `||` (OR), and `!` (NOT) 
      *  `includes(searchString)` method
      *  Truthy and Falsy
-          *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/main
-     /playground/if-statements.html)
+          *  [Truthy/Falsy values list](https://github.com/nabrus/beginner-javascript/blob/main/playground/if-statements.html)
                *  Intro to `Object.keys()` method
 *  [Flow Control 2](https://github.com/nabrus/beginner-javascript/blob/main/playground/conditional.js)
      *  Logical NOT operator `!`
