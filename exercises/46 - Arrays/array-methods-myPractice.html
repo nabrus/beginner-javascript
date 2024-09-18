@@ -148,6 +148,7 @@
     console.log(Object.values(meats)); // (3) [10, 5, 7]
 
     // Common example of using `forEach` to loop through and get a value
+    // Note: `forEach` is not a static method
     Object.values(meats).forEach(qty => {
       console.log(qty);
     });
@@ -417,7 +418,7 @@
     // Finding the lowest rating
     function findLowRating(num) {
       return function (obj) {
-        return obj.rating === num || obj.rating < num;
+        return obj.rating <= num;
       };
     }
 
@@ -445,6 +446,8 @@
     If the function returns a positive value, `b` will be sorted before `a`.
     
     If the function returns zero, the order of `a` and `b` remains unchanged (they are considered equal in terms of sorting).
+
+    After all the necessary comparisons are made by the sorting algorithm, you get the final sorted array
     */
     const numbers = [200, 4, 560, 34, 7, 95, 802];
 
