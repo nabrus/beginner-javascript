@@ -247,5 +247,35 @@
      *  Array Methods - `slice()`, `splice()`, `findIndex()`, etc
           *  Mutable vs. Immutable
      *  Adding and removing items
-
+* [Array "Cardio"](https://github.com/nabrus/beginner-javascript/blob/main/exercises/46%20-%20Arrays/array-methods-myPractice.html)
+     *  Static Methods - methods called directly on the class itself
+          *  `Array.of()`
+          *  `Array.from()`
+               *  Generating a sequence of numbers
+               *  Creating a range function
+          *  `Array.isArray()`
+          *  Object static methods
+               *  `Object.entries()`
+               *  `Object.keys()`
+               *  `Object.values()`
+     *  Instance Methods - methods called on instances of objects/array object
+          *  `forEach()`
+               *  More destructuring examples
+          *  `join()`
+          *  `split()` (string method)
+          *  `pop()` & `push()`
+          *  `shift()` & `unShift()`
+          *  Mutable and Immutable examples
+          *  `slice()` & `splice()`
+          *  `indexOf()` & `lastIndexOf()`
+          *  `includes()`
+          *  `reverse()`
+     *  Callback Methods
+          *  `find()`
+               *  Using a function as an argument
+          *  `filter()`
+          *  `some()`
+          *  `every()`
+          *  `sort()`
+               *  Breakdown of how numbers are sorted
 
