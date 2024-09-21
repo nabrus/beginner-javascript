@@ -168,6 +168,51 @@
 
     // Arrow function as callback example
     console.log(toppings.forEach(item => console.log(item)));
+
+    // Example of using the original array and index arguments
+    function logTopping2(item, index, array) {
+      console.log('<------------Start------------------>');
+      // Log the topping
+      console.log(item);
+
+      // Log the next topping if there is one
+      console.log(array[index + 1]);
+
+      // Log the previous topping if there is one
+      console.log(array[index - 1]);
+
+      // When last topping is reached, say goodbye
+      if (index === array.length - 1) console.log('Goodbye!');
+      // index === array.length - 1 ? console.log('Goodbye!') : null;
+
+      console.log('<------------End-------------------->');
+    }
+
+    toppings.forEach(logTopping2);
+
+    // Wes' solution - removes the undefined
+    function logTopping3(item, index, array) {
+      const nextTopping = array[index + 1];
+      const previousTopping = array[index - 1];
+
+      // Log the topping
+      console.log(item);
+
+      // Log the next topping if there is one
+      nextTopping ? console.log(nextTopping) : null;
+
+      // Log the previous topping if there is one
+      previousTopping ? console.log(previousTopping) : null;
+
+      // When last topping is reached, say goodbye
+      index === array.length - 1
+        ? console.log('Goodbye!')
+        : console.log('Getting the next topping.');
+
+      console.log('-------------------------------');
+    }
+
+    toppings.forEach(logTopping3);
   </script>
 </body>
 
