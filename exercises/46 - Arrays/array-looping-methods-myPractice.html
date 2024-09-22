@@ -147,7 +147,7 @@
     `forEach()` is used to iterate over an array and execute a given callback
     function for each element in the array.
 
-    Syntax: `array.forEach(callback(element, index, array), thisArg);`
+    Syntax: `array.forEach(callback(element, [index], [array]), [thisArg]);`
 
     Notes:
     `forEach()` doesn’t return a value; it’s purely for performing side effects
@@ -157,6 +157,9 @@
     undefined values, but it skips empty elements (i.e., array "holes").
 
     It doesn't modify the original array.
+
+    Best use case: logging value, attaching an event listener - known as side effects 
+    Side effects are when you reach outside a function to do something else
     */
 
     // Example passing in a function
@@ -213,6 +216,27 @@
     }
 
     toppings.forEach(logTopping3);
+
+    /*
+
+    MAP, FILTER, REDUCE
+
+    */
+
+    /*
+    `array.map()` is a method that creates a new array by applying a callback
+    function to each element of an existing array. It's useful for transforming
+    or modifying elements without changing the original array.
+
+    Syntax: `let newArray = array.map(callback(element, [index], [array]), [thisArg]);`
+    */
+
+    // Doubling numbers example
+    const nums = [4, 5, 7, 9, 12];
+
+    const doubled = nums.map(num => num * 2);
+
+    console.log(doubled); // (5) [8, 10, 14, 18, 24]
   </script>
 </body>
 
