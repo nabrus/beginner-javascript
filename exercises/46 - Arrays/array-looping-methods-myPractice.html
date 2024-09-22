@@ -237,6 +237,54 @@
     const doubled = nums.map(num => num * 2);
 
     console.log(doubled); // (5) [8, 10, 14, 18, 24]
+    console.log(nums); // (5) [4, 5, 7, 9, 12]
+
+    // Wes' example of `.map()`
+    function addArms(face) {
+      return `👋 ${face} 👋`;
+    }
+
+    const armsFaces = faces.map(addArms);
+    console.log(armsFaces);
+
+    // Create full names
+    const fullNames = ['Han', 'Leia', 'Ben'].map(name => `${name} Solo`);
+    console.log(fullNames); // (3) ['Han Solo', 'Leia Solo', 'Ben Solo']
+
+    // Multiple functions and chaining `.map()`
+    function urbify(name) {
+      return `${name} Urban`;
+    }
+
+    function capitalize(word) {
+      return `${word[0].toUpperCase()}${word.slice(1)}`;
+    }
+
+    const urbans = ['steve', 'betty', 'wyatt'].map(capitalize).map(urbify);
+
+    console.log(urbans); // (3) ['Steve Urban', 'Betty Urban', 'Wyatt Urban']
+
+    // Adding sales tax to `orderTotals` array
+    const itemsPlusTax = orderTotals.map(
+      amount => amount + Math.floor(amount * 0.06)
+    );
+    console.log(itemsPlusTax);
+
+    // Fun example - introduces `.repeat()` and `.fill()`
+    /* eslint-disable */
+    function attachBody(face, body) {
+      return `
+            ${face}
+          ${body.repeat(3)}
+         ${Array(3).fill(body).join(' ')}
+      👇   ${body.repeat(2)}  👇
+          ${Array(2).fill(body).join('   ')}
+          ${Array(2).fill(body).join('   ')}
+          👢   👢
+      `;
+    }
+
+    faces.map(face => attachBody(face, '💩')).forEach(body => console.log(body));
   </script>
 </body>
 
