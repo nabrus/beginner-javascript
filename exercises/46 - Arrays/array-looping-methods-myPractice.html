@@ -284,7 +284,34 @@
       `;
     }
 
-    faces.map(face => attachBody(face, '💩')).forEach(body => console.log(body));
+    faces.map(face => attachBody(face, '🎾')).forEach(body => console.log(body));
+
+    /* eslint-enable */
+
+    // Note: never update the DOM with a map() method, use forEach() for that
+
+    // Example of taking in an object and manipulating "massaging" the data  to
+    // eliminate unnecessary information from data or cleaning a dataset to make it useable
+    const cleanPeople = people.map(function (person) {
+      // Get their b-day
+      // timestamp
+      const birthday = new Date(person.birthday).getTime();
+
+      // now timestamp
+      const now = Date.now();
+
+      // Calculate their age
+      const age = Math.floor((now - birthday) / 31536000000);
+      console.log(age);
+
+      // Return their full name and age in an object
+      return {
+        age,
+        name: `${person.names.first} ${person.names.last}`,
+      };
+    });
+
+    console.table(cleanPeople);
   </script>
 </body>
 
