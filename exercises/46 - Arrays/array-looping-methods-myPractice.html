@@ -224,11 +224,13 @@
     */
 
     /*
-    `array.map()` is a method that creates a new array by applying a callback
+
+    `map()` is a method that creates a new array by applying a callback
     function to each element of an existing array. It's useful for transforming
     or modifying elements without changing the original array.
 
     Syntax: `let newArray = array.map(callback(element, [index], [array]), [thisArg]);`
+    
     */
 
     // Doubling numbers example
@@ -314,9 +316,20 @@
     console.table(cleanPeople);
 
     /*
+
+    `filter()` method of Array instances creates a shallow copy of a portion of a
+    given array, filtered down to just the elements from the given array that
+    pass the test implemented by the provided function.
+    
     `let newArray = array.filter(callback(element, [index], [array]), [thisArg]);`
 
     */
+
+    // Give only even numbers
+    const numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
+
+    const evenNumsOnly = numArray.filter(num => num % 2 === 0);
+    console.log(evenNumsOnly); // (7) [2, 4, 6, 8, 10, 12, 14]
   </script>
 </body>
 
