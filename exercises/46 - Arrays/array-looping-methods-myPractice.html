@@ -342,6 +342,25 @@
     filter() returns a new array with all matching elements.
     find() returns the first matching element
     */
+
+    // More examples...
+
+    const over40 = cleanPeople.filter(person => person.age > 40);
+    console.log(over40); // returns a new filtered array
+
+    // Find the student with 565a
+    const studentID = students.find(student => student.id === '565a');
+    console.log(studentID); // returns the student object
+
+    // Passing in a function
+    function findById(id) {
+      function isStudent(student) {
+        return student.id === id;
+      }
+    }
+
+    const studentId = students.find(findById('f396'));
+    console.log(studentId);
   </script>
 </body>
 
