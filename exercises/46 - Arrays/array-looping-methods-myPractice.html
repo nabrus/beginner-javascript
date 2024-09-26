@@ -352,15 +352,38 @@
     const studentID = students.find(student => student.id === '565a');
     console.log(studentID); // returns the student object
 
-    // Passing in a function
+    // A more useful way to find the student
+    // Higher-order function, meaning it returns another function. As in `findById`
+    // Note: taking in one or more functions as arguments is also higher order-functions
     function findById(id) {
-      function isStudent(student) {
+      return function (student) {
         return student.id === id;
-      }
+      };
+    }
+    /*
+
+    Note:
+    The returned function takes a student object as an argument and checks
+    whether that student's id matches the id passed into findById(id).
+    
+    */
+
+    // Example of an even more flexible function to find the student
+    function findByKeyValue(key, valueWeAreLookingFor) {
+      return function (student) {
+        // Note: bracket notation must be used because `key` is a variable (dynamic). We are not looking for "key" literally
+        return student[key] === valueWeAreLookingFor;
+      };
     }
 
     const studentId = students.find(findById('f396'));
     console.log(studentId);
+
+    const studentKey = students.find(findByKeyValue('first_name', 'Bendicty'));
+    console.log(studentKey);
+
+    const studentKey2 = students.find(findByKeyValue('id', 'de5f'));
+    console.log(studentKey2);
   </script>
 </body>
 
