@@ -411,6 +411,17 @@
 
     After iterating over the array, the sum of all numbers (10) is returned
     */
+    console.log('----------------------');
+
+    console.log(newNums);
+
+    // A break down of how reduce is iterating through the array and adding the values
+    const sum2 = newNums.reduce((acc, currentVal) => {
+      console.log(acc, currentVal);
+      return acc + currentVal;
+    }, 0);
+
+    console.log(sum2);
   </script>
 </body>
 
