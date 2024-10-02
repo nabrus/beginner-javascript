@@ -398,7 +398,7 @@
     */
 
     // Sum of the numbers in a given array
-    const newNums = [1, 2, 3, 4];
+    const newNums = [2, 3, 4, 5];
 
     const sum = newNums.reduce(
       (accumulator, currentValue) => accumulator + currentValue,
@@ -432,6 +432,17 @@
     }, 1); // note: initialValue is 1
 
     console.log(product);
+
+    // Wes' examples
+    function tallyNumbers(tally, currentTotal) {
+      console.log(`The current tally is ${tally}`);
+      console.log(`The current total is ${currentTotal}`);
+      console.log('------------------------------------');
+      return tally + currentTotal;
+    }
+
+    const allOrders = orderTotals.reduce(tallyNumbers, 0);
+    console.log(allOrders);
   </script>
 </body>
 
