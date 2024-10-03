@@ -448,7 +448,7 @@
 
     console.log('------------------------------------');
 
-    // Example of counting instances of an item
+    // Example of counting instances of an item in the inventory array
     function inventoryReducer(totals, item) {
       // Check if type exists-if not add 1 or increment the type by 1
       totals[item.type] = totals[item.type] + 1 || 1;
@@ -459,6 +459,7 @@
     const invCounts = inventory.reduce(inventoryReducer, {});
     console.log(invCounts); // {shirt: 2, pants: 3, socks: 2}
 
+    // Add up the prices for the inventory array
     const totalInventoryPrice = inventory.reduce(
       (acc, value) => acc + value.price,
       0
