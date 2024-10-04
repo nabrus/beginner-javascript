@@ -276,5 +276,10 @@
 
 ### Looping and Iterating
 
-
+*  [Looping Methods](https://github.com/nabrus/beginner-javascript/blob/main/exercises/46%20-%20Arrays/array-looping-methods-myPractice.html)
+     *  `forEach()`
+     *  `map()`, `filter()` & `reduce()`
+          *  Chaining
+          *  Examples of `.repeat()` and `.fill()`
+          *  Higher-order functions
 
