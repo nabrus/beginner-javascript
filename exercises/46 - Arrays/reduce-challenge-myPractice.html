@@ -553,7 +553,7 @@ Portions of this content are ©1998–2024 by individual mozilla.org contributor
 
 `;
 
-    // Turn all the text from `webPage` to an array;
+    // const noJunkChars = textArray.filter(char => /^[A-Za-z0-9]*$/.test(char));
 
     function isValidChars(char) {
       return char.match(/[a-z0-9]/i);
@@ -561,12 +561,11 @@ Portions of this content are ©1998–2024 by individual mozilla.org contributor
 
     const lowerCase = char => char.toLowerCase();
 
+    // Turn all the text from `webPage` to an array;
     const results = webPage
       .split('') // split each char into an item of an array
       .filter(isValidChars) // filter out all chars except letters and numbers
       .map(lowerCase); // change all chars to lower case
-
-    // const noJunkChars = textArray.filter(char => /^[A-Za-z0-9]*$/.test(char));
 
     console.log(results);
   </script>
