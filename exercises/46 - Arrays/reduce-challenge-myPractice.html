@@ -559,15 +559,34 @@ Portions of this content are ©1998–2024 by individual mozilla.org contributor
       return char.match(/[a-z0-9]/i);
     }
 
+    function instanceCounter(total, item) {
+      total[item] = total[item] + 1 || 1;
+      return total;
+    }
+
+    // Wes' solution for the instanceCounter
+    function instanceCounter2(counts, char) {
+      counts[char] ? (counts[char] = counts[char] + 1) : (counts[char] = 1);
+      return counts;
+    }
+
     const lowerCase = char => char.toLowerCase();
+
+    function sortByValue(a, b) {
+      return a[1] - b[1];
+    }
 
     // Turn all the text from `webPage` to an array;
     const results = webPage
       .split('') // split each char into an item of an array
       .filter(isValidChars) // filter out all chars except letters and numbers
-      .map(lowerCase); // change all chars to lower case
+      .map(lowerCase) // change all chars to lower case
+      .reduce(instanceCounter2, {});
 
-    console.log(results);
+    // Find the char most used
+    const sortedResult = Object.entries(results).sort(sortByValue);
+
+    console.log(sortedResult);
   </script>
 </body>
 
