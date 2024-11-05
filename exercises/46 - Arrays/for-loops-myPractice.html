@@ -21,7 +21,7 @@
     
     Syntax:
     `for (initialization; condition; increment) {
-    // code to execute each iteration
+      // code to execute each iteration
     }`
 
     */
@@ -35,11 +35,13 @@
     }
     console.log('Blastoff!!');
 
-    /* for of
+    /* 
+    for of
 
+    Syntax:
     for (variable of iterable) {
-  // Code to execute for each element in the iterable
-}
+      // Code to execute for each element in the iterable
+    }
    */
     for (num of numbers) {
       console.log(num);
@@ -50,7 +52,25 @@
     for (char of word) {
       console.log(char);
     }
-    // for in
+
+    /*
+    for in
+
+    Syntax:
+    for (variable in object) {
+      // code block to execute
+    }
+    */
+
+    const personObj = {
+      name: 'Homer',
+      resides: 'Springfield',
+      age: 52,
+    };
+
+    for (value in personObj) {
+      console.log(`${value} ${personObj[value]}`);
+    }
     // while
   </script>
 </body>
